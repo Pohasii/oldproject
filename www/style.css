@@ -52,7 +52,6 @@ html.help *:not(.logo):not(.eye) {
 header {
 	border-bottom: 2px solid #737373;
 	background: #E8B250;
-	height: 15%;
 	width: 100%;
 }
 footer {
@@ -65,6 +64,7 @@ footer {
 }
 .menu1 {
 	margin-left: 25%;
+	padding-top: 37px;
 }
 .signup, .menu {
 	display: inline-block;
@@ -78,13 +78,15 @@ footer {
 	margin-right: 17px;
 	font-size: 1.55em;
 	transition: .3s;
+	border: 2px solid #fff;
 	padding: 5px;
+	border-radius: 4px;
 }
+.language a, .enter {border: none;}
 .signup a:hover,
 .menu a:hover {
-	border-bottom: 2px solid  #fff;
-	transition: .3s;
-	color: #fff;
+	color: #FFE800;
+	background: #fff;
 }
 .searchform {
 	border: 1px dashed black;
@@ -151,11 +153,7 @@ footer {
 	display: block;
 }
 /*  лейяут конец */
-.line {
-	width: 0.5%;
-	height: 80%;
-	background: blue;	
-}
+
 .tab {
 	width: 78%; 
 	padding: 5px;
@@ -190,7 +188,7 @@ footer {
 	min-width: 181px;
 	border: 1px solid green;
 }
-.line ,
+
 .tab ,
 .rightbar {
 	display: inline-block;  

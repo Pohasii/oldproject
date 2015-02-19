@@ -87,6 +87,6 @@
 		<?php } ?> 
 
 </div>
-	<div class="line"></div>
+	<!--div class="line"></div-->
 	<div class="rightbar">medium</div>
 </div>
