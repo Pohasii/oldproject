@@ -49,7 +49,7 @@
 					<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
 				<?php endforeach; ?>
 			</div>
-			<a class=enter" href="#searchform">Поиск</a>
+			<a class="enter" href="#searchform">Поиск</a>
 		</div>
 	</header>
 	

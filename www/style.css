@@ -70,9 +70,10 @@ footer {
 .signup, .menu {
 	display: inline-block;
 	margin-top: 10px;
+	margin-bottom: 11px;
 }
 .signup {margin-left: 25%;}
-.signup a, .menu a {
+.signup a, .menu a , .language a, .enter{
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.63);
 	margin-right: 17px;
@@ -82,6 +83,7 @@ footer {
 	padding: 5px;
 	border-radius: 4px;
 }
+.language a, .enter {border: none;}
 .signup a:hover,
 .menu a:hover {
 	color: #FFE800;
