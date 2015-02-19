@@ -9,10 +9,10 @@
 					<option value="Шапокляк">Шапокляк</option>
 					<option value="Крыса Лариса">Крыса Лариса</option>
 				</select>
-				от <input name="" type="number" min="12" max="99"> до <input name="" type="number" min="12" max="99">
+				от <input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
 				
-				<input name="" type="text" placeholder="страна">
-				<input name="" type="text" placeholder="язык">
+				<input name="country" type="text" placeholder="страна">
+				<input name="laung" type="text" placeholder="язык">
 				<select size="3" multiple name="role[]">
 					<option disabled>Роль</option>
 					<option value="Чебурашка">Чебурашка</option>
@@ -37,7 +37,7 @@
 					<option value="Крыса Лариса">брынза</option>
 				</select>
 				
-				<input name="" type="number" min="0" max="15000"> до <input name="" type="number" min="0" max="15000">
+				<input name="gametime1" type="number" min="0" max="15000"> до <input name="gametime2" type="number" min="0" max="15000">
 				<select name="time">
 					<option disabled>часовой пояс</option>
 					<option value="Чебурашка">1</option>
@@ -46,7 +46,7 @@
 					<option value="Крыса Лариса">4</option>
 				</select>
 				
-				<select name="timegame">
+				<select name="timegame1">
 					<option disabled>время игры</option>
 					<option value="Чебурашка">1</option>
 					<option selected value="Крокодил Гена">2</option>
@@ -54,7 +54,7 @@
 					<option value="Крыса Лариса">4</option>
 				</select>
 				
-				<select name="timegames">
+				<select name="timegame2">
 					<option disabled>время игры 2</option>
 					<option value="Чебурашка">1</option>
 					<option selected value="Крокодил Гена">2</option>
