@@ -8,7 +8,7 @@
 
 <body>
 	<header class="main">
-		<div class="menu">
+		<div class="menu1">
 			<div class="menu">
 				<a href="/"><?=t('main');?></a>
 				<a href="/news">Новости</a>
