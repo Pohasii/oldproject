@@ -15,6 +15,12 @@ if($_COOKIE["help"] ) {
 	$help = 'help';
 }
 
+function che($result){
+	$result = stripslashes($result);
+	$result = htmlspecialchars($result);
+	$result = trim($result);
+	return $result;
+}
 //functions
 function error() {
 	ob_end_clean();
