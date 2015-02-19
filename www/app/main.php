@@ -1,6 +1,7 @@
 <?php
 //main controller
 print_r($_POST);
+if ($_POST)
 //$result['news'] = call("SELECT * FROM `news` WHERE lang='$setlang' ORDER BY `date` DESC LIMIT 0,12 ");
 //$result['adv'] = call("SELECT * FROM `adverts` WHERE lang='$setlang' ORDER BY `date` DESC");
 //$result['img'] = call("SELECT * FROM `main_page` WHERE lang='$setlang' AND pos='img'");

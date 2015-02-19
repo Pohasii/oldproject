@@ -1,19 +1,11 @@
 <?php
 
-function ch($result){
-	$result = stripslashes($result);
-	$result = htmlspecialchars($result);
-	$result = trim($result);
-	return $result;
-}
-
-
 if($_POST['sub']=='вход'){
 		$login = $_POST['login'];
 		$password = $_POST['pass'];
 
-		$login = ch($login);
-		$password = ch($password);
+		$login = che($login);
+		$password = che($password);
 		
 		$security='zagadka';
 		$password= md5("$password$security");
@@ -39,9 +31,9 @@ if($_POST['sub']=='вход'){
 		$password2 = $_POST['pass2'];
 		$email = $_POST['login'];
 
-		$login = ch($login);
-		$password = ch($password);
-		$password2 = ch($password2);
+		$login = che($login);
+		$password = che($password);
+		$password2 = che($password2);
 		
 		if ($password == $password2) {
 			$result = call("SELECT * FROM `users` WHERE `nic_name`='$login'");
