@@ -201,3 +201,12 @@ footer {
 	min-width: 955px;
 	background: #FFF7A8;
 }
+.user-info div {
+	padding: 4px 50px;
+	background: #FFF;
+	border: 3px solid rgb(197, 89, 24);
+	width: 1%;
+	margin-bottom: 3px;
+	border-radius: 3px;
+	color: #F27B7B;
+}
