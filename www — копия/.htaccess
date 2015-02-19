@@ -1,0 +1,16 @@
+php_flag display_errors off 
+php_flag display_startup_errors off
+
+AddDefaultCharset UTF-8 
+Options -Indexes 
+RewriteEngine on 
+RewriteCond	%{REQUEST_URI}	!app/*
+RewriteCond	%{REQUEST_URI}	!tpl/*
+RewriteCond	%{REQUEST_URI}	!img/*
+RewriteCond	%{REQUEST_URI}	!style.css
+RewriteCond	%{REQUEST_URI}	!robots.txt
+RewriteCond	%{REQUEST_URI}	!humans.txt
+RewriteCond	%{REQUEST_URI}	!sitemap.xml
+RewriteCond	%{REQUEST_URI}	!favicon.*
+RewriteCond	%{REQUEST_URI}	!index.php
+RewriteRule	^(.*)$	index.php?q=$1 [QSA]

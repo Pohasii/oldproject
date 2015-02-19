@@ -1,0 +1,197 @@
+@font-face {
+	font-family: helvetica; 
+	src: url(/font.otf);
+}
+
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,acronym, address, big, cite, code, d++el, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;	padding: 0;	border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+html {color: #333;font-family: helvetica,serif;height: 100%;width: 100%;margin: 0;padding: 0;}
+body {line-height: 1;min-height: 100%;width: 100%;overflow-y: scroll; background: #f0f0f0; margin: 0;padding: 0;height: 100%;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;	border-spacing: 0;}
+strong,b {font-weight: bold;}
+object {width: 470px;}
+
+html.help {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
+	filter: invert(100%);
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-ms-filter: invert(100%); 
+	-o-filter: invert(100%);
+	filter: invert;
+	background:white;
+}
+html.help img {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'><feColorMatrix in='SourceGraphic' type='matrix' values='-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0'/></filter></svg>#invert");
+	filter: invert(100%);
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-ms-filter: invert(100%); 
+	-o-filter: invert(100%);
+	filter: invert;
+}
+html.help body {
+	filter: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'><filter%20id='grayscale'><feColorMatrix%20type='matrix'%20values='0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale");
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%); 
+	-o-filter: grayscale(100%);
+	filter: gray;
+	background:white;
+}
+html.help *:not(.logo):not(.eye) {
+	opacity:1 !important;
+	background-image: none !important;
+}
+/*header*/
+header {
+	border-bottom: 2px solid #737373;
+	background: #E8B250;
+	height: 15%;
+	width: 100%;
+}
+footer {
+	border-top: 2px solid green;
+	background: #E8B250;
+	height: 12%;
+	margin-top: 20.5%;
+	height: 137px;
+	margin-top: 20.5%;
+	width: 100%;
+}
+.signup, .menu {
+	display: inline-block;
+	margin-top: 10px;
+	
+}
+.signup a, .menu a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.63);
+	margin-right: 5px;
+	font-size: 1.25em;
+	transition: .3s;
+}
+.signup a:hover,
+.menu a:hover {
+	color: rgba(255, 255, 255, 1);
+	}
+.signup {
+	margin-left: 30px;
+}
+.searchform {
+	border: 1px dashed black;
+	background: #d3d3d3;
+	display: none;
+	position: fixed;
+	top: 41%;
+	right: 47%;
+	padding: 15px;
+}
+.searchform input , select {
+	display: block;
+	clear: none;
+	margin-bottom: 8px;
+	padding: 3px;
+}
+.searchform select {
+	width: 179px;
+}
+.searchform:target{
+	display: block;
+} 
+.authform {
+	border: 1px dashed black;
+	display: none;
+	position: fixed;
+	top: 41%;
+	right: 47%;
+	padding: 15px;
+	border-radius: 3px;
+	background: rgba(232, 178, 80, 0.65);
+}
+.authform input {
+	display: block;
+	clear: none;
+	margin-bottom: 8px;
+	padding: 3px;
+}
+.authform select {
+	width: 179px;
+}
+.authform:target{
+	display: block;
+}
+.signform {
+	border: 1px dashed black;
+	background: #d3d3d3;
+	display: none;
+	position: fixed;
+	top: 41%;
+	right: 47%;
+	padding: 15px;
+}
+.signform input {
+	display: block;
+	clear: none;
+	margin-bottom: 8px;
+	padding: 3px;
+}
+.signform select {
+	width: 179px;
+}
+.signform:target{
+	display: block;
+}
+/*  лейяут конец */
+.line {
+	width: 0.5%;
+	height: 80%;
+	background: blue;	
+}
+.tab {
+	width: 78%; 
+	padding: 5px;
+	min-width: 725px;
+}
+.tabss {
+	width: 100%;
+	height:30px;
+	border-bottom: 1px solid green;
+	display: inline-block;  
+	vertical-align: top; 
+}
+.tabs {
+	width: 19.5%;
+	height:30px;
+	padding: 5px 0px;
+	display: inline-block;  
+	vertical-align: top; 
+}
+.tab a:hover {
+	background: blue;
+	transition: 1s;
+}
+.tab a {
+	color: #000;
+	text-decoration: none;
+}
+.rightbar {
+	width: 19%;
+	min-width: 181px;
+	border: 1px solid green;
+}
+.line ,
+.tab ,
+.rightbar {
+	display: inline-block;  
+	vertical-align: top; 
+}
+.content {
+	min-width: 955px;
+	background: #FFF7A8;
+}
