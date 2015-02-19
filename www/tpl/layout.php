@@ -8,6 +8,15 @@
 
 <body>
 	<header class="main">
+		<div class="side">
+				<div class="language">
+					<?php foreach ($lang as $value): ?>
+						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+					<?php endforeach; ?>
+				</div>
+				<a class="enter" href="#searchform">Поиск</a>
+				</div>
+			</div>
 		<div class="menu1">
 			<div class="menu">
 				<a href="/"><?=t('main');?></a>
@@ -44,13 +53,6 @@
 					<input name="sub" type="submit" value="Регистрация">
 				</form>
 			</div>
-			<div class="language">
-				<?php foreach ($lang as $value): ?>
-					<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
-				<?php endforeach; ?>
-			</div>
-			<a class="enter" href="#searchform">Поиск</a>
-		</div>
 	</header>
 	
 	<?php 
