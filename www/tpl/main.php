@@ -66,7 +66,9 @@
 				
 				</form>
 </div>
+
 <div class="content">
+<a class="searchbut" href="#searchform">Поиск</a>
 	<div class="tab">
 
 		<div class="tabs" align="center">логин</div>

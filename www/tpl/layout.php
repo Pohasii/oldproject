@@ -3,21 +3,57 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/style.css">
     <meta charset="UTF-8" />
+	
+	<script type="text/javascript" src="http://scriptjava.net/source/scriptjava/scriptjava.js"></script>
+    <script type="text/javascript">
+      var bg_ini = function () {
+        if($$c.get('bg_style')!=undefined) {
+          if($$c.get('bg_style').indexOf('#')===0) {
+            $$($$().body,'background',$$c.get('bg_style'));
+          }
+          else {
+          	$$($$().body,'backgroundImage','url('+$$c.get('bg_style')+')');
+          }
+        }
+        else {
+          //фон по умолчанию
+          $$($$().body,'background','#555555');
+        }
+      }
+      //ф-ция по умолчанию назначения 
+      var bg_set = function (value) {
+        $$c.set('bg_style', value, 60*60*24*30);
+        bg_ini();
+      }
+      //ф-ция по умолчанию
+      var bg_rem = function () {
+        $$c.erase('bg_style');
+        bg_ini();
+      }
+
+      
+      $$r(function () {
+        bg_ini();
+      });
+	  
+	  //тамймер переключения
+  var i = 1;
+  var timer = setInterval(function() {
+	  if (i==1){bg_set('/img/1.jpg');} 
+	  if (i==2){bg_set('/img/2.jpg');} 
+	  if (i==3){bg_set('/img/3.jpg');} 
+	  i++; 
+	  if (i==4) { i=1;} },
+	  15000);
+	  
+//http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
+    </script>
+	
     <title><?= $title ?></title>
 </head>
 
-<body>
+<body id='ipboard_body'>
 	<header class="main">
-		<div class="side">
-				<div class="language">
-					<?php foreach ($lang as $value): ?>
-						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
-					<?php endforeach; ?>
-				</div>
-				<a class="enter" href="#searchform">Поиск</a>
-				</div>
-			</div>
-		<div class="menu1">
 			<div class="menu">
 				<a href="/"><?=t('main');?></a>
 				<a href="/news">Новости</a>
@@ -53,8 +89,14 @@
 					<input name="sub" type="submit" value="Регистрация">
 				</form>
 			</div>
+			
+			<div class="language">
+						<?php foreach ($lang as $value): ?>
+							<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+						<?php endforeach; ?>
+			</div>
 	</header>
-	
+
 	<?php 
 echo $admin;
 echo $content;
