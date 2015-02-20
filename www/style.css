@@ -15,23 +15,24 @@ strong,b {font-weight: bold;}
 object {width: 470px;}
 
 body {
-background: #000 no-repeat center;
-transition: 1.8s;
+	background: #000 no-repeat center;
+	background-size: cover;
+	transition: 1.8s;
 }
 /*header*/
 header {
 	border-bottom: 4px solid #737373;
-	background: #fff;
+	background:rgba(255, 255, 255, 0.39);
 	width: 100%;
 	height:50px;
-	opacity: 0.3;
 	min-width: 955px;
+	transition: .3s;
 }
 
 header:hover{
 	background: #000;
 	opacity: 0.9;
-	transition: 0.8s;
+	transition: .6s;
 	color: #fff;
 }
 footer {
@@ -41,33 +42,26 @@ footer {
 	margin-top: 20.5%;
 	width: 100%;
 	min-width: 955px;
-	/*opacity: 0.7;*/
 }
 .bodyfonblock {
-/*display: inline-block;*/
-width: 20%;
-margin: 0 auto;
-min-width: 80px;
-height: 20px;
-margin-left: 50%;
+	width: 20%;
+	margin: 0 auto;
+	min-width: 80px;
+	height: 20px;
+	margin-left: 50%;
 }
 .bodyfon {
-display: inline-block;
-border-radius: 50%;
-width: 20px;
-height: 20px;
-background: -webkit-radial-gradient(50% 50%, circle contain, #fff, #000);
+	display: inline-block;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	background: -webkit-radial-gradient(50% 50%, circle contain, #fff, #000);
 }
 
 .bodyfon:hover {
-background: -webkit-radial-gradient(50% 50%, circle contain, #000, #fff);
-transition: 0.8s;
+	background: -webkit-radial-gradient(50% 50%, circle contain, #000, #fff);
+	transition: .8s;
 }
-
-/*.menu1 {
-	margin-left: 25%;
-	padding-top: 37px;
-}*/
 .menu {
 	/*position: fixed;*/
 	display: inline-block;
@@ -75,34 +69,29 @@ transition: 0.8s;
 	margin-bottom: 11px;
 	margin-left: 15%;
 }
-.signup {/*position: fixed; *//*display: inline-block;*/ margin-top: 10px; float: right;}
+.signup {/*position: fixed; *//*display: inline-block;*/ margin-top: 10px; float: right;color: #000;}
 
 .language {
-margin-top: -10px;
-position: absolute;
-background: #fff;
-color: #fff;
+	margin-top: -10px;
+	position: absolute;
 }
-.language a {
+/* .language a {
 	text-decoration: none;
-	opacity: none;
-	color: /*rgba(255, 255, 255, 0.63)*/ #fff;
+	color: #000;
 	margin-right: 5px;
 	font-size: 1em;
 	transition: .3s;
-	/*border: 1px solid #fff;*/
 	padding: 5px;
 	border-radius: 1px;
 	border: none;
-}
+} */
 
 .signup a, .menu a , .language a, .enter{
 	text-decoration: none;
-	color: /*rgba(255, 255, 255, 0.63)*/ #000;
+	color: #FFD83C;
 	margin-right: 5px;
 	font-size: 1em;
 	transition: .3s;
-	border: 1px solid #fff;
 	padding: 5px;
 	border-radius: 1px;
 }
@@ -112,6 +101,9 @@ color: #fff;
 	color: #000;
 	background: #fff;
 }
+header:hover > .menu a{color: #fff;}
+header:hover > .language a{color: #fff;}
+header:hover > .signup a {color: #fff;}
 
 .searchbut{
 	background: #000;
@@ -137,12 +129,12 @@ color: #fff;
 }
 
 .clearf {
-width: 100%;
-margin: 0 auto;
-background-color: ;
-float: none;
-clear: both;
-height: 0;
+	width: 100%;
+	margin: 0 auto;
+	background-color: ;
+	float: none;
+	clear: both;
+	height: 0;
 }
 
 .searchbut:hover{
@@ -157,14 +149,12 @@ height: 0;
 }*/
 
 .searchformblock {
-position: relative;
-top:-150px;
-background: #000;
-opacity: 0.8;
-border-radius: 200px 200px 0px 0px;
-margin: 0 auto;
-min-width: 900px;
-height: 150px
+	position: relative;
+	background: #000;
+	margin: 0 auto;
+	min-width: 900px;
+	height: 150px;
+	padding: 15px 20%;
 }
 .searchform {
 	/*background: #d3d3d3;
@@ -173,7 +163,7 @@ height: 150px
 	padding: 15px;
 }
 .searchform input , select {
-	display: inline-block;
+	display: block;
 	clear: none;
 	margin-bottom: 8px;
 	padding: 3px;
@@ -276,10 +266,11 @@ height: 150px
     margin: 0 auto;
 	margin-top: 300px;
 	min-width: 955px;
-	background: #FFF;
+	/*background: #FFF;*/
 	max-width: 90%;
 	position:relative;
 }
+.second {margin-top: 0; background: #FFF; max-width: 100%;}
 .user-info div {
 	padding: 4px 50px;
 	background: #FFF;
@@ -289,4 +280,9 @@ height: 150px
 	border-radius: 3px;
 	color: #F27B7B;
 }
-
+.form-field {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+.little input {display: inline-block;}
