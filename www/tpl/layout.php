@@ -100,7 +100,22 @@ window.onload = function() {
 				<a href="#signform">Регистрация</a>
 			</div>
 			'; } ?>
-			<div class="authform" id="authform" >
+			<div class="language">
+						<?php foreach ($lang as $value): ?>
+							<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+						<?php endforeach; ?>
+			</div>
+	</header>
+
+<div class=bodyfonblock>
+<div class=bodyfon onclick="bg_set('/img/1.jpg');"></div>
+<div class=bodyfon onclick="bg_set('/img/2.jpg');"></div>
+<div class=bodyfon onclick="bg_set('/img/3.jpg');"></div>
+</div>
+
+<!-- form -->
+
+<div class="authform" id="authform" >
 				<form method="post" action="/layout">
 				<a href="#" title="Закрыть" class="close">X</a>
 				<div class="tittle-forma"> Форма авторизации </div>
@@ -119,100 +134,194 @@ window.onload = function() {
 					<input name="sub" type="submit" value="Регистрация">
 				</form>
 			</div>
-			
-			<div class="language">
-						<?php foreach ($lang as $value): ?>
-							<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
-						<?php endforeach; ?>
-			</div>
-	</header>
-
-<div class=bodyfonblock>
-<div class=bodyfon onclick="bg_set('/img/1.jpg');"></div>
-<div class=bodyfon onclick="bg_set('/img/2.jpg');"></div>
-<div class=bodyfon onclick="bg_set('/img/3.jpg');"></div>
-</div>
 
 <!-- content -->
 
 <div class="content">
 	<!--a class="searchbut" href="#searchform">Поиск</a-->
-	<a class="searchbut" onclick="_click(1); return false;" href="#">Search</a>
+	<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
 	<div class=searchformblock style=" display:none" id="item1">
 
 	<div class="searchform" id="searchform" >
 					<form method="post" action="/main">
 						<!--a href="#" title="Закрыть" class="close">X</a-->
 						<div class="form-field">
+						
 							<input name="login" type="text" placeholder="логин">
+							
 							<select size="3" multiple name="lane[]">
-								<option disabled>Линия</option>
-								<option value="Чебурашка">Чебурашка</option>
-								<option selected value="Крокодил Гена">Крокодил Гена</option>
-								<option value="Шапокляк">Шапокляк</option>
-								<option value="Крыса Лариса">Крыса Лариса</option>
+								<option selected disabled>Линия</option>
+								<option value="top">TOP</option>
+								<option value="jungl">jungl</option>
+								<option value="mid">MID</option>
+								<option value="bot">BOT</option>
 							</select>
+							
 						</div>
+						
 						<div  class="form-field">
+						
 							<div class="little">
 								<input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
 							</div>
+							
 						<input name="country" type="text" placeholder="страна">
+						
 						<input name="laung" type="text" placeholder="язык">
+						
 						</div>
+						
 						<div class="form-field">
-							<select name="elo[]">
-								<option disabled>Ранг</option>
-								<option value="Чебурашка">даймонд</option>
-								<option selected value="Крокодил Гена">платина</option>
-								<option value="Шапокляк">серебро</option>
-								<option value="Крыса Лариса">брынза</option>
+						
+							<select name="elo">
+								<option selected disabled>Ранг</option>
+								<option value="Unranket">Unranket</option>
+								<option value="bronze5">Бронза 5</option>
+								<option value="bronze4">Бронза 4</option>
+								<option value="bronze3">Бронза 3</option>
+								<option value="bronze2">Бронза 2</option>
+								<option value="bronze1">Бронза 1</option>
+								<option value="silver5">серебро 5</option>
+								<option value="silver4">серебро 4</option>
+								<option value="silver3">серебро 3</option>
+								<option value="silver2">серебро 2</option>
+								<option value="silver1">серебро 1</option>
+								<option value="gold5">голд 5</option>
+								<option value="gold4">голд 4</option>
+								<option value="gold3">голд 3</option>
+								<option value="gold2">голд 2</option>
+								<option value="gold1">голд 1</option>
+								<option value="platina5">платина 5</option>
+								<option value="platina4">платина 4</option>
+								<option value="platina3">платина 3</option>
+								<option value="platina2">платина 2</option>
+								<option value="platina1">платина 1</option>
+								<option value="Diamond5">Даймонд 5</option>
+								<option value="Diamond4">Даймонд 4</option>
+								<option value="Diamond3">Даймонд 3</option>
+								<option value="Diamond2">Даймонд 2</option>
+								<option value="Diamond1">Даймонд 1</option>
+								<option value="master5">Мастер</option>
+								<option value="chelik4">Челик</option>
 							</select>
+							
 							<select size="3" multiple name="cel[]">
-								<option disabled>цель</option>
-								<option value="Чебурашка">Чебурашка</option>
-								<option selected value="Крокодил Гена">Крокодил Гена</option>
-								<option value="Шапокляк">Шапокляк</option>
-								<option value="Крыса Лариса">Крыса Лариса</option>
+								<option selected disabled>цель</option>
+								<option value="dou">duo</option>
+								<option value="proteam">pro team</option>
+								<option value="produo">pro duo</option>
+								<option value="learning">учеба</option>
 							</select>
+							
+							<!--input name type="checkbox" value="">
+							<input type="checkbox" value="">
+							<input type="checkbox" value="">
+							<input type="checkbox" value=""-->
+							
 						</div>
+						
 						<div class="form-field">
+						
 							<select size="3" multiple name="role[]">
-								<option disabled>Роль</option>
-								<option value="Чебурашка">Чебурашка</option>
-								<option selected value="Крокодил Гена">Крокодил Гена</option>
-								<option value="Шапокляк">Шапокляк</option>
-								<option value="Крыса Лариса">Крыса Лариса</option>
+								<option selected disabled>Роль</option>
+								<option value="toptank">top-tank</option>
+								<option value="jungl">jungl</option>
+								<option value="mid">mid</option>
+								<option value="botsup">bot sup</option>
+								<option value="botadc">bot adc</option>
 							</select>
+
+							
 							<div class="little">
-								<input name="gametime1" type="number" min="0" max="15000"> до <input name="gametime2" type="number" min="0" max="15000">
+							
+							<select name="server">
+								<option selected disabled>server</option>
+								<option value="all">любой</option>
+								<option value="ru">RU</option>
+								<option value="eu">EU</option>
+								<option value="amer">AMER</option>
+							</select>
+							
+							<!--time game <input name="gametime1" type="number" min="0" max="15000"> до <input name="gametime2" type="number" min="0" max="15000">
+							-->	
 							</div>
+							
 						</div>
+						
 						<div class="form-field">
+						
 							<select name="time">
-								<option disabled>часовой пояс</option>
-								<option value="Чебурашка">1</option>
-								<option selected value="Крокодил Гена">2</option>
-								<option value="Шапокляк">3</option>
-								<option value="Крыса Лариса">4</option>
+								<option selected disabled>часовой пояс</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="-1">-1</option>
+								<option value="-2">-2</option>
+								<option value="-3">-3</option>
+								<option value="-4">-4</option>
+								<option value="-5">-5</option>
+								<option value="-6">-6</option>
+								<option value="-7">-7</option>
+								<option value="-8">-8</option>
+								<option value="-9">-9</option>
+								<option value="-10">-10</option>
+								<option value="-11">-11</option>
+								<option value="-12">-12</option>	
 							</select>
 							
+							<input type=time name=timegame1>
+							<input type=time name=timegame2>
+							
+							<!--
 							<select name="timegame1">
-								<option disabled>время игры</option>
-								<option value="Чебурашка">1</option>
-								<option selected value="Крокодил Гена">2</option>
-								<option value="Шапокляк">3</option>
-								<option value="Крыса Лариса">4</option>
+								<option selected disabled>время игры</option>
+								
+								<option value="1">c 1</option>
+								<option value="2">c 2</option>
+								<option value="3">c 3</option>
+								<option value="4">c 4</option>
+								<option value="5">c 5</option>
+								<option value="6">c 6</option>
+								<option value="7">c 7</option>
+								<option value="8">c 8</option>
+								<option value="9">c 9</option>
+								<option value="10">c 10</option>
+								<option value="11">c 11</option>
+								<option value="12">c 12</option>
+								
 							</select>
-							
+							-->
+							<!--
 							<select name="timegame2">
-								<option disabled>время игры 2</option>
-								<option value="Чебурашка">1</option>
-								<option selected value="Крокодил Гена">2</option>
-								<option value="Шапокляк">3</option>
-								<option value="Крыса Лариса">4</option>
+							
+								<option selected disabled>время игры</option>
+								
+								<option value="1">по 1</option>
+								<option value="2">по 2</option>
+								<option value="3">по 3</option>
+								<option value="4">по 4</option>
+								<option value="5">по 5</option>
+								<option value="6">по 6</option>
+								<option value="7">по 7</option>
+								<option value="8">по 8</option>
+								<option value="9">по 9</option>
+								<option value="10">по 10</option>
+								<option value="11">по 11</option>
+								<option value="12">по 12</option>
+								
 							</select>
+							-->
 						</div>
+						
 						<input name="sub" type="submit"  value="поиск">
 						
 					</form>
