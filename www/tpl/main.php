@@ -1,6 +1,13 @@
+
+<div class="content">
+
+<!--a class="searchbut" href="#searchform">Поиск</a-->
+<a class="searchbut" onclick="_click(1); return false;" href="#">Search</a>
+<div class=searchformblock style=" display:none" id="item1">
+
 <div class="searchform" id="searchform" >
 				<form method="post" action="/main">
-				<a href="#" title="Закрыть" class="close">X</a>
+				<!--a href="#" title="Закрыть" class="close">X</a-->
 				<input name="login" type="text" placeholder="логин">
 				<select size="3" multiple name="lane[]">
 					<option disabled>Линия</option>
@@ -67,8 +74,10 @@
 				</form>
 </div>
 
-<div class="content">
-<a class="searchbut" href="#searchform">Поиск</a>
+</div>
+<div class=clearf> </div>
+
+
 	<div class="tab">
 
 		<div class="tabs" align="center">логин</div>
@@ -92,3 +101,4 @@
 	<!--div class="line"></div-->
 	<div class="rightbar">medium</div>
 </div>
+ 

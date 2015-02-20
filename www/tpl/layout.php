@@ -49,10 +49,38 @@
 //http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
     </script>
 	
+	<script>
+	//список
+	var show;
+	function hidetxt(type){
+	param=document.getElementById(type);
+	if(param.style.display == "none") {
+	if(show) show.style.display = "none";
+	param.style.display = "block";
+	show = param;
+	}else param.style.display = "none"
+	}
+	</script>
+	
+	<script type="text/javascript">
+	//выпад спис поиск
+var _click = function () {
+        var b = 1;
+        return function (c) {
+            var a = document.getElementById("item" + b);
+            c == b && (a.style.display = "none" == a.style.display ? "" : "none");
+            c != b && (a.style.display = "none", a = document.getElementById("item" + c), a.style.display = "", b = c)
+        }
+    }();
+window.onload = function() {
+    _click(1)
+ }
+</script>
+	
     <title><?= $title ?></title>
 </head>
 
-<body id='ipboard_body'>
+<body>
 	<header class="main">
 			<div class="menu">
 				<a href="/"><?=t('main');?></a>
@@ -96,6 +124,12 @@
 						<?php endforeach; ?>
 			</div>
 	</header>
+
+<div class=bodyfonblock>
+<div class=bodyfon onclick="bg_set('/img/1.jpg');"></div>
+<div class=bodyfon onclick="bg_set('/img/2.jpg');"></div>
+<div class=bodyfon onclick="bg_set('/img/3.jpg');"></div>
+</div>
 
 	<?php 
 echo $admin;
