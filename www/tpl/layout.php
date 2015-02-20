@@ -75,6 +75,8 @@ var _click = function () {
 window.onload = function() {
     _click(1)
  }
+ 
+ //http://javascript.ru/forum/misc/25996-zakrytie-i-otkrytie-diva-po-kliku.html
 </script>
 	
     <title><?= $title ?></title>
