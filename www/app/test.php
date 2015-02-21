@@ -13,7 +13,7 @@ if (@$action[0]=='') {
 //	echo '<script>window.location.href = "/" </script>';
 } else {
 	if(@$action[0]) {
-	$result = callt("SELECT * FROM `users` WHERE `nic_name`='123123'");
+	$result = call("SELECT * FROM `users` WHERE `nic_name`='123123'");
 		$content = getTpl('test',$result/*,$result2*/);
 	}
 }

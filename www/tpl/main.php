@@ -5,11 +5,12 @@
 			<div class="tabs" align="center">страна</div>
 			<div class="tabs" align="center">роль</div>
 			
-			<div id="content">
 			<?php if ($result == FALSE) {
 				echo 'Ивините по вашему запросу ничего не найдено';
-				} else {
-			foreach($result as $value) { ?>
+				} else { ?>
+			<div id="content">
+			
+			<?php foreach($result as $value) { ?>
 			<div class="tabss">
 			<a href="/user/<?=$value['nic_name'];?>"><div class="tabs" align="center"><?=$value['nic_name']; ?></div>
 			<div class="tabs" align="center"><?=$value['lan'];?></div>
@@ -18,5 +19,6 @@
 			<div class="tabs" align="center"><?=$value['role'];?></div></a>
 
 			</div>
-				<?php }} ?> 
+				<?php }
+				} ?> 
 			</div>
