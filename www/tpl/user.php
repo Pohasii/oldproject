@@ -1,5 +1,9 @@
 				<div class="user-info">
 					<div class="user-lines">
+						<label>картинка</label>
+						<div><img src="/img/avatar.png"><?=$result['img'];?></img></div>
+					</div>
+					<div class="user-lines">
 						<label>ник</label>
 						<div><?=$result['nic_name']; ?></div>
 					</div>
@@ -30,10 +34,6 @@
 					<div class="user-lines">
 						<label>рейтинг</label>
 						<div><?=$result['rating'];?></div>
-					</div>
-					<div class="user-lines">
-						<label>картинка</label>
-						<div><?=$result['img'];?></div>
 					</div>
 					<div class="user-lines">
 						<label>часовой пояс</label>

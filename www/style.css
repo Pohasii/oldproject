@@ -306,7 +306,7 @@ display: inline-block;
 }
 
 .second {margin-top: 0; background: #FFF; max-width: 100%;}
-.user-info div {
+/* .user-info  {
 	padding: 4px 50px;
 	background: #FFF;
 	border: 3px solid rgb(197, 89, 24);
@@ -314,7 +314,7 @@ display: inline-block;
 	margin-bottom: 3px;
 	border-radius: 3px;
 	color: #F27B7B;
-}
+} */
 .form-field {
 	display: inline-block;
 	vertical-align: top;
@@ -361,3 +361,16 @@ input.searchbutton:active {
 	padding:0 0.5em
 }
 /* end pagin */
+
+/*user info*/
+.user-lines label {
+	display: inline-block;
+	color: rgba(0, 0, 0, 0.560784);
+	font-size: 1.2em;
+	position: relative;
+}
+.user-lines div {
+	display: inline-block;
+	position: absolute;
+	left: 26%;
+}
