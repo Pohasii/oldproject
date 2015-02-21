@@ -1,0 +1,1 @@
+<?php if($result==FALSE) echo $result."нихуя не нашло";?>
