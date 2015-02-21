@@ -323,7 +323,7 @@ window.onload = function() {
 							-->
 						</div>
 						
-						<input name="sub" type="submit"  value="поиск">
+						<input class="searchbutton" name="sub" type="submit"  value="поиск">
 						
 					</form>
 	</div>

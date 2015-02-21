@@ -314,3 +314,23 @@ display: inline-block;
 }
 .little input {display: inline-block;}
 .form-field .country-lang input {display: block;}
+.searchbutton{vertical-align: middle;}
+input.searchbutton {
+	padding: 0.5% 0.7%;
+	font-size: 1.1em;
+	background: #FF9B00;
+	color: #fff;
+	border-radius: 8%;
+	border: 0;
+	outline: none;
+}
+input.searchbutton:hover {
+	cursor: pointer;
+	outline: none;
+	box-shadow: 0 0 12px 1px #F49325;
+}
+input.searchbutton:active {
+	background: #F9BB5C;
+	color: #fff;
+	outline: none;
+}
