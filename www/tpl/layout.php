@@ -159,12 +159,16 @@ window.onload = function() {
  
  //http://javascript.ru/forum/misc/25996-zakrytie-i-otkrytie-diva-po-kliku.html
 </script>
-	
     <title><?= $title ?></title>
 </head>
 
 <body>
 	<header class="main">
+			<div class="language">
+				<?php foreach ($lang as $value): ?>
+						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+				<?php endforeach; ?>
+			</div>
 			<div class="menu">
 				<a href="/"><?=t('main');?></a>
 				<a href="/news">Новости</a>
@@ -181,11 +185,7 @@ window.onload = function() {
 				<a href="#signform">Регистрация</a>
 			</div>
 			'; } ?>
-			<div class="language">
-						<?php foreach ($lang as $value): ?>
-							<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
-						<?php endforeach; ?>
-			</div>
+		
 	</header>
 
 <div class=bodyfonblock>
