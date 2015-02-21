@@ -164,11 +164,10 @@ window.onload = function() {
 							<div class="little">
 								<input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
 							</div>
-							
-						<input name="country" type="text" placeholder="страна">
-						
-						<input name="laung" type="text" placeholder="язык">
-						
+							<div class="country-lang">
+								<input name="country" type="text" placeholder="страна">
+								<input name="laung" type="text" placeholder="язык">
+							</div>
 						</div>
 						
 						<div class="form-field">
