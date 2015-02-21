@@ -353,11 +353,11 @@ input.searchbutton:active {
 	vertical-align: bottom;
 }
 #pagingControls ul {
-	display:inline;
+	display: inline-block;
 	padding-left:0.5em;
 }
 #pagingControls li {
-	display:inline;
+	display:inline-block;
 	padding:0 0.5em
 }
 /* end pagin */
