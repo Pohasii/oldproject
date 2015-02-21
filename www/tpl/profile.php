@@ -5,9 +5,9 @@
 			<img src="/img/avatar.png">
 			<div class="personal-data">
 				<label>Имя</label>
-				<input name="" type="text">
+				<input name="" type="text" value="<?=$result['nic_name']; ?>">
 				<label>Фамилия</label>
-				<input name="" type="text">4
+				<input name="" type="text" value="<?=$result['fname'];?>">
 			</div>
 			<div class="location">
 				<label>Возраст</label>
