@@ -2,11 +2,11 @@
 	<h1>My page</h1>
 	<div class="mypersonal">
 		<form>
-			<img src="http://www.i2clipart.com/search/silhouette/24">
+			<img src="/img/avatar.png">
 			<div class="personal-data">
 				<label>Имя</label>
 				<input name="" type="text">
-				<label>Грибанов</label>
+				<label>Фамилия</label>
 				<input name="" type="text">
 			</div>
 			<div class="location">
@@ -29,7 +29,30 @@
 				<label>Текущий пароль</label>
 				<input name="" type="password"> 
 			</div>
-			
+			<div class="purpose">
+				<label>Цель</label>
+				<input name="" type="text">
+			</div>
+			<div class="role">
+				<label>Роль</label>
+				<input name="" type="text">
+			</div>
+			<div class="category">
+				<label>Дивизион</label>
+				<input name="" type="text">
+			</div>
+			<div class="line">
+				<label>Линия</label>
+				<input name="" type="text">
+			</div>
+			<div class="line">
+				<label>Часы</label>
+				<input name="" type="text">
+			</div>
+			<div class="desription">
+				<label>Описание</label>
+				<textarea name="">Dimon</textarea>
+			</div>
 		</form>
 	</div>
 </div>
