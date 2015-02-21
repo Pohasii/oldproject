@@ -312,3 +312,22 @@ display: inline-block;
 }
 .little input {display: inline-block;}
 .form-field .country-lang input {display: block;}
+ /* pagin */
+#content {
+	/*text-indent:20px;*/
+	text-align:justify;
+}
+#pagingControls {
+	padding-top:15px;
+	font-weight:bold;
+	vertical-align: bottom;
+}
+#pagingControls ul {
+	display:inline;
+	padding-left:0.5em;
+}
+#pagingControls li {
+	display:inline;
+	padding:0 0.5em
+}
+/* end pagin */

@@ -4,7 +4,9 @@
 			<div class="tabs" align="center">возраст</div>
 			<div class="tabs" align="center">страна</div>
 			<div class="tabs" align="center">роль</div>
-
+			
+			<div id="content">
+			
 			<?php foreach($result['all'] as $value) { ?>
 			<div class="tabss">
 			<a href="/user/<?=$value['nic_name'];?>"><div class="tabs" align="center"><?=$value['nic_name']; ?></div>
@@ -15,6 +17,7 @@
 
 			</div>
 			<?php } ?> 
-
+			</div>
+			<div id="pagingControls"></div>
 	<div class="resetsearch"><a href="/"><img src="img/reset.png"></a></div>
  
