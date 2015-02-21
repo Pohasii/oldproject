@@ -377,7 +377,7 @@ input.searchbutton:active {
 .info-block {display: inline-block;}
 .user-info .user-lines .user-avatar {display: block;}
 .user-lines.email {
-	background: url(/img/icon.png);
+	background: url(/img/icon.png) no-repeat;
 	background-size: contain;
 	padding-left: 8%;
 	}
