@@ -33,97 +33,43 @@ if ($_POST) {
 	
 	
 	if (isset($login) AND $login != '') {
-		$q = "`nic_name` = '$login'";
+		$q1 = "`nic_name`='$login'";
 	}
 	
 	if (isset($firstage) AND $firstage != '') {
-		$b=$q;
-		$q = "`aga` > '$firstage'";
-		if ($b != '') {
-			$q = " AND `aga` > '$firstage'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q2 = "`aga`>'$firstage'";
 	}
 	
 	if (isset($secondage) AND $secondage != '') {
-		$b=$q;
-		$q = "`aga` < '$secondage'";
-		if ($b != '') {
-			$q = " AND `aga` < '$secondage'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q3 = "`aga`<'$secondage'";
 	}
 	
 	if (isset($country) AND $country != '') {
-		$b=$q;
-		$q = "`strana` = '$country'";
-		if ($b != '') {
-			$q = " AND `strana` = '$country'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q4 = "`strana`='$country'";
 	}
 	
 	if (isset($laung) AND $laung != '') {
-		$b=$q;
-		$q = "`lang` = '$laung'";
-		if ($b != '') {
-			$q = " AND `lang` = '$laung'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q5 = "`lang`='$laung'";
 	}
 	
 	if (isset($elo) AND $elo != '') {
-		$b=$q;
-		$q = "`elo` = '$elo'";
-		if ($b != '') {
-			$q = " AND `elo` = '$elo'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q6 = "`elo`='$elo'";
 	}
 	
 	if (isset($time) AND $time != '') {
-		$b=$q;
-		$q = "`time` = '$time'";
-		if ($b != '') {
-			$q = " AND `time` = '$time'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q7 = "`time`='$time'";
 	}
 	
 	if (isset($timegame1) AND $timegame1 != '') {
-		$b=$q;
-		$q = "`needtime` > '$timegame1'";
-		if ($b != '') {
-			$q = " AND `needtime` > '$timegame1'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q = "`needtime`>'$timegame1'";
 	}
 	
 	if (isset($timegame2) AND $timegame2 != '') {
-		$b=$q;
-		$q = "`needtimetwo` < '$timegame2'";
-		if ($b != '') {
-			$q = " AND `needtimetwo` < '$timegame2'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q = "`needtimetwo`<'$timegame2'";
 	}
 	
 	if (isset($serv) AND $serv != '') {
-		$b=$q;
-		$q = "`server` = '$serv'";
-		if ($b != '') {
-			$q = " AND `server` = '$serv'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q = "`server`='$serv'";
 	}
 	
 	if (isset($lane1) or isset($lane2) or isset($lane3) or isset($lane4)) {
