@@ -230,6 +230,7 @@ echo $content;
 <div id="pagingControls"></div>
 </div>
 			<div class="rightbar">	<div class="resetsearch"><a href="/"><img src="img/reset.png"></a></div> medium</div>
+			<div class="clearf"> </div>
 	</div>
 </div>
 
