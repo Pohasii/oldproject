@@ -1,15 +1,16 @@
 				<div class="user-info">
-					<div class="user-lines">
-						<label>картинка</label>
-						<?php if ($result['img']==NULL){$scr='avatar.png';} else $scr=$result; ?>
-						<div><img src="/img/<?=$scr;?>"></img></div>
+					<div>
+						<div class="user-avatar">
+							<?php if ($result['img']==NULL){$scr='avatar.png';} else $scr=$result; ?>
+							<div><img src="/img/<?=$scr;?>"></img></div>
+						</div>
 					</div>
 					<div class="info-block">
 						<div class="user-lines">
 							<label>ник</label>
 							<div><?=$result['nic_name']; ?></div>
 						</div>
-						<div class="user-lines">
+						<div class="user-lines email">
 							<label>почта</label>
 							<div><?=$result['email'];?></div>
 						</div>

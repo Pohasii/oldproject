@@ -374,4 +374,10 @@ input.searchbutton:active {
 	position: absolute;
 	left: 26%;
 }
-.info-block {display: inline-block:}
+.info-block {display: inline-block;}
+.user-info .user-lines .user-avatar {display: block;}
+.user-lines.email {
+	background: url(/img/icon.png);
+	background-size: contain;
+	padding-left: 8%;
+	}
