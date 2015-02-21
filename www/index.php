@@ -33,8 +33,7 @@ function call($query) { //SELECT * FROM `ad` WHERE `id`='$id'
 	$result=mysql_query($query) or $return = FALSE;
 	if(mysql_num_rows($result)==0) {
 		$return = FALSE;
-	}
-	else while($row = mysql_fetch_array($result)) $return[] = $row;
+	} else while($row = mysql_fetch_array($result)) $return[] = $row;
 	return $return;
 }
 function put($query) { //INSERT INTO `name` (`name`) values ('$name')
