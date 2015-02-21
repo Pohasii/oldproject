@@ -139,7 +139,9 @@ window.onload = function() {
 
 <div class="content">
 	<!--a class="searchbut" href="#searchform">Поиск</a-->
-	<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
+	<div class="searchbut-align">
+		<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
+	</div>
 	<div class=searchformblock style=" display:none" id="item1">
 
 	<div class="searchform" id="searchform" >
