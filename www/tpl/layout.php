@@ -4,6 +4,87 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
     <meta charset="UTF-8" />
 	
+	<!-- пагинация -->
+	<script async="" type="text/javascript" src="http://www.gstatic.com/pub-config/ca-pub-8635539539050660.js"></script>
+	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+ var Imtech = {};
+Imtech.Pager = function() {
+
+
+
+
+    this.paragraphsPerPage = 3;
+    this.currentPage = 1;
+    this.pagingControlsContainer = '#pagingControls';
+    this.pagingContainerPath = '#content';
+    // число страниц
+    this.numPages = function() {
+        var numPages = 0;
+        //          ('div.z')                               5
+        if (this.paragraphs != null && this.paragraphsPerPage != null) {
+        // метод ceil - возвращает наименьшее целое
+            numPages = Math.ceil(this.paragraphs.length / this.paragraphsPerPage);
+        }
+
+        return numPages;
+    };
+    
+    
+    
+    
+// page - текущая (открытая - номер) страница, то есть в ф-ю передаем номер текущий страницы, контент котор впоследствии выводим
+    this.showPage = function(page) {
+        this.currentPage = page;
+        var html = '';
+// slice - Данный метод не изменяет исходный массив, а просто возвращает его часть.
+// то есть выводит тот контент, котор соответствует текущей странице
+        this.paragraphs.slice((page-1) * this.paragraphsPerPage,
+            ((page-1)*this.paragraphsPerPage) + this.paragraphsPerPage).each(function() {
+            html += '<div>' + $(this).html() + '</div>';
+        });
+// вставляем контент
+        $(this.pagingContainerPath).html(html);
+//                          #pagingControls,  текущая страница(по умолч. 1), общее число страниц     
+        renderControls(this.pagingControlsContainer, this.currentPage, this.numPages());
+    }
+    
+    
+    
+    
+// блок с навигацией
+    var renderControls = function(container, currentPage, numPages) {
+// разметка с навигацией
+        var pagingControls = 'Страницы: <ul>';
+        for (var i = 1; i <= numPages; i++) {
+            if (i != currentPage) {
+                pagingControls += '<li><a href="#" onclick="pager.showPage(' + i + '); return false;">' + i + '</a></li>';
+            } else {
+                pagingControls += '<li>' + i + '</li>';
+            }
+        }
+
+        pagingControls += '</ul>';
+
+        $(container).html(pagingControls);
+    } 
+}   
+
+var pager = new Imtech.Pager();
+$(document).ready(function() {
+    // кол-во выводимых параграфов () или div )
+    // на одной странице
+    pager.paragraphsPerPage = 30; 
+    // основной контейнер
+    pager.pagingContainer = $('#content'); 
+    // обозначаем требуемый блок ('div.z')
+    pager.paragraphs = $('div.tabss', pager.pagingContainer); 
+    pager.showPage(1);
+});
+</script>
+	
+	<!-- конец пагин-->
 	<script type="text/javascript" src="http://scriptjava.net/source/scriptjava/scriptjava.js"></script>
     <script type="text/javascript">
       var bg_ini = function () {
@@ -115,25 +196,9 @@ window.onload = function() {
 
 <!-- form -->
 
-<div class="authform" id="authform" >
-				<form method="post" action="/layout">
-				<a href="#" title="Закрыть" class="close">X</a>
-				<div class="tittle-forma"> Форма авторизации </div>
-					<input name="login" type="text" autofocus="autofocus"  placeholder="логин" required>
-					<input name="pass" type="password" placeholder="пароль" required>
-					<input name="sub" type="submit"  value="вход">
-				</form>
-			</div>
-			<div class="signform" id="signform" >
-				<form method="post" action="/layout">
-					<a href="#" title="Закрыть" class="close">X</a>
-					<input name="login" type="text" autofocus="autofocus"  placeholder="логин" required onBlur="alert('asd')">
-					<input name="pass" type="password"  placeholder="пароль" required>
-					<input name="pass2" type="password"  placeholder="пароль" required>
-					<input name="email" type="text" autofocus="autofocus" placeholder="email" required>
-					<input name="sub" type="submit" value="Регистрация">
-				</form>
-			</div>
+		<?php formAuth(); ?>
+		<?php formSing(); ?>
+			
 
 <!-- content -->
 
@@ -143,196 +208,14 @@ window.onload = function() {
 		<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
 	</div>
 	<div class=searchformblock style=" display:none" id="item1">
+	<?php formSearch(); ?>
 
-	<div class="searchform" id="searchform" >
-					<form method="post" action="main">
-					<!--a href="#" title="Закрыть" class="close">X</a-->
-						<div class="form-field">
-						
-							<input name="login" type="text" placeholder="логин">
-							
-							<select size="3" multiple name="lane[]">
-								<option selected disabled>Линия</option>
-								<option value="top">TOP</option>
-								<option value="jungl">jungl</option>
-								<option value="mid">MID</option>
-								<option value="bot">BOT</option>
-							</select>
-							
-						</div>
-						
-						<div  class="form-field">
-						
-							<div class="little">
-								<input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
-							</div>
-							<div class="country-lang">
-								<input name="country" type="text" placeholder="страна">
-								<input name="laung" type="text" placeholder="язык">
-							</div>
-						</div>
-						
-						<div class="form-field">
-						
-							<select name="elo">
-								<option selected disabled>Ранг</option>
-								<option value="Unranket">Unranket</option>
-								<option value="bronze5">Бронза 5</option>
-								<option value="bronze4">Бронза 4</option>
-								<option value="bronze3">Бронза 3</option>
-								<option value="bronze2">Бронза 2</option>
-								<option value="bronze1">Бронза 1</option>
-								<option value="silver5">серебро 5</option>
-								<option value="silver4">серебро 4</option>
-								<option value="silver3">серебро 3</option>
-								<option value="silver2">серебро 2</option>
-								<option value="silver1">серебро 1</option>
-								<option value="gold5">голд 5</option>
-								<option value="gold4">голд 4</option>
-								<option value="gold3">голд 3</option>
-								<option value="gold2">голд 2</option>
-								<option value="gold1">голд 1</option>
-								<option value="platina5">платина 5</option>
-								<option value="platina4">платина 4</option>
-								<option value="platina3">платина 3</option>
-								<option value="platina2">платина 2</option>
-								<option value="platina1">платина 1</option>
-								<option value="Diamond5">Даймонд 5</option>
-								<option value="Diamond4">Даймонд 4</option>
-								<option value="Diamond3">Даймонд 3</option>
-								<option value="Diamond2">Даймонд 2</option>
-								<option value="Diamond1">Даймонд 1</option>
-								<option value="master5">Мастер</option>
-								<option value="chelik4">Челик</option>
-							</select>
-							
-							<select size="3" multiple name="cel[]">
-								<option selected disabled>цель</option>
-								<option value="dou">duo</option>
-								<option value="proteam">pro team</option>
-								<option value="produo">pro duo</option>
-								<option value="learning">учеба</option>
-							</select>
-							
-							<!--input name type="checkbox" value="">
-							<input type="checkbox" value="">
-							<input type="checkbox" value="">
-							<input type="checkbox" value=""-->
-							
-						</div>
-						
-						<div class="form-field">
-						
-							<select size="3" multiple name="role[]">
-								<option selected disabled>Роль</option>
-								<option value="top">top-tank</option>
-								<option value="jungl">jungl</option>
-								<option value="mid">mid</option>
-								<option value="sup">bot sup</option>
-								<option value="adc">bot adc</option>
-							</select>
-
-							
-							<div class="little">
-							
-							<select name="server">
-								<option selected disabled>server</option>
-								<option value="all">любой</option>
-								<option value="ru">RU</option>
-								<option value="eu">EU</option>
-								<option value="amer">AMER</option>
-							</select>
-							
-							<!--time game <input name="gametime1" type="number" min="0" max="15000"> до <input name="gametime2" type="number" min="0" max="15000">
-							-->	
-							</div>
-							
-						</div>
-						
-						<div class="form-field">
-						
-							<select name="time">
-								<option selected disabled>часовой пояс</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="-1">-1</option>
-								<option value="-2">-2</option>
-								<option value="-3">-3</option>
-								<option value="-4">-4</option>
-								<option value="-5">-5</option>
-								<option value="-6">-6</option>
-								<option value="-7">-7</option>
-								<option value="-8">-8</option>
-								<option value="-9">-9</option>
-								<option value="-10">-10</option>
-								<option value="-11">-11</option>
-								<option value="-12">-12</option>	
-							</select>
-							
-							<input type=time name=timegame1>
-							<input type=time name=timegame2>
-							
-							<!--
-							<select name="timegame1">
-								<option selected disabled>время игры</option>
-								
-								<option value="1">c 1</option>
-								<option value="2">c 2</option>
-								<option value="3">c 3</option>
-								<option value="4">c 4</option>
-								<option value="5">c 5</option>
-								<option value="6">c 6</option>
-								<option value="7">c 7</option>
-								<option value="8">c 8</option>
-								<option value="9">c 9</option>
-								<option value="10">c 10</option>
-								<option value="11">c 11</option>
-								<option value="12">c 12</option>
-								
-							</select>
-							-->
-							<!--
-							<select name="timegame2">
-							
-								<option selected disabled>время игры</option>
-								
-								<option value="1">по 1</option>
-								<option value="2">по 2</option>
-								<option value="3">по 3</option>
-								<option value="4">по 4</option>
-								<option value="5">по 5</option>
-								<option value="6">по 6</option>
-								<option value="7">по 7</option>
-								<option value="8">по 8</option>
-								<option value="9">по 9</option>
-								<option value="10">по 10</option>
-								<option value="11">по 11</option>
-								<option value="12">по 12</option>
-								
-							</select>
-							-->
-						</div>
-						
-						<input class="searchbutton" name="sub" type="submit"  value="поиск">
-						
-					</form>
-	</div>
 
 	</div>
 	<div class=clearf> </div>
 
 	<div class="content second">
-	
+	<div class="contecs">
 	<div class="tab">
 	<?php 
 echo $admin;
@@ -342,7 +225,9 @@ echo $content;
 //echo print_r(call("SELECT * FROM `links`"));
 ?>
 </div>
-			<div class="rightbar">medium</div>
+<div id="pagingControls"></div>
+</div>
+			<div class="rightbar">	<div class="resetsearch"><a href="/"><img src="img/reset.png"></a></div> medium</div>
 	</div>
 </div>
 

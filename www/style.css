@@ -249,7 +249,7 @@ display: inline-block;
 /*  лейяут конец */
 
 .tab {
-	width: 78%; 
+	width: 100%; 
 	padding: 5px;
 	min-width: 725px;
 }
@@ -294,9 +294,16 @@ display: inline-block;
 	margin-top: 265px;
 	min-width: 955px;
 	/*background: #FFF;*/
-	max-width: 90%;
+	max-width: 80%;
 	position:relative;
 }
+.contecs {
+	width: 78%;
+	min-height:100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
 .second {margin-top: 0; background: #FFF; max-width: 100%;}
 .user-info div {
 	padding: 4px 50px;
@@ -334,3 +341,22 @@ input.searchbutton:active {
 	color: #fff;
 	outline: none;
 }
+ /* pagin */
+#content {
+	/*text-indent:20px;*/
+	text-align:justify;
+}
+#pagingControls {
+	padding-top:15px;
+	font-weight:bold;
+	vertical-align: bottom;
+}
+#pagingControls ul {
+	display:inline;
+	padding-left:0.5em;
+}
+#pagingControls li {
+	display:inline;
+	padding:0 0.5em
+}
+/* end pagin */
