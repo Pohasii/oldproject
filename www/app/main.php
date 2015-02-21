@@ -2,12 +2,6 @@
 //main controller
 if ($_POST) {
 	
-	/*$tests=$_POST;
-	$tests = trim($tests);
-	$tests = stripslashes($tests);
-	$tests = htmlspecialchars($tests);
-	print_r($tests);*/
-	
 	$login=$_POST["login"];
 	$lane=$_POST["lane"];
 	$firstage=$_POST["firstage"];
@@ -291,7 +285,7 @@ if ($_POST) {
 		$q="$q)";	
 	}
 	
-	//print_r($q);
+	print_r($q);
 	
 	$result['all'] = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $q");
 	

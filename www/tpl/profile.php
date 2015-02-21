@@ -1,6 +1,4 @@
-	<div class="tab">
-
-	<div class="user-info">
+<div class="user-info">
 	<div><?=$result['nic_name']; ?></div>
 	<div><?=$result['email'];?></div>
 	<div><?=$result['aga'];?></div>
@@ -22,5 +20,3 @@
 	<div>пуст</div>
 	<div>пуст</div>
 			</div>
-
-	</div>

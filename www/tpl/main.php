@@ -1,4 +1,3 @@
-	<div class="tab">
 
 			<div class="tabs" align="center">логин</div>
 			<div class="tabs" align="center">линия</div>
@@ -17,6 +16,5 @@
 			</div>
 			<?php } ?> 
 
-	</div>
 	<div class="resetsearch"><a href="/"><img src="img/reset.png"></a></div>
  

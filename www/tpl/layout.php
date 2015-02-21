@@ -332,12 +332,15 @@ window.onload = function() {
 
 	<div class="content second">
 	
-	
+	<div class="tab">
 	<?php 
 echo $admin;
+
 echo $content;
+
 //echo print_r(call("SELECT * FROM `links`"));
 ?>
+</div>
 			<div class="rightbar">medium</div>
 	</div>
 </div>
