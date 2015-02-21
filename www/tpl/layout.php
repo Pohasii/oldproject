@@ -224,11 +224,11 @@ window.onload = function() {
 						
 							<select size="3" multiple name="role[]">
 								<option selected disabled>Роль</option>
-								<option value="toptank">top-tank</option>
+								<option value="top">top-tank</option>
 								<option value="jungl">jungl</option>
 								<option value="mid">mid</option>
-								<option value="botsup">bot sup</option>
-								<option value="botadc">bot adc</option>
+								<option value="sup">bot sup</option>
+								<option value="adc">bot adc</option>
 							</select>
 
 							
