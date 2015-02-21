@@ -98,9 +98,9 @@ if ($_POST) {
 	
 	if (isset($timegame1) AND $timegame1 != '') {
 		$b=$q;
-		$q = "`needtime` = '$timegame1'";
+		$q = "`needtime` > '$timegame1'";
 		if ($b != '') {
-			$q = " AND `needtime` = '$timegame1'";
+			$q = " AND `needtime` > '$timegame1'";
 			$c="$b $q";
 		} else $c="$q";
 		$q=$c;
@@ -108,9 +108,9 @@ if ($_POST) {
 	
 	if (isset($timegame2) AND $timegame2 != '') {
 		$b=$q;
-		$q = "`needtimetwo` = '$timegame2'";
+		$q = "`needtimetwo` < '$timegame2'";
 		if ($b != '') {
-			$q = " AND `needtimetwo` = '$timegame2'";
+			$q = " AND `needtimetwo` < '$timegame2'";
 			$c="$b $q";
 		} else $c="$q";
 		$q=$c;
