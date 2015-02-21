@@ -2,6 +2,7 @@
 session_start();
 //core file
 include('config.php');
+include('tpl/form.php');
 
 //langs
 if(!$_COOKIE["lang"] ) {
