@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+<div class="user-info">
+	<div><?=$result['nic_name']; ?></div>
+	<div><?=$result['email'];?></div>
+	<div><?=$result['aga'];?></div>
+	<div><?=$result['strana'];?></div>
+	<div><?=$result['role'];?></div>
+	<div><?=$result['title'];?></div>
+	<div><?=date_format(date_create($result['regdate']), 'd.m.y');?></div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+	<div>пуст</div>
+=======
 <div class="personal">
 	<h1>My page</h1>
 	<div class="mypersonal">
@@ -8,6 +31,7 @@
 				<input name="" type="text">
 				<label>Фамилия</label>
 				<input name="" type="text">
+>>>>>>> 6cb79b39a4983166f769894aa1af07662cbd5a24
 			</div>
 			<div class="location">
 				<label>Возраст</label>

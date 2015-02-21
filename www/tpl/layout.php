@@ -145,8 +145,8 @@ window.onload = function() {
 	<div class=searchformblock style=" display:none" id="item1">
 
 	<div class="searchform" id="searchform" >
-					<form method="post" action="/main">
-						<!--a href="#" title="Закрыть" class="close">X</a-->
+					<form method="post" action="main">
+					<!--a href="#" title="Закрыть" class="close">X</a-->
 						<div class="form-field">
 						
 							<input name="login" type="text" placeholder="логин">
