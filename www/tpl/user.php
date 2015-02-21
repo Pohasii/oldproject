@@ -1,7 +1,8 @@
 				<div class="user-info">
 					<div class="user-lines">
 						<label>картинка</label>
-						<div><img src="/img/avatar.png"><?=$result['img'];?></img></div>
+						<?php if ($result['img']==NULL){$scr='avatar.png';} else $scr=$result; ?>
+						<div><img src="/img/<?=$scr;?>"></img></div>
 					</div>
 					<div class="user-lines">
 						<label>ник</label>
