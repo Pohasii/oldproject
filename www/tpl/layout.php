@@ -139,7 +139,9 @@ window.onload = function() {
 
 <div class="content">
 	<!--a class="searchbut" href="#searchform">Поиск</a-->
-	<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
+	<div class="searchbut-align">
+		<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
+	</div>
 	<div class=searchformblock style=" display:none" id="item1">
 
 	<div class="searchform" id="searchform" >
@@ -164,11 +166,10 @@ window.onload = function() {
 							<div class="little">
 								<input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
 							</div>
-							
-						<input name="country" type="text" placeholder="страна">
-						
-						<input name="laung" type="text" placeholder="язык">
-						
+							<div class="country-lang">
+								<input name="country" type="text" placeholder="страна">
+								<input name="laung" type="text" placeholder="язык">
+							</div>
 						</div>
 						
 						<div class="form-field">
