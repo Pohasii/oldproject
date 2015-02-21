@@ -166,28 +166,9 @@ if ($_POST) {
 		$q=$c;
 		}
 		$q="$q)";	
-			/*if ($lane4!='') {
-			$b=$q;
-			$q = "`lan` = '$lane1' or '$lane2' or '$lane3' or '$lane4'";
-			if ($b != '') {
-				$q = " AND `lan` = '$lane1' or '$lane2' or '$lane3' or '$lane4'";
-				$c="$b $q";
-			} else $c="$q";
-			$q=$c;
-			}*/
 	}
 	
-	/*if (isset($role1) or isset($role2) or isset($role3) or isset($role4)) {
-		if($role1!='' or $role2!='' or $role3!='' or $role4!='') {
-			$b=$q;
-			$q = "`role` = '$role1' or '$role2' or '$role3' or '$role4'";
-			if ($b != '') {
-				$q = " AND `role` = '$role1' or '$role2' or '$role3' or '$role4'";
-				$c="$b $q";
-			} else $c="$q";
-			$q=$c;
-		}
-	}*/
+
 	
 	if (isset($role1) or isset($role2) or isset($role3) or isset($role4)) {
 		if ($role!='') {
@@ -231,18 +212,6 @@ if ($_POST) {
 		$q="$q)";	
 	}
 	
-	/*if (isset($cel1) or isset($cel2) or isset($cel3) or isset($cel4)) {
-		if($cel1!='' or $cel2!='' or $cel3!='' or $cel4!='') {
-			$b=$q;
-			$q = "`goal` = '$cel1' or '$cel2' or '$cel3' or '$cel4'";
-			if ($b != '') {
-				$q = " AND `goal` = '$cel1' or '$cel2' or '$cel3' or '$cel4'";
-				$c="$b $q";
-			} else $c="$q";
-			$q=$c;
-		}
-	}*/
-	
 	if (isset($cel1) or isset($cel2) or isset($cel3) or isset($cel4)) {
 		if ($cel!='') {
 		$b=$q;
@@ -285,15 +254,14 @@ if ($_POST) {
 		$q="$q)";	
 	}
 	
-//	print_r($q);
 	
-	$result = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $q");
-
+	$result = call("SELECT `id`, `nic_name`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $q");
+	print_r($result);
 	//$asd = "$login / $lane1 ! $lane2 ! $lane3 ! $lane4 / $firstage / $secondage / $country / $laung / $elo / $cel1 ! $cel2 ! $cel3 ! $cel4 / $role1 ! $role2 ! $role3 ! $role4 / $gametime1 / $gametime2 / $time / $timegame1 / $timegame2";
 	//print_r($asd);
 } else {
 	$result = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users`");
-	if(!$result) $result['all'] = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users`");
+//	if(!$result) $result['all'] = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users`");
 }
 
 $title = 'main';

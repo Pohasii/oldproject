@@ -30,9 +30,9 @@ function error() {
 }
 function call($query) { //SELECT * FROM `ad` WHERE `id`='$id'
 	$return;
-	$result=mysql_query($query) or $return = FALSE;
+	$result=mysql_query($query) or $return = NULL;
 	if(mysql_num_rows($result)==0) {
-		$return = FALSE;
+		$return = NULL;
 	} else while($row = mysql_fetch_array($result)) $return[] = $row;
 	return $return;
 }
