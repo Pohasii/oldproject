@@ -118,14 +118,14 @@ $(document).ready(function() {
       });
 	  
 	  //тамймер переключения
-  var i = 1;
+/*  var i = 1;
   var timer = setInterval(function() {
 	  if (i==1){bg_set('/img/1.jpg');} 
 	  if (i==2){bg_set('/img/2.jpg');} 
 	  if (i==3){bg_set('/img/3.jpg');} 
 	  i++; 
 	  if (i==4) { i=1;} },
-	  15000);
+	  15000);*/
 	  
 //http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
     </script>
