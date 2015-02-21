@@ -1,31 +1,32 @@
 <div class="personal">
 	<h1>My page</h1>
-	<div class="">
+	<div class="mypersonal">
 		<form>
+			<img src="http://www.i2clipart.com/search/silhouette/24">
 			<div class="personal-data">
-				<label>Имя</label>
+				<label>РРјСЏ</label>
 				<input name="" type="text">
-				<label>Грибанов</label>
+				<label>Р“СЂРёР±Р°РЅРѕРІ</label>
 				<input name="" type="text">
 			</div>
 			<div class="location">
-				<label>Возраст</label
+				<label>Р’РѕР·СЂР°СЃС‚</label>
 				<input name="" type="text">
-				<label>Страна</label
+				<label>РЎС‚СЂР°РЅР°</label>
 				<input name="" type="text">
-				<label>Язык</label
+				<label>РЇР·С‹Рє</label>
 				<input name="" type="text">
 			</div>
 			<div class="login">
-				<label>Логин</label
+				<label>Р›РѕРіРёРЅ</label>
 				<input name="" type="text">
 			</div>
 			<div class="passwords">
-				<label>Новый пароль</label
+				<label>РќРѕРІС‹Р№ РїР°СЂРѕР»СЊ</label>
 				<input name="" type="password">
-				<label>Повторите новый пароль</label
+				<label>РџРѕРІС‚РѕСЂРёС‚Рµ РЅРѕРІС‹Р№ РїР°СЂРѕР»СЊ</label>
 				<input name="" type="password">
-				<label>Текущий пароль</label
+				<label>РўРµРєСѓС‰РёР№ РїР°СЂРѕР»СЊ</label>
 				<input name="" type="password"> 
 			</div>
 			
