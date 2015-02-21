@@ -315,4 +315,4 @@ display: inline-block;
 	margin-right: 10px;
 }
 .little input {display: inline-block;}
-.form-field .country-lang {display: block;}
+.form-field .country-lang input {display: block;}
