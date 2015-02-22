@@ -3,47 +3,47 @@
 if ($_POST) {
 	
 	function ches($result){
-		foreach($result as $value) {
+	foreach($result as $value) {
 	$value = stripslashes($value);
 	$value = htmlspecialchars($value);
 	$value = trim($value);
-		}
-	return $value;
+	}
+	return $result;
 }
-	$test=$_POST['formserach'];
-	$test=ches($test);
+
+	$test=ches($_POST);
+	
+	//print_r($test);
 	
 	$login=$test["login"];
-	$lane=$test["lane"];
+
 	$firstage=$test["firstage"];
 	$secondage=$test["secondage"];
 	$country=$test["country"];
 	$laung=$test["laung"];
 	$elo=$test["elo"];
-	$goal=$test["goal"];
-	$role=$test["role"];
+
 	$serv=$test["server"];
 	$time=$test["time"];
 	$timegame1=$test["timegame1"];
 	$timegame2=$test["timegame2"];
 	
-	$lane1 = $lane[0];
-	$lane2 = $lane[1];
-	$lane3 = $lane[2];
-	$lane4 = $lane[3];
+	$laneone = $test["lane"][0];
+	$lanetwo = $test["lane"][1];
+	$lanefree = $test["lane"][2];
+	$lanefot = $test["lane"][3];
 	
-	$role1 = $role[0];
-	$role2 = $role[1];
-	$role3 = $role[2];
-	$role4 = $role[3];
+	$roleone = $test["role"][0];
+	$roletwo = $test["role"][1];
+	$rolefree = $test["role"][2];
+	$rolefot = $test["role"][3];
 	
 	//print_r($goal[0]);
 	
-	$cel1 = $goal;
-	$cel2 = $goal[1];
-	$cel3 = $goal[2];
-	$cel4 = $goal[3];
-	
+	$goalone = $test["goal"][0];
+	$goaltwo = $test["goal"][1];
+	$goalfree = $test["goal"][2];
+	$goalfot = $test["goal"][3];
 	
 	if (isset($login) AND $login != '') {
 		$q1 = " `nic_name`='$login'";
@@ -85,58 +85,59 @@ if ($_POST) {
 		$q10 = " `server`='$serv'";
 	}
 	
-	if (isset($lane1) or isset($lane2) or isset($lane3) or isset($lane4)) {
-		if ($lane1!='') {
-		$q11 = " `lan`in('$lane1'";
+
+	if (isset($laneone) or isset($lanetwo) or isset($lanefree) or isset($lanefot)) {
+		if ($laneone!='') {
+		$q11 = " `lan`in('$laneone'";
 		}
-		if ($lane2!='') {
-		$q12 = ",'$lane2'";
+		if ($lanetwo!='') {
+		$q12 = ",'$lanetwo'";
 		}
-		if ($lane3!='') {
-		$q13 = ",'$lane3'";
+		if ($lanefree!='') {
+		$q13 = ",'$lanefree'";
 		}
-		if ($lane4!='') {
-		$q14 = ",'$lane4'";
+		if ($lanefot!='') {
+		$q14 = ",'$lanefot'";
 		}
 		if($q11!='') $q15=")";	
 	}
 	
-	if (isset($role1) or isset($role2) or isset($role3) or isset($role4)) {
-		if ($role1!='') {
-		$q16 = " `role`in('$role1'";
+	if (isset($roleone) or isset($roletwo) or isset($rolefree) or isset($rolefot)) {
+		if ($roleone!='') {
+		$q16 = " `role`in('$roleone'";
 		}
 		
-		if ($role2!='') {
-		$q17 = ",'$role2'";
+		if ($roletwo!='') {
+		$q17 = ",'$roletwo'";
 		}
 		
-		if ($role3!='') {
-		$q18 = ",'$role3'";
+		if ($rolefree!='') {
+		$q18 = ",'$rolefree'";
 		}
 		
-		if ($role4!='') {
-		$q19 = ",'$role4'";
+		if ($rolefot!='') {
+		$q19 = ",'$rolefot'";
 		}
 		if($q16!='')$q20=")";	
 	}
 	
-	if (isset($cel1) or isset($cel2) or isset($cel3) or isset($cel4)) {
-		if ($cel1 !='') {
-		$q21 = " `goal`in('$cel1'";
+	if (isset($goalone) or isset($goaltwo) or isset($goalfree) or isset($goalfot)) {
+		if ($goalone !='') {
+		$q21 = " `goal`in('$goalone'";
 		}
 		
-		if ($cel2!='') {
-		$q22 = ",'$cel2'";
+		if ($goaltwo!='') {
+		$q22 = ",'$goaltwo'";
 		}
 		
-		if ($cel3!='') {
-		$q23 = ",'$cel3'";
+		if ($goalfree!='') {
+		$q23 = ",'$goalfree'";
 		}
 		
-		if ($cel4!='') {
-		$q24 = ",'$cel4'";
+		if ($goalfot!='') {
+		$q24 = ",'$goalfot'";
 		}
-		if($q21=!'')$q25=")";	
+		if($q21!='')$q25=")";	
 	}
 	
 	$q="$q1$q2$q3$q4$q5$q6$q7$q8$q9$q10$q11$q12$q13$q14$q15$q16$q17$q18$q19$q20$q21$q22$q23$q24$q25";
@@ -155,7 +156,7 @@ if ($_POST) {
 	print_r($resultss);
 	
 	
-	$result = call("SELECT `id`, `nic_name`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $resultss LIMIT 0,40");
+	$result = call("SELECT `nic_name`,`aga`,`strana`, `lan`, `role` FROM `users` WHERE $resultss LIMIT 0,40");
 //	print_r($result);
 	//$asd = "$login / $lane1 ! $lane2 ! $lane3 ! $lane4 / $firstage / $secondage / $country / $laung / $elo / $cel1 ! $cel2 ! $cel3 ! $cel4 / $role1 ! $role2 ! $role3 ! $role4 / $gametime1 / $gametime2 / $time / $timegame1 / $timegame2";
 	//print_r($asd);

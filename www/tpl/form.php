@@ -67,7 +67,7 @@ $f='<div class="searchform" id="searchform" >
 								<option selected disabled>цель</option>
 								<option value="duo">duo</option>
 								<option value="proteam">pro team</option>
-								<option value="produe">pro duo</option>
+								<option value="produo">pro duo</option>
 								<option value="learning">учеба</option>
 							</select>
 							
