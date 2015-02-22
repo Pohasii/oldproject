@@ -33,176 +33,117 @@ if ($_POST) {
 	
 	
 	if (isset($login) AND $login != '') {
-		$q1 = "`nic_name`='$login'";
+		$q1 = " `nic_name`='$login'";
 	}
 	
 	if (isset($firstage) AND $firstage != '') {
-		$q2 = "`aga`>'$firstage'";
+		$q2 = " `aga`>'$firstage'";
 	}
 	
 	if (isset($secondage) AND $secondage != '') {
-		$q3 = "`aga`<'$secondage'";
+		$q3 = " `aga`<'$secondage'";
 	}
 	
 	if (isset($country) AND $country != '') {
-		$q4 = "`strana`='$country'";
+		$q4 = " `strana`='$country'";
 	}
 	
 	if (isset($laung) AND $laung != '') {
-		$q5 = "`lang`='$laung'";
+		$q5 = " `lang`='$laung'";
 	}
 	
 	if (isset($elo) AND $elo != '') {
-		$q6 = "`elo`='$elo'";
+		$q6 = " `elo`='$elo'";
 	}
 	
 	if (isset($time) AND $time != '') {
-		$q7 = "`time`='$time'";
+		$q7 = " `time`='$time'";
 	}
 	
 	if (isset($timegame1) AND $timegame1 != '') {
-		$q = "`needtime`>'$timegame1'";
+		$q8 = " `needtime`>'$timegame1'";
 	}
 	
 	if (isset($timegame2) AND $timegame2 != '') {
-		$q = "`needtimetwo`<'$timegame2'";
+		$q9 = " `needtimetwo`<'$timegame2'";
 	}
 	
 	if (isset($serv) AND $serv != '') {
-		$q = "`server`='$serv'";
+		$q10 = " `server`='$serv'";
 	}
 	
 	if (isset($lane1) or isset($lane2) or isset($lane3) or isset($lane4)) {
 		if ($lane1!='') {
-		$b=$q;
-		if ($b != '') {
-			$q = "AND `lan` in ('$lane1'";
-			$c="$b $q";
-		} else { $q = "`lan` in ('$lane1'"; $c="$q";}
-		$q=$c;
+		$q11 = " `lan`in('$lane1'";
 		}
-		
 		if ($lane2!='') {
-		$b=$q;
-		$q = ", '$lane2'";
-		if ($b != '') {
-			$q = ", '$lane2'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q12 = ",'$lane2'";
 		}
-		
 		if ($lane3!='') {
-		$b=$q;
-		$q = ", '$lane3'";
-		if ($b != '') {
-			$q = ", '$lane3'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q13 = ",'$lane3'";
 		}
-		
 		if ($lane4!='') {
-		$b=$q;
-		$q = ", '$lane4'";
-		if ($b != '') {
-			$q = ", '$lane4'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q14 = ",'$lane4'";
 		}
-		$q="$q)";	
+		if($q11!='') $q15=")";	
 	}
 	
-
-	
 	if (isset($role1) or isset($role2) or isset($role3) or isset($role4)) {
-		if ($role!='') {
-		$b=$q;
-		if ($b != '') {
-			$q = "AND `role` in ('$role1'";
-			$c="$b $q";
-		} else { $q = "`role` in ('$role1'"; $c="$q";}
-		$q=$c;
+		if ($role1!='') {
+		$q16 = " `role`in('$role1'";
 		}
 		
 		if ($role2!='') {
-		$b=$q;
-		$q = ", '$role2'";
-		if ($b != '') {
-			$q = ", '$role2'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q17 = ",'$role2'";
 		}
 		
 		if ($role3!='') {
-		$b=$q;
-		$q = ", '$role3'";
-		if ($b != '') {
-			$q = ", '$role3'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q18 = ",'$role3'";
 		}
 		
 		if ($role4!='') {
-		$b=$q;
-		$q = ", '$role4'";
-		if ($b != '') {
-			$q = ", '$role4'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q19 = ",'$role4'";
 		}
-		$q="$q)";	
+		if($q16!='')$q20=")";	
 	}
 	
 	if (isset($cel1) or isset($cel2) or isset($cel3) or isset($cel4)) {
-		if ($cel!='') {
-		$b=$q;
-		if ($b != '') {
-			$q = "AND `goal` in ('$cel1'";
-			$c="$b $q";
-		} else { $q = "`goal` in ('$cel1'"; $c="$q";}
-		$q=$c;
+		if ($cel1!='') {
+		$q21 = " `goal`in('$cel1'";
 		}
 		
 		if ($cel2!='') {
-		$b=$q;
-		$q = ", '$cel2'";
-		if ($b != '') {
-			$q = ", '$cel2'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q22 = ",'$cel2'";
 		}
 		
 		if ($cel3!='') {
-		$b=$q;
-		$q = ", '$cel3'";
-		if ($b != '') {
-			$q = ", '$cel3'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q23 = ",'$cel3'";
 		}
 		
 		if ($cel4!='') {
-		$b=$q;
-		$q = ", '$cel4'";
-		if ($b != '') {
-			$q = ", '$cel4'";
-			$c="$b $q";
-		} else $c="$q";
-		$q=$c;
+		$q24 = ",'$cel4'";
 		}
-		$q="$q)";	
+		if($q21=!'')$q25=")";	
 	}
 	
+	$q="$q1$q2$q3$q4$q5$q6$q7$q8$q9$q10$q11$q12$q13$q14$q15$q16$q17$q18$q19$q20$q21$q22$q23$q24$q25";
 	
-	$result = call("SELECT `id`, `nic_name`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $q");
-	print_r($result);
+	function tourls($text) {
+    $cyr = array(' ');
+    $lat = array(' AND ');
+    return str_replace($cyr, $lat, $text);
+	}
+	
+	$resultss=tourls($q);
+	
+	$resultss=substr_replace($resultss, '', 0, 4);
+//	$q26="<script>var char=$resultss.charAt(0)+$resultss.charAt(1)+$resultss.charAt(2); if(char == 'AND') $resultss.substring(3); </script>";
+	
+	print_r($resultss);
+	
+	
+	$result = call("SELECT `id`, `nic_name`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $resultss");
+//	print_r($result);
 	//$asd = "$login / $lane1 ! $lane2 ! $lane3 ! $lane4 / $firstage / $secondage / $country / $laung / $elo / $cel1 ! $cel2 ! $cel3 ! $cel4 / $role1 ! $role2 ! $role3 ! $role4 / $gametime1 / $gametime2 / $time / $timegame1 / $timegame2";
 	//print_r($asd);
 } else {
