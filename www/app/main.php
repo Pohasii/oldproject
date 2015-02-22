@@ -2,21 +2,30 @@
 //main controller
 if ($_POST) {
 	
-	che($_POST);
+	function ches($result){
+		foreach($result as $value) {
+	$value = stripslashes($value);
+	$value = htmlspecialchars($value);
+	$value = trim($value);
+		}
+	return $value;
+}
+	$test=$_POST['formserach'];
+	$test=ches($test);
 	
-	$login=$_POST["login"];
-	$lane=$_POST["lane"];
-	$firstage=$_POST["firstage"];
-	$secondage=$_POST["secondage"];
-	$country=$_POST["country"];
-	$laung=$_POST["laung"];
-	$elo=$_POST["elo"];
-	$cel=$_POST["cel"];
-	$role=$_POST["role"];
-	$serv=$_POST["server"];
-	$time=$_POST["time"];
-	$timegame1=$_POST["timegame1"];
-	$timegame2=$_POST["timegame2"];
+	$login=$test["login"];
+	$lane=$test["lane"];
+	$firstage=$test["firstage"];
+	$secondage=$test["secondage"];
+	$country=$test["country"];
+	$laung=$test["laung"];
+	$elo=$test["elo"];
+	$goal=$test["goal"];
+	$role=$test["role"];
+	$serv=$test["server"];
+	$time=$test["time"];
+	$timegame1=$test["timegame1"];
+	$timegame2=$test["timegame2"];
 	
 	$lane1 = $lane[0];
 	$lane2 = $lane[1];
@@ -28,10 +37,12 @@ if ($_POST) {
 	$role3 = $role[2];
 	$role4 = $role[3];
 	
-	$cel1 = $cel[0];
-	$cel2 = $cel[1];
-	$cel3 = $cel[2];
-	$cel4 = $cel[3];
+	//print_r($goal[0]);
+	
+	$cel1 = $goal;
+	$cel2 = $goal[1];
+	$cel3 = $goal[2];
+	$cel4 = $goal[3];
 	
 	
 	if (isset($login) AND $login != '') {
@@ -110,7 +121,7 @@ if ($_POST) {
 	}
 	
 	if (isset($cel1) or isset($cel2) or isset($cel3) or isset($cel4)) {
-		if ($cel1!='') {
+		if ($cel1 !='') {
 		$q21 = " `goal`in('$cel1'";
 		}
 		
@@ -144,12 +155,12 @@ if ($_POST) {
 	print_r($resultss);
 	
 	
-	$result = call("SELECT `id`, `nic_name`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $resultss");
+	$result = call("SELECT `id`, `nic_name`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` WHERE $resultss LIMIT 0,40");
 //	print_r($result);
 	//$asd = "$login / $lane1 ! $lane2 ! $lane3 ! $lane4 / $firstage / $secondage / $country / $laung / $elo / $cel1 ! $cel2 ! $cel3 ! $cel4 / $role1 ! $role2 ! $role3 ! $role4 / $gametime1 / $gametime2 / $time / $timegame1 / $timegame2";
 	//print_r($asd);
 } else {
-	$result = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users`");
+	$result = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` LIMIT 0,40");
 //	if(!$result) $result['all'] = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users`");
 }
 

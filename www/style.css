@@ -71,6 +71,7 @@ footer {
 	margin-bottom: 11px;
 	margin-left: 15%;
 }
+
 .signup {
 	margin-top: 10px; 
 	float: right;
@@ -110,9 +111,14 @@ footer {
 .menu a:hover {
 	color: #fff;
 }
+
 header:hover > .menu a{color: #fff;}
 header:hover > .language a{color: #fff;}
 header:hover > .signup a {color: #fff;}
+
+.menu a:hover {
+box-shadow: 0 0 86px 23px #fff;
+}
 
 .searchbut{
 	background: rgba(0, 0, 0, 0.78);

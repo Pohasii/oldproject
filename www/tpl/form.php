@@ -3,7 +3,7 @@
 function formSearch() {
 
 $f='<div class="searchform" id="searchform" >
-					<form method="post" action="/main">
+					<form method="post" name="formserach" action="/main">
 						<div class="form-field">
 						
 							<input name="login" type="text" placeholder="логин">
@@ -63,11 +63,11 @@ $f='<div class="searchform" id="searchform" >
 								<option value="chelik4">Челик</option>
 							</select>
 							
-							<select size="3" multiple name="cel[]">
+							<select size="3" multiple name="goal[]">
 								<option selected disabled>цель</option>
-								<option value="dou">duo</option>
+								<option value="duo">duo</option>
 								<option value="proteam">pro team</option>
-								<option value="produo">pro duo</option>
+								<option value="produe">pro duo</option>
 								<option value="learning">учеба</option>
 							</select>
 							
