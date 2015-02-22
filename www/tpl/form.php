@@ -3,7 +3,7 @@
 function formSearch() {
 
 $f='<div class="searchform" id="searchform" >
-					<form method="post" action="main">
+					<form method="post" action="/main">
 						<div class="form-field">
 						
 							<input name="login" type="text" placeholder="логин">
@@ -91,7 +91,7 @@ $f='<div class="searchform" id="searchform" >
 								<option selected disabled>server</option>
 								<option value="all">любой</option>
 								<option value="ru">RU</option>
-								<option value="eu">EU</option>
+								<option value="EUW">EU</option>
 								<option value="amer">AMER</option>
 							</select>
 							

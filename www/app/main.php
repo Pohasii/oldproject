@@ -2,6 +2,8 @@
 //main controller
 if ($_POST) {
 	
+	che($_POST);
+	
 	$login=$_POST["login"];
 	$lane=$_POST["lane"];
 	$firstage=$_POST["firstage"];
@@ -136,7 +138,7 @@ if ($_POST) {
 	
 	$resultss=tourls($q);
 	
-	$resultss=substr_replace($resultss, '', 0, 4);
+	$resultss=substr_replace($resultss, '', 1, 4);
 //	$q26="<script>var char=$resultss.charAt(0)+$resultss.charAt(1)+$resultss.charAt(2); if(char == 'AND') $resultss.substring(3); </script>";
 	
 	print_r($resultss);
