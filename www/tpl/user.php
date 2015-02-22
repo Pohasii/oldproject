@@ -1,102 +1,102 @@
 				<div class="user-info">
-					<div>
-						<div class="user-avatar">
+					<div class="user-avatar">
+						<div class="">
 							<?php if ($result['img']==NULL){$scr='avatar.png';} else $scr=$result; ?>
 							<div><img src="/img/<?=$scr;?>"></img></div>
 						</div>
 					</div>
 					<div class="info-block">
 						<div class="user-lines">
-							<label>ник</label>
-							<div><?=$result['nic_name']; ?></div>
+							<label class="user-label">ник</label>
+							<div class="user-divider"><?=$result['nic_name']; ?></div>
+						</div>
+						<div class="user-lines">
+							<label class="user-label">имя</label>
+							<div class="user-divider"><?=$result['name'];?></div>
+						</div>
+						<div class="user-lines">
+							<label class="user-label">фамилия</label>
+							<div class="user-divider"><?=$result['fname'];?></div>
+						</div>
+						<div class="user-lines">
+							<label class="user-label">возраст</label>
+							<div class="user-divider"><?=$result['aga'];?></div>
 						</div>
 						<div class="user-lines email">
-							<label>почта</label>
-							<div><?=$result['email'];?></div>
+							<label class="user-label">почта</label>
+							<div class="user-divider"><?=$result['email'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>имя</label>
-							<div><?=$result['name'];?></div>
+							<label class="user-label">титле</label>
+							<div class="user-divider"><?=$result['title']; ?></div>
 						</div>
 						<div class="user-lines">
-							<label>фамилия</label>
-							<div><?=$result['fname'];?></div>
+							<label class="user-label">рейтинг</label>
+							<div class="user-divider"><?=$result['rating'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>скайп</label>
-							<div><?=$result['skype'];?></div>
+							<label class="user-label">часовой пояс</label>
+							<div class="user-divider"><?=$result['time'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>возраст</label>
-							<div><?=$result['aga'];?></div>
+							<label class="user-label">дата регистрации</label>
+							<div class="user-divider"><?=$result['regdate'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>титле</label>
-							<div><?=$result['title']; ?></div>
+							<label class="user-label">с какого времени играю</label>
+							<div class="user-divider"><?=$result['needtime'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>рейтинг</label>
-							<div><?=$result['rating'];?></div>
+							<label class="user-label">по какое время играю</label>
+							<div class="user-divider"><?=$result['needtimetwo']; ?></div>
 						</div>
 						<div class="user-lines">
-							<label>часовой пояс</label>
-							<div><?=$result['time'];?></div>
+							<label class="user-label">страна</label>
+							<div class="user-divider"><?=$result['strana'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>дата регистрации</label>
-							<div><?=$result['regdate'];?></div>
+							<label class="user-label">язык</label>
+							<div class="user-divider"><?=$result['lang'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>с какого времени играю</label>
-							<div><?=$result['needtime'];?></div>
+							<label class="user-label">ранг</label>
+							<div class="user-divider"><?=$result['elo'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>по какое время играю</label>
-							<div><?=$result['needtimetwo']; ?></div>
+							<label class="user-label">сервер</label>
+							<div class="user-divider"><?=$result['server'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>страна</label>
-							<div><?=$result['strana'];?></div>
+							<label class="user-label">роль</label>
+							<div class="user-divider"><?=$result['role'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>язык</label>
-							<div><?=$result['lang'];?></div>
+							<label class="user-label">линия</label>
+							<div class="user-divider"><?=$result['lan']; ?></div>
 						</div>
 						<div class="user-lines">
-							<label>ранг</label>
-							<div><?=$result['elo'];?></div>
+							<label class="user-label">кого ищу</label>
+							<div class="user-divider"><?=$result['goal'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>сервер</label>
-							<div><?=$result['server'];?></div>
+							<label class="user-label">я ищу</label>
+							<div class="user-divider"><?=$result['I_was_looking_for'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>роль</label>
-							<div><?=$result['role'];?></div>
+							<label class="user-label">команда</label>
+							<div class="user-divider"><?=$result['team'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>линия</label>
-							<div><?=$result['lan']; ?></div>
+							<label class="user-label">скайп</label>
+							<div class="user-divider"><?=$result['skype'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>кого ищу</label>
-							<div><?=$result['goal'];?></div>
+							<label class="user-label">фейсбук</label>
+							<div class="user-divider"><?=$result['fc'];?></div>
 						</div>
 						<div class="user-lines">
-							<label>я ищу</label>
-							<div><?=$result['I_was_looking_for'];?></div>
-						</div>
-						<div class="user-lines">
-							<label>команда</label>
-							<div><?=$result['team'];?></div>
-						</div>
-						<div class="user-lines">
-							<label>фейсбук</label>
-							<div><?=$result['fc'];?></div>
-						</div>
-						<div class="user-lines">
-							<label>вконтакте</label>
-							<div><?=$result['vk'];?></div>
+							<label class="user-label">вконтакте</label>
+							<div class="user-divider"><?=$result['vk'];?></div>
 						</div>
 				</div>
 			</div>

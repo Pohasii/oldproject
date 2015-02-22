@@ -81,8 +81,8 @@ footer {
 	border-radius: 3px 0 0 3px;
 }
 .language {
-	margin-top: -10px;
 	position: absolute;
+	margin-top: 10px;
 }
 /* .language a {
 	text-decoration: none;
@@ -374,7 +374,9 @@ input.searchbutton:active {
 .user-lines div {
 	display: inline-block;
 	position: absolute;
-	left: 26%;
+	left: 36%;
+	font-size: 1.2em;
+	color: #000;
 }
 .info-block {display: inline-block;}
 .user-info .user-lines .user-avatar {display: block;}
@@ -383,4 +385,9 @@ input.searchbutton:active {
 	}
 .user-avatar, .info-block {
 	display: inline-block;
+	vertical-align: top;
 }
+.user-lines label::first-letter {
+	text-transform: capitalize;
+}
+.user-label:hover + .user-divider{color: #FF9B00;}
