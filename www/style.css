@@ -412,4 +412,6 @@ input.searchbutton:active {
 }
 .topic-main {
 	position: relative;
+	margin-top: -13px;
+	margin-bottom: 9px;
 }
