@@ -29,6 +29,8 @@ header {
 	transition: .3s;
 	box-shadow: 0 0 86px 23px #000;
 	margin-top:30px;
+	position: absolute;
+	z-index:3;
 }
 
 header:hover{
@@ -475,4 +477,8 @@ input.searchbutton:active {
     -o-transition: all 1s;
     -ms-transition: all 1s;
     transition: all 1s;
+  }
+  
+ #logo:hover {
+    z-index:5;
   }
