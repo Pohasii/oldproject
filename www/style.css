@@ -473,17 +473,17 @@ input.searchbutton:active {
   }
     
   #logo {
+ /*  background: url(img/logo2.png) center no-repeat; */
     position: absolute;
     left: 0;
     top: 0;
-    /*width: 40px;
-    height: 40px;*/
 
-    -webkit-transition: all 1s;
+
+   -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -o-transition: all 1s;
     -ms-transition: all 1s;
-    transition: all 1s;
+    transition: all 1s; 
   }
   
  #logo:hover {
