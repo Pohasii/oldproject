@@ -27,7 +27,7 @@ header {
 	height: 60px;
 	min-width: 955px;
 	transition: .3s;
-	box-shadow: 0 0 86px 23px #000;
+	box-shadow: 18px 13px 86px 23px #000;
 	margin-top:30px;
 	position: absolute;
 	z-index:3;
@@ -201,17 +201,14 @@ display: inline-block;
 .resetsearch {
 	display: inline-block;
 	position: fixed;
-	width: 30px;
-	height: 30px;
+	width: 4%;
+	height: 3%;
 	color: #000;
-	margin-left: -30px;
-	background: /*url(img/reset.jpg)*/ center no-repeat;
+	background: red;
 }
 
 .resetsearch  a {
-	color: #000;
-	width: 30px;
-	height: 30px;
+	color: #fff;
 	text-decoration: none;
 	transition: 0.3s;
 }
@@ -301,9 +298,8 @@ display: inline-block;
 .rightbar {
 	width: 20%;
 	min-width: 181px;
-	border-left: 1px solid rgba(0, 0, 0, 0.14);
-	height: ;
-	box-shadow: 0px 6px 29px 10px;
+	border-left: 2px solid rgba(0, 0, 0, 0.14);
+	padding: 5px;
 }
 
 .tab ,
@@ -418,7 +414,7 @@ input.searchbutton:active {
 /*news-one*/
 .topic {
 	background: #FC8E8E;
-	padding: 3px 13px 0 2px;
+	padding: 3px 13px 1px 2px;
 	color: #fff;
 	border-radius: 1px 2px 2px 1px;
 	position: relative;

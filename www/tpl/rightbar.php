@@ -1,7 +1,6 @@
 <div class="rightbar">	
-<div class="resetsearch"><a href="/"><img src="img/reset.png"></a></div> 
-medium
-
+<div class="resetsearch"><a href="/">РЎР±СЂРѕСЃ</a></div> 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 <div id="field">
     <!--img src="img/ser.png" id="ball" class=ball-->
 </div>
@@ -15,37 +14,37 @@ medium
 
   field.onclick = function(event) {
     
-    // координаты поля относительно окна
+    // РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР»СЏ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РѕРєРЅР°
     var fieldCoords = this.getBoundingClientRect();
 
-    // координаты левого-верхнего внутреннего угла поля
+    // РєРѕРѕСЂРґРёРЅР°С‚С‹ Р»РµРІРѕРіРѕ-РІРµСЂС…РЅРµРіРѕ РІРЅСѓС‚СЂРµРЅРЅРµРіРѕ СѓРіР»Р° РїРѕР»СЏ
     var fieldInnerCoords = {
       top: fieldCoords.top + field.clientTop,
       left: fieldCoords.left + field.clientLeft
     };
 
-    // разместить по клику,
-    // но сдвинув относительно поля (т.к. position:relative) 
-    // и сдвинув на половину ширины/высоты
-    // (!) используются координаты относительно окна clientX/Y, как и в fieldCoords
+    // СЂР°Р·РјРµСЃС‚РёС‚СЊ РїРѕ РєР»РёРєСѓ,
+    // РЅРѕ СЃРґРІРёРЅСѓРІ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РїРѕР»СЏ (С‚.Рє. position:relative) 
+    // Рё СЃРґРІРёРЅСѓРІ РЅР° РїРѕР»РѕРІРёРЅСѓ С€РёСЂРёРЅС‹/РІС‹СЃРѕС‚С‹
+    // (!) РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РєРѕРѕСЂРґРёРЅР°С‚С‹ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РѕРєРЅР° clientX/Y, РєР°Рє Рё РІ fieldCoords
     var ballCoords = {  
       top: event.clientY - fieldInnerCoords.top - ball.clientHeight / 2,
       left: event.clientX - fieldInnerCoords.left - ball.clientWidth / 2
     };
 
-    // вылезает за верхнюю границу - разместить по ней
+    // РІС‹Р»РµР·Р°РµС‚ Р·Р° РІРµСЂС…РЅСЋСЋ РіСЂР°РЅРёС†Сѓ - СЂР°Р·РјРµСЃС‚РёС‚СЊ РїРѕ РЅРµР№
     if(ballCoords.top < 0) ballCoords.top = 0;
 
-    // вылезает за левую границу - разместить по ней
+    // РІС‹Р»РµР·Р°РµС‚ Р·Р° Р»РµРІСѓСЋ РіСЂР°РЅРёС†Сѓ - СЂР°Р·РјРµСЃС‚РёС‚СЊ РїРѕ РЅРµР№
     if(ballCoords.left < 0) ballCoords.left = 0;
 
 
-    // вылезает за правую границу - разместить по ней
+    // РІС‹Р»РµР·Р°РµС‚ Р·Р° РїСЂР°РІСѓСЋ РіСЂР°РЅРёС†Сѓ - СЂР°Р·РјРµСЃС‚РёС‚СЊ РїРѕ РЅРµР№
     if(ballCoords.left + ball.clientWidth > field.clientWidth) {
       ballCoords.left = field.clientWidth - ball.clientWidth;
     }
 
-    // вылезает за нижнюю границу - разместить по ней
+    // РІС‹Р»РµР·Р°РµС‚ Р·Р° РЅРёР¶РЅСЋСЋ РіСЂР°РЅРёС†Сѓ - СЂР°Р·РјРµСЃС‚РёС‚СЊ РїРѕ РЅРµР№
     if(ballCoords.top + ball.clientHeight > field.clientHeight) {
       ballCoords.top = field.clientHeight - ball.clientHeight;
     }
