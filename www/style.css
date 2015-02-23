@@ -182,12 +182,19 @@ background: #000;
 	/*position: fixed;*/
 	padding: 15px;
 	color: #fff;
+	box-shadow: 0 -10px 26px -8px rgba(0, 0, 0, 0.78);
+}
+.searchform input:focus,
+.searchform select:focus{
+	background: rgb(240, 211, 166);
 }
 .searchform input , select {
 	display: block;
 	clear: none;
 	margin-bottom: 8px;
 	padding: 3px;
+	border: 2px solid #FF9B00;
+	outline: 0;
 }
 .searchform select {
 	width: 179px;
@@ -267,25 +274,25 @@ display: inline-block;
 	z-index: 3;
 }
 /*  лейяут конец */
-
 .tab {
 	width: 100%; 
 	padding: 5px;
 	min-width: 725px;
+
 }
 .tabss {
 	width: 100%;
-	height:30px;
 	display: inline-block;  
 	vertical-align: top; 
 }
 .tabs {
-	width: 19.5%;
+	width: 19.4%;
 	display: inline-block;  
 	vertical-align: top; 
 	border-right: 1px solid black;
+	padding: 6px 0;
 }
-.tab a:hover > .tabs {border-right:1px solid #000;}
+.tab a:hover > .tabs {border-right:1px solid #000;} 
 .tab a:hover  > .tabs:last-child{border-right: 0;}
 .tab-headings .tabs:last-child,
 .tabs:last-child {border-right: 0;}
@@ -293,9 +300,12 @@ display: inline-block;
 .tab-headings {
 	margin-bottom: 20px;
 }
-.tab a:hover {
+.tab-line:hover > a {
+	color: #fff;	
+	font-size: 1.55em;
+}
+.tab-line:hover {
 	background: #000;
-	transition: 0.5s;
 	color: #fff;
 }
 .tab a {
