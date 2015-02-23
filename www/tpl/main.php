@@ -23,12 +23,15 @@
 			
 			<?php foreach($result as $value) { ?>
 			<div class="tabss">
-			<a href="/user/<?=$value['nic_name'];?>"><div class="tabs" align="center"><?=$value['nic_name']; ?></div>
-			<div class="tabs" align="center"><?=$value['lan'];?></div>
-			<div class="tabs" align="center"><?=$value['aga'];?></div>
-			<div class="tabs" align="center"><?=$value['strana'];?></div>
-			<div class="tabs" align="center"><?=$value['role'];?></div></a>
-
+				<div class="tab-line">
+					<a href="/user/<?=$value['nic_name'];?>">
+						<div class="tabs" align="center"><?=$value['nic_name']; ?></div>
+						<div class="tabs" align="center"><?=$value['lan'];?></div>
+						<div class="tabs" align="center"><?=$value['aga'];?></div>
+						<div class="tabs" align="center"><?=$value['strana'];?></div>
+						<div class="tabs" align="center"><?=$value['role'];?></div>
+					</a>
+				</div>
 			</div>
 				<?php }
 				} ?> 
