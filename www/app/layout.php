@@ -5,6 +5,11 @@ if($_POST['sub']=='вход'){
 		$ip=$_SERVER['REMOTE_ADDR'];
 		if(isset($_COOKIE["$ip"]) & $_COOKIE["$ip"]!=5){
 			
+			
+			
+		} else {
+			
+			
 		}
 		$login = $_POST['login'];
 		$password = $_POST['pass'];
