@@ -137,10 +137,10 @@ header:hover > .signup a {color: #fff;}
 	transition: .3s;
 	margin: 0 auto;
 	border-radius: 15px 15px 0 0;
-	padding: 10px 15px;
+	padding: 5px 15px;
 	position: absolute;
 	margin-left: 30%;
-	margin-top: -41px;
+	margin-top: -31px;
 	width: 40%;
 	/*z-index: 3;*/
 	box-shadow: 0 -10px 26px -8px rgba(255, 255, 255, 0.78);
