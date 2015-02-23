@@ -21,13 +21,12 @@ body {
 }
 /*header*/
 header {
-	border-bottom: 1px solid #000;
 	background: rgba(0, 0, 0, 0.48);
 	width: 100%;
 	height: 60px;
 	min-width: 955px;
 	transition: .3s;
-	box-shadow: 18px 13px 86px 23px #000;
+	box-shadow: 18px 13px 92px 4px #000;
 	margin-top:30px;
 	position: absolute;
 	z-index:3;
@@ -37,7 +36,7 @@ header:hover{
 	background: #000;
 	transition: .6s;
 	color: #fff;
-	box-shadow: 0 0 86px 23px #000;
+	box-shadow: 0 0 86px 23px rgba(0, 0, 0, 0.78);
 }
 footer {
 	border-top: 2px solid #737373;
@@ -143,7 +142,7 @@ header:hover > .signup a {color: #fff;}
 	margin-top: -31px;
 	width: 40%;
 	/*z-index: 3;*/
-	box-shadow: 0 -10px 26px -8px rgba(255, 255, 255, 0.78);
+	box-shadow: 0 -10px 26px -8px rgba(0, 0, 0, 0.78);
 }
 .clearf {
 	width: 100%;
@@ -204,13 +203,16 @@ display: inline-block;
 	width: 4%;
 	height: 3%;
 	color: #000;
-	background: red;
+	background: rgb(244, 57, 57);
+	padding: 5px 10px;
+	box-sizing: border-box;
 }
 
 .resetsearch  a {
 	color: #fff;
 	text-decoration: none;
 	transition: 0.3s;
+	font-size: 1.1em;
 }
 /*
 .searchform:target{
@@ -279,21 +281,26 @@ display: inline-block;
 }
 .tabs {
 	width: 19.5%;
-	height:30px;
-	padding: 5px 0px;
 	display: inline-block;  
 	vertical-align: top; 
+	border-right: 1px solid black;
+}
+.tab a:hover > .tabs {border-right:1px solid #000;}
+.tab a:hover  > .tabs:last-child{border-right: 0;}
+.tab-headings .tabs:last-child,
+.tabs:last-child {border-right: 0;}
+.tab-headings .tabs {border:0;}
+.tab-headings {
+	margin-bottom: 20px;
 }
 .tab a:hover {
-	background: #FFD83C;
-	transition: 0.3s;
+	background: #000;
+	transition: 0.5s;
 	color: #fff;
 }
 .tab a {
 	color: #000;
 	text-decoration: none;
-	padding-bottom: 15px;
-	transition: 0.3s;
 }
 .rightbar {
 	width: 20%;
