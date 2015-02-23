@@ -21,13 +21,12 @@ body {
 }
 /*header*/
 header {
-	border-bottom: 1px solid #000;
 	background: rgba(0, 0, 0, 0.48);
 	width: 100%;
 	height: 60px;
 	min-width: 955px;
 	transition: .3s;
-	box-shadow: 18px 13px 86px 23px #000;
+	box-shadow: 18px 13px 92px 4px #000;
 	margin-top:30px;
 	position: absolute;
 	z-index:3;
@@ -273,7 +272,6 @@ display: inline-block;
 	width: 100%; 
 	padding: 5px;
 	min-width: 725px;
-	transition: .3s;
 }
 .tabss {
 	width: 100%;
@@ -288,8 +286,13 @@ display: inline-block;
 	border-right: 1px solid black;
 }
 .tab a:hover > .tabs {border-right:1px solid #000;}
+.tab a:hover  > .tabs:last-child{border-right: 0;}
 .tab-headings .tabs:last-child,
-.tabs:last-child {border-right: 1px solid #000;}
+.tabs:last-child {border-right: 0;}
+.tab-headings .tabs {border:0;}
+.tab-headings {
+	margin-bottom: 20px;
+}
 .tab a:hover {
 	background: #000;
 	transition: 0.5s;
@@ -298,7 +301,6 @@ display: inline-block;
 .tab a {
 	color: #000;
 	text-decoration: none;
-	transition: 0.3s;
 }
 .rightbar {
 	width: 20%;
