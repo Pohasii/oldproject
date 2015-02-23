@@ -9,13 +9,13 @@
 			<div class="litlestats" align="center"> Джанглеров:<?=$result2[0]['jungl'];?></div>
 			
 			</div>
-
-			<div class="tabs" align="center" onBlur="alert('asd')">Логин</div>
-			<div class="tabs" align="center" onBlur="alert('asd')">линия</div>
-			<div class="tabs" align="center" onBlur="alert('asd')">Возраст</div>
-			<div class="tabs" align="center" onBlur="alert('asd')">страна</div>
-			<div class="tabs" align="center" onBlur="alert('asd')">роль</div>
-			
+			<div class="tab-headings">
+				<div class="tabs" align="center" onBlur="alert('asd')">Логин</div>
+				<div class="tabs" align="center" onBlur="alert('asd')">линия</div>
+				<div class="tabs" align="center" onBlur="alert('asd')">Возраст</div>
+				<div class="tabs" align="center" onBlur="alert('asd')">страна</div>
+				<div class="tabs" align="center" onBlur="alert('asd')">роль</div>
+			</div>
 			<?php if ($result == FALSE) {
 				echo 'Ивините по вашему запросу ничего не найдено';
 				} else { ?>
