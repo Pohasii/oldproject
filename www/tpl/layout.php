@@ -205,7 +205,7 @@ window.onload = function() {
 </div>
 <!-- logo -->
 <div id="logopole">
-   <img src="img/logo2.png" id="logo">
+   <div id="logo"><img src="img/logo.png" ></div>
 </div>
 
  <script>

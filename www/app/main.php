@@ -157,7 +157,7 @@ if ($_POST) {
 	
 	
 	$result = call("SELECT `nic_name`,`aga`,`strana`, `lan`, `role` FROM `users` WHERE $resultss LIMIT 0,40");
-//	print_r($result);
+	//print_r($result);
 	//$asd = "$login / $lane1 ! $lane2 ! $lane3 ! $lane4 / $firstage / $secondage / $country / $laung / $elo / $cel1 ! $cel2 ! $cel3 ! $cel4 / $role1 ! $role2 ! $role3 ! $role4 / $gametime1 / $gametime2 / $time / $timegame1 / $timegame2";
 	//print_r($asd);
 } else {
