@@ -476,7 +476,3 @@ input.searchbutton:active {
     -ms-transition: all 1s;
     transition: all 1s;
   }
-  
- .logo :hover{
-    z-index: 5;
-  }
