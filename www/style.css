@@ -274,7 +274,6 @@ display: inline-block;
 	z-index: 3;
 }
 /*  лейяут конец */
-.tab-line {}
 .tab {
 	width: 100%; 
 	padding: 5px;
@@ -293,7 +292,7 @@ display: inline-block;
 	border-right: 1px solid black;
 	padding: 6px 0;
 }
-.tab a:hover > .tabs {border-right:1px solid #000;}
+.tab a:hover > .tabs {border-right:1px solid #000;} 
 .tab a:hover  > .tabs:last-child{border-right: 0;}
 .tab-headings .tabs:last-child,
 .tabs:last-child {border-right: 0;}
@@ -301,10 +300,12 @@ display: inline-block;
 .tab-headings {
 	margin-bottom: 20px;
 }
-.tab-line:hover > a {color: #fff;}
+.tab-line:hover > a {
+	color: #fff;	
+	font-size: 1.55em;
+}
 .tab-line:hover {
 	background: #000;
-	transition: 0.5s;
 	color: #fff;
 }
 .tab a {
