@@ -119,9 +119,16 @@ header:hover > .language a{color: #fff;}
 header:hover > .signup a {color: #fff;}
 
 .menu a:hover {
-box-shadow: 0 0 86px 23px #fff;
+/* box-shadow: 0 0 86px 23px #fff; */
+	text-shadow:0 -3px 20px #fff;/*,
+				0px -20px 40px #fff, 
+				0px -30px 60px #fff, 
+				0px -50px 90px #fff, 
+				0 10px 20px #fff, 
+				0px 20px 40px #fff, 
+				0px 30px 60px #fff, 
+				0px 50px 90px #fff;  */
 }
-
 .searchbut{
 	background: rgba(0, 0, 0, 0.78);
 	text-decoration: none;
@@ -129,13 +136,13 @@ box-shadow: 0 0 86px 23px #fff;
 	font-size: 1.3em;
 	transition: .3s;
 	margin: 0 auto;
-	border-radius: 30px 30px 0 0;
+	border-radius: 15px 15px 0 0;
 	padding: 10px 15px;
 	position: absolute;
 	margin-left: 30%;
-	margin-top: -40.5px;
+	margin-top: -41px;
 	width: 40%;
-	z-index: 3;
+	/*z-index: 3;*/
 	box-shadow: 0 -10px 26px -8px rgba(255, 255, 255, 0.78);
 }
 .clearf {
@@ -169,7 +176,6 @@ background: #000;
 	margin: 0 auto;
 	min-width: 900px;
 	height: 150px;
-	transition: .5s;
 }
 .searchform {
 	/*background: #d3d3d3;
@@ -407,7 +413,7 @@ input.searchbutton:active {
 /*news-one*/
 .topic {
 	background: #FC8E8E;
-	padding: 3px 13px 1px 2px;
+	padding: 3px 13px 0 2px;
 	color: #fff;
 	border-radius: 1px 2px 2px 1px;
 	position: relative;
@@ -429,7 +435,7 @@ input.searchbutton:active {
 	margin-bottom: 9px;
 }
 
-/* %%%%%%%%%%%%%%% */
+/* %%%%%%%%test%%%%%%% */
 
  #field { 
     width: 100%;

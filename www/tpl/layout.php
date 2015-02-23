@@ -4,6 +4,9 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
     <meta charset="UTF-8" />
 	
+	<link rel="icon" href="img/favicon2.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon2.ico" type="image/x-icon">
+	
 	<!-- пагинация -->
 	<script async="" type="text/javascript" src="http://www.gstatic.com/pub-config/ca-pub-8635539539050660.js"></script>
 	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
