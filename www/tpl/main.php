@@ -1,9 +1,20 @@
 
-			<div class="tabs" align="center">логин</div>
-			<div class="tabs" align="center">линия</div>
-			<div class="tabs" align="center">возраст</div>
-			<div class="tabs" align="center">страна</div>
-			<div class="tabs" align="center">роль</div>
+			<div class="stats" align="center">У нас
+			<div class="litlestats" align="center"> <?=$result2[0]['account'];?> пользователя</div>
+			<div class="litlestats" align="center"> из них <?=$result2[0]['chelick'];?> Челенджеры</div>
+			<div class="litlestats" align="center"> Керри:<?=$result2[0]['adc'];?></div>
+			<div class="litlestats" align="center"> Саппорта:<?=$result2[0]['sup'];?> </div>
+			<div class="litlestats" align="center"> Мидера:<?=$result2[0]['mid'];?> </div>
+			<div class="litlestats" align="center"> Топера:<?=$result2[0]['top'];?> </div>
+			<div class="litlestats" align="center"> Джанглеров:<?=$result2[0]['jungl'];?></div>
+			
+			</div>
+
+			<div class="tabs" align="center" onBlur="alert('asd')">Логин</div>
+			<div class="tabs" align="center" onBlur="alert('asd')">линия</div>
+			<div class="tabs" align="center" onBlur="alert('asd')">Возраст</div>
+			<div class="tabs" align="center" onBlur="alert('asd')">страна</div>
+			<div class="tabs" align="center" onBlur="alert('asd')">роль</div>
 			
 			<?php if ($result == FALSE) {
 				echo 'Ивините по вашему запросу ничего не найдено';
