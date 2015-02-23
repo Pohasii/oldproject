@@ -136,7 +136,7 @@ header:hover > .signup a {color: #fff;}
 	font-size: 1.3em;
 	transition: .3s;
 	margin: 0 auto;
-	border-radius: 15px 15px 0 0;
+	border-radius: 5px 5px 0 0;
 	padding: 5px 15px;
 	position: absolute;
 	margin-left: 30%;
@@ -326,7 +326,12 @@ display: inline-block;
 	vertical-align: top;
 }
 
-.second {margin-top: 0; background: #FFF; max-width: 100%;}
+.second {
+	margin-top: 0; 
+	background: #FFF; 
+	max-width: 100%;
+	padding-top: 22px;
+}
 /* .user-info  {
 	padding: 4px 50px;
 	background: #FFF;
