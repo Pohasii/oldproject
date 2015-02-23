@@ -143,7 +143,7 @@ header:hover > .signup a {color: #fff;}
 	margin-top: -31px;
 	width: 40%;
 	/*z-index: 3;*/
-	box-shadow: 0 -10px 26px -8px rgba(255, 255, 255, 0.78);
+	box-shadow: 0 -10px 26px -8px rgba(0, 0, 0, 0.78);
 }
 .clearf {
 	width: 100%;
@@ -204,13 +204,16 @@ display: inline-block;
 	width: 4%;
 	height: 3%;
 	color: #000;
-	background: red;
+	background: rgb(244, 57, 57);
+	padding: 5px 10px;
+	box-sizing: border-box;
 }
 
 .resetsearch  a {
 	color: #fff;
 	text-decoration: none;
 	transition: 0.3s;
+	font-size: 1.1em;
 }
 /*
 .searchform:target{
