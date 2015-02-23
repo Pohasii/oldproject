@@ -1,6 +1,11 @@
 <?php
 
+
 if($_POST['sub']=='вход'){
+		$ip=$_SERVER['REMOTE_ADDR'];
+		if(isset($_COOKIE["$ip"]) & $_COOKIE["$ip"]!=5){
+			
+		}
 		$login = $_POST['login'];
 		$password = $_POST['pass'];
 
@@ -12,16 +17,25 @@ if($_POST['sub']=='вход'){
 		//echo $password;
 		$result = call("SELECT * FROM `users` WHERE `nic_name`='$login'");
 		
-		if ($password == $result[0]['password']) {	
+		if ($count!=0) {$count=$count;} else $count=0;
+		if ($count!=5 & $password == $result[0]['password']) {	
 			$d = date('Y m d H i s');
 			$keys = "$password$d";
 			$keys = md5("$keys");
 			$_SESSION["keys"]=$keys;
 			$_SESSION["login"]=$login;
 			$res = put("UPDATE `users` SET `keys`='$keys' WHERE `nic_name`='$login'");
+			$count=0;
 			if ($res) {echo '<script>alert("Добро пожаловать");</script>'; }// смс приветствия 
 			echo '<script>window.location.href = "/" </script>'; // перенаправление
-		} else echo '<script>alert("Логин/пароль не действителен");</script>';
+		} else {
+		$count++; 
+		$resultcount=5-$count;
+		setcookie ("$ip", "$resultcount", time() - 300, /);
+		$error="Логин/пароль не верный, у вас осталось $resultcount попыток";
+		echo '<script>window.location.href = "/#authform" </script>';
+		
+		}
 	}
 	
 	if($_POST['sub']=='Регистрация'){
