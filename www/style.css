@@ -492,8 +492,8 @@ input.searchbutton:active {
   #logo {
  /*  background: url(img/logo2.png) center no-repeat; */
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 100px;
+    top: 100px;
 
 
    -webkit-transition: all 1s;

@@ -8,7 +8,19 @@
 			<div class="litlestats" align="center"> Топера:<?=$result2[0]['top'];?> </div>
 			<div class="litlestats" align="center"> Джанглеров:<?=$result2[0]['jungl'];?></div>
 			</div>
-			<div class="litlestats" align="center"> <?php if($result3!=0) {echo "По вашему запросу найдено:".$result3."Из них показано:150";} ?></div>
+			<div class="litlestats" align="center"> 
+			<?php if($result3==1) {
+				echo "По вашему запросу найдено: $result3";
+			} elseif($result3>1 and $result3<150) {
+				echo "По вашему запросу найдено: $result3";
+			} else {
+				if ($result == FALSE) {
+				echo 'Ивините по вашему запросу ничего не найдено';
+				} else {
+				echo "По вашему запросу найдено: $result3 из них показано 150";
+				}
+			}
+			?></div>
 			<div class="tab-headings">
 				<div class="tabs" align="center" onBlur="alert('asd')">Логин</div>
 				<div class="tabs" align="center" onBlur="alert('asd')">линия</div>
