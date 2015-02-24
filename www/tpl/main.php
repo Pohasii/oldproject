@@ -7,8 +7,8 @@
 			<div class="litlestats" align="center"> Мидера:<?=$result2[0]['mid'];?> </div>
 			<div class="litlestats" align="center"> Топера:<?=$result2[0]['top'];?> </div>
 			<div class="litlestats" align="center"> Джанглеров:<?=$result2[0]['jungl'];?></div>
-			
 			</div>
+			<div class="litlestats" align="center"> <?php if($result3!=0) {echo "По вашему запросу найдено:".$result3."Из них показано:150";} ?></div>
 			<div class="tab-headings">
 				<div class="tabs" align="center" onBlur="alert('asd')">Логин</div>
 				<div class="tabs" align="center" onBlur="alert('asd')">линия</div>
