@@ -20,7 +20,7 @@
 				echo 'Ивините по вашему запросу ничего не найдено';
 				} else { ?>
 			<div id="content">
-
+			
 			<?php foreach($result as $value) { ?>
 			<div class="tabss">
 				<div class="tab-line">
@@ -35,6 +35,14 @@
 			</div>
 				<?php }
 				} ?> 
-		
-		
-</div>
+			</div>
+			
+			<script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery('#example-1').click(function(){
+                    jQuery(this).load('ajax/example.html');                
+                }) 
+            });
+			</script>
+			
+			<div id="pagingControls"></div>

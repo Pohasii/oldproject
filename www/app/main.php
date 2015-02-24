@@ -1,7 +1,7 @@
 <?php
 //main controller
 if ($_POST) {
-	
+	print_r($_POST);
 	function ches($result){
 	foreach($result as $value) {
 	$value = stripslashes($value);
@@ -19,32 +19,29 @@ if ($_POST) {
 
 	$firstage=$test["firstage"];
 	$secondage=$test["secondage"];
-	$country=$test["country"];
-	$laung=$test["laung"];
-	$elo=$test["elo"];
-
-	$serv=$test["server"];
-	$time=$test["time"];
+	
 	$timegame1=$test["timegame1"];
 	$timegame2=$test["timegame2"];
 	
-	$laneone = $test["lane"][0];
-	$lanetwo = $test["lane"][1];
-	$lanefree = $test["lane"][2];
-	$lanefot = $test["lane"][3];
+	$lane=$test["lane"];
 	
-	$roleone = $test["role"][0];
-	$roletwo = $test["role"][1];
-	$rolefree = $test["role"][2];
-	$rolefot = $test["role"][3];
+	$goal=$test["goal"];
 	
-	//print_r($goal[0]);
+	$role=$test["role"];
 	
-	$goalone = $test["goal"][0];
-	$goaltwo = $test["goal"][1];
-	$goalfree = $test["goal"][2];
-	$goalfot = $test["goal"][3];
+	$country=$test["country"];
 	
+	$language=$test["language"];
+	
+	$division=$test["division"];
+
+	$server=$test["server"];
+	
+	$result = call("SELECT `id`, `nic_name`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` LIMIT 0,100");
+	
+	/*unset($array['foo']);*/
+	$result = array_intersect($result, $lane,$goal,$role,$country,$language,$division,$server);
+	/*
 	if (isset($login) AND $login != '') {
 		$q1 = " `nic_name`='$login'";
 	}
@@ -55,6 +52,19 @@ if ($_POST) {
 	
 	if (isset($secondage) AND $secondage != '') {
 		$q3 = " `aga`<'$secondage'";
+	}
+	
+	if (isset($timegame1) AND $timegame1 != '') {
+		$q8 = " `needtime`>'$timegame1'";
+	}
+	
+	if (isset($timegame2) AND $timegame2 != '') {
+		$q9 = " `needtimetwo`<'$timegame2'";
+	}
+	
+	for($i=0;$i<7;$i++) {
+		$q="q$i"
+		
 	}
 	
 	if (isset($country) AND $country != '') {
@@ -73,13 +83,7 @@ if ($_POST) {
 		$q7 = " `time`='$time'";
 	}
 	
-	if (isset($timegame1) AND $timegame1 != '') {
-		$q8 = " `needtime`>'$timegame1'";
-	}
 	
-	if (isset($timegame2) AND $timegame2 != '') {
-		$q9 = " `needtimetwo`<'$timegame2'";
-	}
 	
 	if (isset($serv) AND $serv != '') {
 		$q10 = " `server`='$serv'";
@@ -150,18 +154,12 @@ if ($_POST) {
 	
 	$resultss=tourls($q);
 	
-	$resultss=substr_replace($resultss, '', 1, 4);
-//	$q26="<script>var char=$resultss.charAt(0)+$resultss.charAt(1)+$resultss.charAt(2); if(char == 'AND') $resultss.substring(3); </script>";
-	
-	//print_r($resultss);
-	
-	
-	$result = call("SELECT `nic_name`,`aga`,`strana`, `lan`, `role` FROM `users` WHERE $resultss LIMIT 0,40");
-	//print_r($result);
-	//$asd = "$login / $lane1 ! $lane2 ! $lane3 ! $lane4 / $firstage / $secondage / $country / $laung / $elo / $cel1 ! $cel2 ! $cel3 ! $cel4 / $role1 ! $role2 ! $role3 ! $role4 / $gametime1 / $gametime2 / $time / $timegame1 / $timegame2";
-	//print_r($asd);
+	$resultss=substr_replace($resultss, '', 1, 4);*/
+
 } else {
-	$result = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` LIMIT 0,40");
+	
+	
+	$result = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users` LIMIT 0,100");
 //	if(!$result) $result['all'] = call("SELECT `id`, `nic_name`, `password`, `keys`, `email`, `name`, `fname`, `skype`, `aga`, `title`, `rating`, `img`, `time`, `regdate`, `needtime`, `needtimetwo`, `strana`, `lang`, `elo`, `server`, `role`, `lan`, `goal`, `I_was_looking_for`, `team`, `fc`, `vk` FROM `users`");
 }
 

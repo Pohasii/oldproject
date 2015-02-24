@@ -1,10 +1,11 @@
-<?php 
-
-$input = "-----Alien";
-echo str_pad($input, 10);                      // выводит "Alien     "
-echo str_pad($input, 8, "    ", STR_PAD_LEFT);  // выводит "-=-=-Alien"
-echo str_pad($input, 10, "_", STR_PAD_BOTH);   // выводит "__Alien___"
-echo str_pad($input, 6 , "___");               // выводит "Alien_
-
-
-?>
+<script>
+$.ajax({
+  type: "POST",
+  url: "app/test.php",
+  data: "one=0&two=20",
+  async: false,
+  success: function(msg){
+    alert( "Прибыли данные: " + msg );
+  }
+});
+</script>

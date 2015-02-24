@@ -7,87 +7,22 @@
 	<link rel="icon" href="img/favicon2.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="img/favicon2.ico" type="image/x-icon">
 	
-	<!-- пагинация -->
-	<script async="" type="text/javascript" src="http://www.gstatic.com/pub-config/ca-pub-8635539539050660.js"></script>
-	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+
+	<!-- chouse -->
 	
-	<script type="text/javascript">
- var Imtech = {};
-Imtech.Pager = function() {
-
-
-
-
-    this.paragraphsPerPage = 3;
-    this.currentPage = 1;
-    this.pagingControlsContainer = '#pagingControls';
-    this.pagingContainerPath = '#content';
-    // число страниц
-    this.numPages = function() {
-        var numPages = 0;
-        //          ('div.z')                               5
-        if (this.paragraphs != null && this.paragraphsPerPage != null) {
-        // метод ceil - возвращает наименьшее целое
-            numPages = Math.ceil(this.paragraphs.length / this.paragraphsPerPage);
-        }
-
-        return numPages;
-    };
-    
-    
-    
-    
-// page - текущая (открытая - номер) страница, то есть в ф-ю передаем номер текущий страницы, контент котор впоследствии выводим
-    this.showPage = function(page) {
-        this.currentPage = page;
-        var html = '';
-// slice - Данный метод не изменяет исходный массив, а просто возвращает его часть.
-// то есть выводит тот контент, котор соответствует текущей странице
-        this.paragraphs.slice((page-1) * this.paragraphsPerPage,
-            ((page-1)*this.paragraphsPerPage) + this.paragraphsPerPage).each(function() {
-            html += '<div>' + $(this).html() + '</div>';
-        });
-// вставляем контент
-        $(this.pagingContainerPath).html(html);
-//                          #pagingControls,  текущая страница(по умолч. 1), общее число страниц     
-        renderControls(this.pagingControlsContainer, this.currentPage, this.numPages());
-    }
-    
-    
-    
-    
-// блок с навигацией
-    var renderControls = function(container, currentPage, numPages) {
-// разметка с навигацией
-        var pagingControls = 'Страницы: <ul>';
-        for (var i = 1; i <= numPages; i++) {
-            if (i != currentPage) {
-                pagingControls += '<li><a href="#" onclick="pager.showPage(' + i + '); return false;">' + i + '</a></li>';
-            } else {
-                pagingControls += '<li>' + i + '</li>';
-            }
-        }
-
-        pagingControls += '</ul>';
-
-        $(container).html(pagingControls);
-    } 
-}   
-
-var pager = new Imtech.Pager();
-$(document).ready(function() {
-    // кол-во выводимых параграфов () или div )
-    // на одной странице
-    pager.paragraphsPerPage = 100; 
-    // основной контейнер
-    pager.pagingContainer = $('#content'); 
-    // обозначаем требуемый блок ('div.z')
-    pager.paragraphs = $('div.tabss', pager.pagingContainer); 
-    pager.showPage(1);
-});
-</script>
+	<!--script src="//code.jquery.com/jquery-1.11.2.min.js"></script-->
+	<script src="tpl/jquery-2.1.3.min.js" type="text/javascript"></script>
+	<!--script src="chosen.jquery.js" type="text/javascript"></script-->
+	<script src="tpl/chosen.jquery.js" type="text/javascript"></script>
+	<link href="tpl/chosen.css" rel="stylesheet">
 	
-	<!-- конец пагин-->
+	<!-- chouse -->
+	 <!--script type="text/javascript">
+ $(document).ready(function(){
+ alert(jQuery.fn.jquery);
+ });
+ </script-->
+	
 	<script type="text/javascript" src="http://scriptjava.net/source/scriptjava/scriptjava.js"></script>
     <script type="text/javascript">
       var bg_ini = function () {
@@ -137,19 +72,7 @@ $(document).ready(function() {
 //http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
     </script>
 	
-	<script>
-	//список
-	var show;
-	function hidetxt(type){
-	param=document.getElementById(type);
-	if(param.style.display == "none") {
-	if(show) show.style.display = "none";
-	param.style.display = "block";
-	show = param;
-	}else param.style.display = "none"
-	}
-	</script>
-	
+
 	<script type="text/javascript">
 	//выпад спис поиск
 var _click = function () {
@@ -170,6 +93,10 @@ window.onload = function() {
 </head>
 
 <body>
+
+
+<body>
+ </body>
 	<header class="main">
 			<div class="language">
 				<?php foreach ($lang as $value): ?>
@@ -273,8 +200,8 @@ window.onload = function() {
 	<div class="searchbut-align">
 		<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
 	</div>
-	<div class=searchformblock style=" display:none" id="item1">
-	<?php formSearch(); ?>
+	<div class=searchformblock style="" id="item1">
+	<?php formSearch();?>
 
 
 	</div>
@@ -287,13 +214,28 @@ window.onload = function() {
 echo $admin;
 echo $content;
 ?>
+
 </div>
 </div>
 			<?php include('rightbar.php');?>
 			<div class="clearf"> </div>
 	</div>
 </div>
-
 	<footer>footer</footer>
+	
+	<script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {max_selected_options: 5},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+	  $(".chosen-select").chosen({width: '350px'});
+    }
+  </script>
+	
 </body>
 </html>

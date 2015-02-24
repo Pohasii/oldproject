@@ -183,7 +183,7 @@ background: #000;
 	padding: 15px;
 	color: #fff;
 	box-shadow: 0 -10px 26px -8px rgba(0, 0, 0, 0.78);
-}
+}/*
 .searchform input:focus,
 .searchform select:focus{
 	background: rgb(240, 211, 166);
@@ -198,11 +198,11 @@ background: #000;
 }
 .searchform select {
 	width: 179px;
-}
+}*//*
 .searchform input,submit {
 vertical-align: top;
 display: inline-block;
-}
+}*/
 
 .resetsearch {
 	display: inline-block;
@@ -242,10 +242,10 @@ display: inline-block;
 	clear: none;
 	margin-bottom: 8px;
 	padding: 3px;
-}
+}/*
 .authform select {
 	width: 179px;
-}
+}*/
 .authform:target{
 	display: block;
 	z-index: 3;
@@ -265,10 +265,10 @@ display: inline-block;
 	clear: none;
 	margin-bottom: 8px;
 	padding: 3px;
-}
+}/*
 .signform select {
 	width: 179px;
-}
+}*/
 .signform:target{
 	display: block;
 	z-index: 3;
