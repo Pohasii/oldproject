@@ -131,8 +131,9 @@ window.onload = function() {
 <div class=bodyfon onclick="bg_set('#1b9626');"></div>
 </div>
 <!-- logo -->
+
 <div id="logopole">
-   <div id="logo"><img src="img/logo.png" ></div>
+   <div id="logo"><img src="img/logo2.png" ></div>
 </div>
 
  <script>
