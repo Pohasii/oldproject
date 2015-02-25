@@ -379,14 +379,14 @@ $f='<div class="searchform" id="searchform" >
 
 function formAuth() {
 
-$f='<div class="authform" id="authform" >
-				<form method="post" action="/layout">
+$f='<div class="authform" id="authform">
+				<form method="post" action="/layout" id="authform" name="authform">
 				<a href="#" title="Закрыть" class="close">X</a>
 				<div class="tittle-forma"> Форма авторизации </div>
 					<input name="login" type="text" autofocus="autofocus"  placeholder="логин" required>
 					<input name="pass" type="password" placeholder="пароль" required>
 					<input name="sub" type="submit"  value="вход">
-				</form>
+				</form>	
 			</div>';
 
 	echo $f;
