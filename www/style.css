@@ -15,7 +15,7 @@ strong,b {font-weight: bold;}
 object {width: 470px;}
 
 body {
-	background: #284BA6 no-repeat center;
+	background: #284BA6 no-repeat center fixed;
 	background-size: cover;
 	transition: 1.8s;
 }

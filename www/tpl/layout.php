@@ -61,12 +61,12 @@
 	 /* if (i==1){bg_set('/img/1.jpg');} 
 	  if (i==2){bg_set('/img/2.jpg');} 
 	  if (i==3){bg_set('/img/3.jpg');} */
-	  if (i==1){bg_set('#284BA6');}
-	  if (i==2){bg_set('#99a628');}
-	  if (i==3){bg_set('#1b9626');}
+	  if (i==1){bg_set('/img/3.jpg');}
+	 /* if (i==2){bg_set('#99a628');}
+	  if (i==3){bg_set('#1b9626');}*/
 	 
 	  i++; 
-	  if (i==3) { i=1;} },
+	  if (i==1) { i=1;} },
 	  15000);
 	  
 //http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
