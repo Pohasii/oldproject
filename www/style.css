@@ -379,7 +379,7 @@ input.searchbutton:active {
 /* end pagin */
 /*avatar*/
 .user-avatar {
-	
+	max-width: 640px;
 }
 /*user info*/
 .user-lines {
