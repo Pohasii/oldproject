@@ -400,18 +400,22 @@ input.searchbutton:active {
 	padding:0 0.5em
 }
 /* end pagin */
-
+/*avatar*/
+.user-avatar {
+	
+}
 /*user info*/
+.user-lines {
+	min-width: 510px;
+}
 .user-lines label {
 	display: inline-block;
 	color: rgba(0, 0, 0, 0.560784);
 	font-size: 1.2em;
-	position: relative;
+	width: 59%;
 }
 .user-lines div {
 	display: inline-block;
-	position: absolute;
-	left: 36%;
 	font-size: 1.2em;
 	color: #000;
 }
