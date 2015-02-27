@@ -576,3 +576,6 @@ border-right: none;
 .personal-info .user-divider {
 background: rgb(234, 137, 137);
 }
+/*searchform positioning*/
+.searchform input {display: inline-block;}
+.searchform .chosen-select {display: block;}

@@ -7,12 +7,18 @@ $f='<div class="searchform" id="searchform" >
 <div class="first-column-block">
 	<input name="login" type="text" placeholder="Login">
 
-	<input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
-
-	<input type=time name=timegame1>
-	<input type=time name=timegame2>
+	<div class="age-block">
+		<input name="firstage" type="number" min="12" max="99"> 
+		до <input name="secondage" type="number" min="12" max="99">
+	</div>
+	<div class="timegame-block">
+		<input type=time name=timegame1>
+		<input type=time name=timegame2>
+	</div>
 </div>
 <div class="second-column-block">
+	<div class="second-column-block-element">
+
 	<select name="lane[]" data-placeholder="Line" class="chosen-select" multiple style="width:150px;" tabindex="1">
 				<option value=""></option>
 				<option value="duotop">Duo Top</option>
@@ -23,7 +29,8 @@ $f='<div class="searchform" id="searchform" >
 				<option value="mid">Mid</option>
 				<option value="bot">Bottom</option>
 			  </select>
-			  
+	</div>	  
+	<div class="second-column-block-element">
 	<select name="goal[]" data-placeholder="goal" class="chosen-select" multiple style="width:150px;" tabindex="2">
 				<option value=""></option>
 				<option value="duo">duo</option>
@@ -33,7 +40,8 @@ $f='<div class="searchform" id="searchform" >
 				<option value="learning">Learning</option>
 				<option value="increaseelo">increase ELO</option>
 			  </select>
-			  
+	</div>
+	<div class="second-column-block-element">
 	<select name="role[]" data-placeholder="Role" class="chosen-select" multiple style="width:150px;" tabindex="3">
 				<option value=""></option>
 				<option value="tank">Tank</option>
@@ -44,9 +52,10 @@ $f='<div class="searchform" id="searchform" >
 				<option value="support">Support</option>
 				<option value="jungler">Jungler</option>
 	</select>
+	</div>
 </div>		  
-
-
+	<div class="third-column-block">
+		<div class="third-column-block-element">
 		  <select name="country[]" data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:150px;" tabindex="4">
             <option value=""></option>
             <option value="United States">United States</option>
@@ -301,7 +310,9 @@ $f='<div class="searchform" id="searchform" >
             <option value="Zambia">Zambia</option>
             <option value="Zimbabwe">Zimbabwe</option>
           </select>
-		  
+		 </div>
+		 
+		<div class="third-column-block-element">
 		   <select name="language[]" data-placeholder="Choose your language..." class="chosen-select" multiple style="width:150px;" tabindex="5">
 				<option value=""></option>
 				<option value="English">English (Английский)</option>
@@ -325,7 +336,8 @@ $f='<div class="searchform" id="searchform" >
 				<option value="2">cestina (Чешский)</option>
 				<option value="21">Svenska (Шведский)</option>
           </select>
-		  
+		 </div>
+		<div class="third-column-block-element">
 		    <select name="division[]" data-placeholder="Your division..." class="chosen-select" multiple style="width:150px" tabindex="6">
 				<option value=""></option>
 				<option value="Unranket">Unranket</option>
@@ -357,8 +369,10 @@ $f='<div class="searchform" id="searchform" >
 				<option value="masterleague">Master League</option>
 				<option value="challenger">Сhallenger</option>
           </select>
-		  
-		  <select name="server[]" data-placeholder="select the server" class="chosen-select" multiple style="width:150px; " tabindex="7">
+		 </div>
+	</div>
+	<div class="last-column-block">
+		<select name="server[]" data-placeholder="select the server" class="chosen-select" multiple style="width:150px; " tabindex="7">
             <option value=""></option>
 			<option value="northamerica">North America</option>
 			<option value="europewest">Europe West</option>
@@ -370,8 +384,10 @@ $f='<div class="searchform" id="searchform" >
 			<option value="latinamericasouth">Latin America South</option>
 			<option value="oceania">Oceania</option>
           </select>
-		  
+	</div>
+	<div class="search-but-block">
 		  <input class="searchbutton" name="sub" type="submit"  value="поиск">
+	</div>
 </form>
 	</div>';
 
