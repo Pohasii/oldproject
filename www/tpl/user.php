@@ -9,7 +9,7 @@
 						<div class="personal-menu">
 							<ul>
 								<li><a class="but1" href="#pers">Личное</a></li>
-								<li><a class="but2" href="#game">Игра</a></li>
+								<li><a class="but2 active-personal-menu" href="#game">Игра</a></li>
 								<li><a class="but3" href="#cont">Контакты</a></li>
 							</ul>
 						</div>

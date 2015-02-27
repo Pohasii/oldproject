@@ -614,10 +614,23 @@ background: rgb(234, 137, 137);
 	display: block;
 	margin-top: -17px;
 }
-
-
-
-
+.active-personal-menu{z-index:100;}
+.personal-menu a {
+	padding: 5px 10px;
+	background: green;
+	color: #fff;
+	display: inline-block;
+	margin-left: -8px;
+}
+a.but1 {
+	background: rgb(234, 137, 137);
+}
+a.but2  {
+	background: #82E296;
+}
+a.but3 {
+	background:#D78F3D;
+}
 
 
 
