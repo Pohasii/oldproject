@@ -258,10 +258,11 @@ background: #000;
 	width: 19%;
 	display: inline-block;  
 	vertical-align: top; 
-	border-right: 1px solid black;
+	border-right: 1px dashed #A5A5A5;
+	border-bottom: 1px dashed #A5A5A5;
 	padding: 6px 0;
 }
-.tab a:hover > .tabs {border-right:1px solid #000;} 
+.tab a:hover > .tabs {border-right:1px solid #fff;} 
 .tab a:hover  > .tabs:last-child{border-right: 0;}
 .tab-headings .tabs:last-child,
 .tabs:last-child {border-right: 0;}
@@ -273,7 +274,7 @@ background: #000;
 	color: #fff;	
 }
 .tab-line:hover {
-	background: #000;
+	background: #A5A5A5;
 	color: #fff;
 }
 .tab a {
@@ -421,6 +422,7 @@ input.searchbutton:active {
 	padding: 4px 10px;
 	color: #82E296;
 	border: 1px solid #82E296;
+	transition: .2s;
 }
 .user-lines div {
 	display: inline-block;
@@ -432,6 +434,7 @@ input.searchbutton:active {
 	border: 1px solid white;
 /* 	box-shadow: 2px -3px 10px 0px green;
 	border-radius: 3px; */
+	transition: .5s;
 }
 .info-block {display: inline-block;}
 .user-info .user-lines .user-avatar {display: block;}
@@ -446,7 +449,7 @@ input.searchbutton:active {
 	text-transform: capitalize;
 }
 .user-label:hover + .user-divider{color: gray;}
-.user-label:hover{border:none;}
+.user-label:hover{border: 1px solid transparent;}
 /*news-one*/
 .topic {
 	background: #FC8E8E;
