@@ -11,10 +11,10 @@
 	<!-- chouse -->
 	
 	<!--script src="//code.jquery.com/jquery-1.11.2.min.js"></script-->
-	<script src="tpl/jquery-2.1.3.min.js" type="text/javascript"></script>
+	<script src="/tpl/jquery-2.1.3.min.js" type="text/javascript"></script>
 	<!--script src="chosen.jquery.js" type="text/javascript"></script-->
-	<script src="tpl/chosen.jquery.js" type="text/javascript"></script>
-	<link href="tpl/chosen.css" rel="stylesheet">
+	<script src="/tpl/chosen.jquery.js" type="text/javascript"></script>
+	<link href="/tpl/chosen.css" rel="stylesheet">
 	
 	<!-- chouse -->
 	 <!--script type="text/javascript">
@@ -132,7 +132,7 @@ window.onload = function() {
 <!-- logo -->
 
 <div id="logopole">
-   <div id="logo"><img src="img/logo2.png" ></div>
+   <div id="logo"><img src="/img/logo2.png" ></div>
 </div>
 
  <script>
@@ -210,8 +210,8 @@ echo $content;
 ?>
 
 </div>
-<?php include('rightbar.php');?>
 </div>
+<?php include('rightbar.php');?>
 			<!--div class="clearf"> </div-->
 </div>
 </div>
