@@ -395,14 +395,23 @@ input.searchbutton:active {
 }
 .user-lines label {
 	display: inline-block;
-	color: rgba(0, 0, 0, 0.560784);
-	font-size: 1.2em;
-	width: 59%;
+	color: rgba(255, 255, 255, 1);
+	font-size: 1em;
+	width: 50%;
+	padding: 4px 10px;
+	color: #82E296;
+	border: 1px solid #82E296;
 }
 .user-lines div {
 	display: inline-block;
-	font-size: 1.2em;
-	color: #000;
+	font-size: 1em;
+	color: #fff;
+	background: #82E296;
+	padding: 5px 10px;
+	width: 30%;
+	border: 1px solid white;
+/* 	box-shadow: 2px -3px 10px 0px green;
+	border-radius: 3px; */
 }
 .info-block {display: inline-block;}
 .user-info .user-lines .user-avatar {display: block;}
