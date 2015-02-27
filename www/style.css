@@ -426,6 +426,7 @@ input.searchbutton:active {
 /* 	box-shadow: 2px -3px 10px 0px green;
 	border-radius: 3px; */
 	transition: .5s;
+	border-left: none;
 }
 .info-block {display: inline-block;}
 .user-info .user-lines .user-avatar {display: block;}
@@ -440,7 +441,7 @@ input.searchbutton:active {
 	text-transform: capitalize;
 }
 .user-label:hover + .user-divider{color: gray;}
-.user-label:hover{border: 1px solid transparent;}
+/* .user-label:hover{border: 1px solid transparent;} */
 /*news-one*/
 .topic {
 	background: #FC8E8E;
