@@ -118,6 +118,8 @@
 				<label>Описание</label>
 				<textarea name=""><?=$result['title']; ?></textarea>
 			</div>
+			
+			<input class="personal-save-but" name="" type="submit" value="Сохранить">
 		</form>
 	</div>
 </div>

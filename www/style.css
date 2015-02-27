@@ -369,11 +369,9 @@ height: 30px;
 .form-field .country-lang input {display: block;}
 .searchbutton{vertical-align: middle;}
 input.searchbutton {
-	padding: 0.5% 0.7%;
-	font-size: 1.1em;
+	padding: 7px 22px;
 	background: #FF9B00;
 	color: #fff;
-	border-radius: 8%;
 	border: 0;
 	outline: none;
 }
@@ -439,7 +437,10 @@ input.searchbutton:active {
 	transition: .5s;
 	border-left: none;
 }
-.info-block {display: inline-block;}
+.info-block {
+	display: inline-block;
+	position: relative;
+}
 .user-info .user-lines .user-avatar {display: block;}
 .user-lines.email {
 	
@@ -547,7 +548,7 @@ input.searchbutton:active {
 	margin-bottom: 4px;
 	width: 29%;
 }
-.personal input:focus {
+.personal input:focus:not(.personal-save-but){
 	background: #C5C3C3;
 	transition: .2s;
 	border: 2px solid gray;
@@ -580,7 +581,8 @@ background: rgb(234, 137, 137);
 .first-column-block,
 .second-column-block,
 .third-column-block,
-.last-column-block {
+.last-column-block,
+.search-but-block {
 	display: inline-block;
 	vertical-align: top;
 }
@@ -590,11 +592,25 @@ background: rgb(234, 137, 137);
 .first-column-block .age-block,
 .first-column-block .timegame-block {display: block;}
 
-
-
-
-
-
+.personal-save-but {
+	background: #57E2CD;
+	color: #fff;
+	border: 1px solid transparent;
+	outline: 0;
+	margin-left: 40%;
+}
+.personal-menu li {
+	display:inline-block;
+}
+.personal-info,
+.game-info,
+.contacts {
+	position: absolute;
+	display:none;
+	top: 81%;
+	left: 19%;
+}
+#pers:target {display: block;}
 
 
 

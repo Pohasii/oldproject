@@ -6,7 +6,14 @@
 						</div>
 					</div>
 						<div class="info-block">
-						<div class="personal-info">
+						<div class="personal-menu">
+							<ul>
+								<li><a class="but1" href="#pers">Личное</a></li>
+								<li><a class="but2" href="#game">Игра</li>
+								<li><a class="but3" href="#cont">Контакты</li>
+							</ul>
+						</div>
+						<div class="personal-info" id="pers">
 							<div class="user-lines">
 								<label class="user-label">ник</label>
 								<div class="user-divider"><?=$result['nic_name']; ?></div>
