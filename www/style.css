@@ -577,5 +577,30 @@ border-right: none;
 background: rgb(234, 137, 137);
 }
 /*searchform positioning*/
-.searchform input {display: inline-block;}
-.searchform .chosen-select {display: block;}
+.first-column-block,
+.second-column-block,
+.third-column-block,
+.last-column-block {display: inline-block;}
+.second-column-block-element, 
+.third-column-block-element
+.first-column-block input:first-child,
+.first-column-block .age-block,
+.first-column-block .timegame-block {display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
