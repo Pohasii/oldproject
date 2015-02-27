@@ -101,12 +101,39 @@ function t($t) {
 $priQuery = explode("/",q($_GET["q"]));
 $query = $priQuery;
 
+function sampleArr($result='',$field='',$fieldsecond=''){
+		if(isset($fieldsecond) && $fieldsecond!=''){
+		$resultcount = count($result);
+				for($i=0;$i<$resultcount;$i++){
+					if($result[$i][$field]==$fieldsecond){
+						$result2[$i]=$result[$i];
+					}
+			}
+		unset($result);
+		unset($resultcount);
+		} else return $result;
+		if($result2==FALSE) return FALSE;
+		else {
+			$result2 = array_slice($result2, 0, 10);
+			return $result2;
+		}
+	}
+	
+	$resultRightB = call("SELECT `nic_name`, `rating`, `role` FROM `users` WHERE `role`in('adc','mid','jungl') ORDER BY `rating` DESC LIMIT 0,100");
+
 if($query[0] != '') {
 	$controller = $query[0];
 	unset($query[0]);
 	$action = array_values($query);
-} else $controller = 'main';
-
+	$rightbarone = sampleArr($resultRightB,'role','adc');
+	$rightbartwo = sampleArr($resultRightB,'role','mid');
+	$rightbarsecond = sampleArr($resultRightB,'role','jungl');
+} else {
+	$controller = 'main';
+	$rightbarone = sampleArr($resultRightB,'role','adc');
+	$rightbartwo = sampleArr($resultRightB,'role','mid');
+	$rightbarsecond = sampleArr($resultRightB,'role','jungl');
+}
 //loading
 $controllPath = 'app/'.$controller.'.php';
 if(file_exists($controllPath)) {

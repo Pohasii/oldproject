@@ -97,23 +97,26 @@ if($_POST['sub']=='Sing in'){
 		$login = $_POST['login'];
 		$password = $_POST['pass'];
 		$password2 = $_POST['pass2'];
-		$email = $_POST['login'];
+		$email = $_POST['email'];
+		$emailsecond = $_POST['emailsecond'];
 
 		$login = che($login);
 		$password = che($password);
 		$password2 = che($password2);
 		
 		if ($password == $password2) {
-			$result = call("SELECT * FROM `users` WHERE `nic_name`='$login' and `email`='$email'");
-			if ($result[0]['nic_name']!=$login) {
-				if ($result[0]['email']!=$email) {
-					$security='zagadka';
-					$password= md5("$password$security");
-					$res = put("INSERT INTO `users` (`nic_name`, `password`, `email`) values ('$login', '$password', '$email')");
-					if ($res) {$result['ok'] = '<script>alert("Спасибо за рег");</script>'; }// смс приветствия 
-				} else $result['email'] = 'такой E-mail уже занят';
-			} else $result['login'] =  'Такой логин уже занят';
-		} else $result['passerror'] = 'пароли не совпадают';
+			if($email==$emailsecond) {
+				$result = call("SELECT * FROM `users` WHERE `nic_name`='$login' and `email`='$email'");
+				if ($result[0]['nic_name']!=$login) {
+					if ($result[0]['email']!=$email) {
+						$security='zagadka';
+						$password= md5("$password$security");
+						$res = put("INSERT INTO `users` (`nic_name`, `password`, `email`) values ('$login', '$password', '$email')");
+						if ($res) {$result['ok'] = '<script>alert("Спасибо за рег");</script>'; }// смс приветствия 
+					}else $result['erroremail'] = 'такой E-mail уже занят';
+				}else $result['errorlogin'] =  'Такой логин уже занят';
+			}else $result['notidenticalemail'] = 'E-mail не совпадают';
+		}else $result['errorpass'] = 'пароли не совпадают';
 	}
 
 $title = 'authentication';
