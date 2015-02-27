@@ -3,12 +3,12 @@
 
 <div class="rightbar-top10">	
 <?php foreach($rightbarone as $value) { ?>
-				<div class=rightbar-top10-str>
+
 					<a href="/user/<?=$value['nic_name'];?>">
-						<div class="tabs" align="center"><?=$value['nic_name']; ?></div>
-						<div class="tabs" align="center"><?=$value['rating'];?></div>
+						<div class="rightbar-top10-str" align="center"><?=$value['nic_name']; ?></div>
+						<div class="rightbar-top10-str" align="center"><?=$value['rating'];?></div>
 					</a>
-				</div>
+
 				<?php } ?> 
 
 </div>
@@ -16,8 +16,8 @@
 <div class="rightbar-top10">	
 <?php foreach($rightbartwo as $value) { ?>
 					<a href="/user/<?=$value['nic_name'];?>">
-						<div class="tabs" align="center"><?=$value['nic_name']; ?></div>
-						<div class="tabs" align="center"><?=$value['rating'];?></div>
+						<div class="rightbar-top10-str" align="center"><?=$value['nic_name']; ?></div>
+						<div class="rightbar-top10-str" align="center"><?=$value['rating'];?></div>
 					</a>
 				<?php } ?> 
 
@@ -26,8 +26,8 @@
 <div class="rightbar-top10">	
 <?php foreach($rightbarsecond as $value) { ?>
 					<a href="/user/<?=$value['nic_name'];?>">
-						<div class="tabs" align="center"><?=$value['nic_name']; ?></div>
-						<div class="tabs" align="center"><?=$value['rating'];?></div>
+						<div class="rightbar-top10-str" align="center"><?=$value['nic_name']; ?></div>
+						<div class="rightbar-top10-str" align="center"><?=$value['rating'];?></div>
 					</a>
 				<?php } ?> 
 
