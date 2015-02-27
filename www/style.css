@@ -271,7 +271,6 @@ background: #000;
 }
 .tab-line:hover > a {
 	color: #fff;	
-	font-size: 1.55em;
 }
 .tab-line:hover {
 	background: #000;
