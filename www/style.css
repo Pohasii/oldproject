@@ -516,4 +516,23 @@ input.searchbutton:active {
  #logo:hover {
     z-index:5;
   }
-  
+
+  /*personal*/
+.personal label {
+	color: #A6ABA4;
+	padding: 5px 10px;
+	display: inline-block;
+	width: 37%;
+	margin-bottom: 4px;
+
+}
+.personal input {
+	padding: 5px 10px;
+	outline: none;
+	margin-bottom: 4px;
+}
+.personal input:focus {
+	background: #C5C3C3;
+	transition: .2s;
+	border: 2px solid gray;
+}

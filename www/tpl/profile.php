@@ -1,9 +1,9 @@
 <div class="personal">
 	<h1>My page</h1>
 	<div class="mypersonal">
-		<form>
 		<? if ($result['img']=='') { $scr='avatar.png'; } else $scr=$result['img'];?>
 			<img src="/img/<?=$scr?>">
+		<form>
 			<div class="personal-data">
 				<label>Имя</label>
 				<input name="" type="text" value="<?=$result['name'];?>">
