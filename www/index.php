@@ -4,6 +4,7 @@ session_start();
 include('config.php');
 include('tpl/form.php');
 
+$ip=$_SERVER['REMOTE_ADDR'];
 //langs
 if(!$_COOKIE["lang"] ) {
 	setcookie("lang", 'ru', time(), "/");

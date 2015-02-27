@@ -204,15 +204,12 @@ background: #000;
 }
 
 .authform {
-	border: 1px dashed black;
-	display: none;
-	position: fixed;
+	display: inline-block;
+	/*position: fixed;
 	top: 25%;
-	right: 50%;
+	right: 50%;*/
+	height:100%;
 	padding: 15px;
-	border-radius: 3px;
-	background: rgba(232, 178, 80, 0.65);
-	z-index: 3;
 }
 .authform input {
 	display: block;
@@ -223,19 +220,14 @@ background: #000;
 .authform select {
 	width: 179px;
 }*/
-.authform:target{
+/*.authform:target{
 	display: block;
 	z-index: 3;
-}
+}*/
 .signform {
-	border: 1px dashed black;
-	background: #d3d3d3;
-	display: none;
-	position: fixed;
-	top: 25%;
-	right: 50%;
+	border-left: 1px solid black;
+	display: inline-block;
 	padding: 15px;
-	z-index: 3;
 }
 .signform input {
 	display: block;
@@ -246,10 +238,10 @@ background: #000;
 .signform select {
 	width: 179px;
 }*/
-.signform:target{
+/*.signform:target{
 	display: block;
 	z-index: 3;
-}
+}*/
 /*  лейяут конец */
 .tab {
 	width: 100%; 
