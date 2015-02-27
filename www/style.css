@@ -610,7 +610,9 @@ background: rgb(234, 137, 137);
 	top: 81%;
 	left: 19%;
 }
-#pers:target {display: block;}
+#pers:target,
+#game:target,
+#cont:target {display: block;}
 
 
 

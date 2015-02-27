@@ -35,7 +35,7 @@
 								<div class="user-divider"><?=$result['title']; ?></div>
 							</div>
 						</div>
-						<div class="game-info">
+						<div class="game-info" id="game">
 							<div class="user-lines">
 								<label class="user-label">рейтинг</label>
 								<div class="user-divider"><?=$result['rating'];?></div>
@@ -93,7 +93,7 @@
 								<div class="user-divider"><?=$result['team'];?></div>
 							</div>
 						</div>
-						<div class="contacts">
+						<div class="contacts" id="cont">
 							<div class="user-lines email">
 								<label class="user-label">почта</label>
 								<div class="user-divider"><?=$result['email'];?></div>
