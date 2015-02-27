@@ -5,30 +5,28 @@
 							<div><img src="/img/<?=$scr;?>"></img></div>
 						</div>
 					</div>
-					<div class="info-block">
-						<div class="user-lines">
-							<label class="user-label">ник</label>
-							<div class="user-divider"><?=$result['nic_name']; ?></div>
-						</div>
-						<div class="user-lines">
-							<label class="user-label">имя</label>
-							<div class="user-divider"><?=$result['name'];?></div>
-						</div>
-						<div class="user-lines">
-							<label class="user-label">фамилия</label>
-							<div class="user-divider"><?=$result['fname'];?></div>
-						</div>
-						<div class="user-lines">
-							<label class="user-label">возраст</label>
-							<div class="user-divider"><?=$result['aga'];?></div>
-						</div>
-						<div class="user-lines email">
-							<label class="user-label">почта</label>
-							<div class="user-divider"><?=$result['email'];?></div>
-						</div>
-						<div class="user-lines">
-							<label class="user-label">титле</label>
-							<div class="user-divider"><?=$result['title']; ?></div>
+						<div class="info-block">
+						<div class="personal-info">
+							<div class="user-lines">
+								<label class="user-label">ник</label>
+								<div class="user-divider"><?=$result['nic_name']; ?></div>
+							</div>
+							<div class="user-lines">
+								<label class="user-label">имя</label>
+								<div class="user-divider"><?=$result['name'];?></div>
+							</div>
+							<div class="user-lines">
+								<label class="user-label">фамилия</label>
+								<div class="user-divider"><?=$result['fname'];?></div>
+							</div>
+							<div class="user-lines">
+								<label class="user-label">возраст</label>
+								<div class="user-divider"><?=$result['aga'];?></div>
+							</div>
+							<div class="user-lines">
+								<label class="user-label">титле</label>
+								<div class="user-divider"><?=$result['title']; ?></div>
+							</div>
 						</div>
 						<div class="user-lines">
 							<label class="user-label">рейтинг</label>
@@ -86,17 +84,23 @@
 							<label class="user-label">команда</label>
 							<div class="user-divider"><?=$result['team'];?></div>
 						</div>
-						<div class="user-lines">
-							<label class="user-label">скайп</label>
-							<div class="user-divider"><?=$result['skype'];?></div>
-						</div>
-						<div class="user-lines">
-							<label class="user-label">фейсбук</label>
-							<div class="user-divider"><?=$result['fc'];?></div>
-						</div>
-						<div class="user-lines">
-							<label class="user-label">вконтакте</label>
-							<div class="user-divider"><?=$result['vk'];?></div>
+						<div class="contacts">
+							<div class="user-lines email">
+								<label class="user-label">почта</label>
+								<div class="user-divider"><?=$result['email'];?></div>
+							</div>
+							<div class="user-lines">
+								<label class="user-label">скайп</label>
+								<div class="user-divider"><?=$result['skype'];?></div>
+							</div>
+							<div class="user-lines">
+								<label class="user-label">фейсбук</label>
+								<div class="user-divider"><?=$result['fc'];?></div>
+							</div>
+							<div class="user-lines">
+								<label class="user-label">вконтакте</label>
+								<div class="user-divider"><?=$result['vk'];?></div>
+							</div>
 						</div>
 				</div>
 			</div>

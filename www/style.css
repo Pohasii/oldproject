@@ -562,3 +562,10 @@ input.searchbutton:active {
 	transition: .2s;
 	border: 2px solid gray;
 }
+.contacts .user-divider {
+	background: #D78F3D;
+}
+.contacts label {
+	border: 1px solid #D78F3D;
+	border-right: none;
+}
