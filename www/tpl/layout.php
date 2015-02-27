@@ -210,8 +210,8 @@ echo $content;
 ?>
 
 </div>
-<?php include('rightbar.php');?>
 </div>
+<?php include('rightbar.php');?>
 			<!--div class="clearf"> </div-->
 </div>
 </div>

@@ -31,7 +31,7 @@
 			<?php if ($result == FALSE) {
 				echo 'Ивините по вашему запросу ничего не найдено';
 				} else { ?>
-			<div id="content">
+			
 
 			<?php foreach($result as $value) { ?>
 			<div class="tabss">
@@ -49,4 +49,3 @@
 				} ?> 
 		
 		
-</div>
