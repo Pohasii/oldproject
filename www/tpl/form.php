@@ -3,47 +3,48 @@
 function formSearch() {
 
 $f='<div class="searchform" id="searchform" >
-					<form method="post" action="/main">
+<form method="post" action="/main">
+<div class="first-column-block">
+	<input name="login" type="text" placeholder="Login">
 
-<input name="login" type="text" placeholder="Login">
+	<input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
 
-<input name="firstage" type="number" min="12" max="99"> до <input name="secondage" type="number" min="12" max="99">
-
-<input type=time name=timegame1>
-<input type=time name=timegame2>
-
-<select name="lane[]" data-placeholder="Line" class="chosen-select" multiple style="width:150px;" tabindex="1">
-            <option value=""></option>
-            <option value="duotop">Duo Top</option>
-            <option value="jungl">Jungl</option>
-            <option value="mid">Mid</option>
-            <option value="bot">Bottom</option>
-			<option value="solotop">Solo top</option>
-            <option value="mid">Mid</option>
-            <option value="bot">Bottom</option>
-          </select>
-		  
-<select name="goal[]" data-placeholder="goal" class="chosen-select" multiple style="width:150px;" tabindex="2">
-            <option value=""></option>
-			<option value="duo">duo</option>
-			<option value="proteam">Pro team</option>
-			<option value="produo">Pro Duo</option>
-			<option value="learningteam">Learning team</option>
-			<option value="learning">Learning</option>
-			<option value="increaseelo">increase ELO</option>
-          </select>
-		  
-<select name="role[]" data-placeholder="Role" class="chosen-select" multiple style="width:150px;" tabindex="3">
-            <option value=""></option>
-			<option value="tank">Tank</option>
-			<option value="adcarry">AD Carry</option>
-			<option value="apcarry">AP Carry</option>
-			<option value="assassin">Assassin</option>
-			<option value="bruiser">Bruiser</option>
-			<option value="support">Support</option>
-			<option value="jungler">Jungler</option>
-          </select>
-		  
+	<input type=time name=timegame1>
+	<input type=time name=timegame2>
+</div>
+<div class="second-column-block">
+	<select name="lane[]" data-placeholder="Line" class="chosen-select" multiple style="width:150px;" tabindex="1">
+				<option value=""></option>
+				<option value="duotop">Duo Top</option>
+				<option value="jungl">Jungl</option>
+				<option value="mid">Mid</option>
+				<option value="bot">Bottom</option>
+				<option value="solotop">Solo top</option>
+				<option value="mid">Mid</option>
+				<option value="bot">Bottom</option>
+			  </select>
+			  
+	<select name="goal[]" data-placeholder="goal" class="chosen-select" multiple style="width:150px;" tabindex="2">
+				<option value=""></option>
+				<option value="duo">duo</option>
+				<option value="proteam">Pro team</option>
+				<option value="produo">Pro Duo</option>
+				<option value="learningteam">Learning team</option>
+				<option value="learning">Learning</option>
+				<option value="increaseelo">increase ELO</option>
+			  </select>
+			  
+	<select name="role[]" data-placeholder="Role" class="chosen-select" multiple style="width:150px;" tabindex="3">
+				<option value=""></option>
+				<option value="tank">Tank</option>
+				<option value="adcarry">AD Carry</option>
+				<option value="apcarry">AP Carry</option>
+				<option value="assassin">Assassin</option>
+				<option value="bruiser">Bruiser</option>
+				<option value="support">Support</option>
+				<option value="jungler">Jungler</option>
+	</select>
+</div>		  
 
 
 		  <select name="country[]" data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:150px;" tabindex="4">

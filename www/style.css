@@ -569,3 +569,10 @@ input.searchbutton:active {
 	border: 1px solid #D78F3D;
 	border-right: none;
 }
+.personal-info label {
+border: 1px solid rgb(234, 137, 137);
+border-right: none;
+}
+.personal-info .user-divider {
+background: rgb(234, 137, 137);
+}
