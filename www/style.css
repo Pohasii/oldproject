@@ -580,7 +580,10 @@ background: rgb(234, 137, 137);
 .first-column-block,
 .second-column-block,
 .third-column-block,
-.last-column-block {display: inline-block;}
+.last-column-block {
+	display: inline-block;
+	vertical-align: top;
+}
 .second-column-block-element, 
 .third-column-block-element
 .first-column-block input:first-child,
