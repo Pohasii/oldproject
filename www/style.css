@@ -546,6 +546,7 @@ input.searchbutton:active {
 	padding: 5px 10px;
 	outline: none;
 	margin-bottom: 4px;
+	width: 29%;
 }
 .personal input:focus {
 	background: #C5C3C3;
