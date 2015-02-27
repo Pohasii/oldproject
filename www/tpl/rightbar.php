@@ -1,6 +1,5 @@
 <div class="rightbar">	
 
-
 <div class="rightbar-top10">	
 ТОП10 - ADC ===
 <?php foreach($rightbarone as $value) { ?>
@@ -38,11 +37,6 @@
 						</div>
 					</a>
 				<?php } ?> 
-
-</div>
-
-<div id="field">
-
 </div>
   
 </div>

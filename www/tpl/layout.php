@@ -198,8 +198,6 @@ window.onload = function() {
 	</div>
 	<div class=searchformblock style="" id="item1">
 	<?php formSearch();?>
-
-
 	</div>
 	<div class=clearf> </div>
 
@@ -212,10 +210,10 @@ echo $content;
 ?>
 
 </div>
+<?php include('rightbar.php');?>
 </div>
-			<?php include('rightbar.php');?>
-			<div class="clearf"> </div>
-	</div>
+			<!--div class="clearf"> </div-->
+</div>
 </div>
 	<footer>footer</footer>
 	
