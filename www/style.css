@@ -262,7 +262,7 @@ background: #000;
 	border-bottom: 1px dashed #A5A5A5;
 	padding: 6px 0;
 }
-.tab a:hover > .tabs {border-right:1px solid #fff;} 
+.tab a:hover > .tabs {border-right:1px dashed #fff;} 
 .tab a:hover  > .tabs:last-child{border-right: 0;}
 .tab-headings .tabs:last-child,
 .tabs:last-child {border-right: 0;}
