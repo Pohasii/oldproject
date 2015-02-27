@@ -2,7 +2,7 @@
 	<h1>My page</h1>
 	<div class="mypersonal">
 		<form>
-		<? if ($result['img']=='') { $scr='avatar.png'; } else $scr=$result['img'];?>
+		<?php if ($result['img']==NULL){$scr='avatar.png';} else $scr=$result; ?>
 			<img src="/img/<?=$scr?>">
 			<div class="personal-data">
 				<label>Имя</label>
