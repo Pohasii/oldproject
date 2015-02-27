@@ -56,17 +56,17 @@
       });
 	  
 	  //тамймер переключения
-  var i = 1;
+  var i = 2;
   var timer = setInterval(function() {
-	 /* if (i==1){bg_set('/img/1.jpg');} 
+	 /* if (i==1){bg_set('/img/1.jpg');} */
 	  if (i==2){bg_set('/img/2.jpg');} 
-	  if (i==3){bg_set('/img/3.jpg');} */
-	  if (i==1){bg_set('/img/3.jpg');}
+	  if (i==3){bg_set('/img/3.jpg');} 
+	 /* if (i==1){bg_set('/img/3.jpg');}
 	 /* if (i==2){bg_set('#99a628');}
 	  if (i==3){bg_set('#1b9626');}*/
 	 
 	  i++; 
-	  if (i==1) { i=1;} },
+	  if (i==4) { i=2;} },
 	  15000);
 	  
 //http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
@@ -198,8 +198,6 @@ window.onload = function() {
 	</div>
 	<div class=searchformblock style="" id="item1">
 	<?php formSearch();?>
-
-
 	</div>
 	<div class=clearf> </div>
 
@@ -212,10 +210,10 @@ echo $content;
 ?>
 
 </div>
+<?php include('rightbar.php');?>
 </div>
-			<?php include('rightbar.php');?>
-			<div class="clearf"> </div>
-	</div>
+			<!--div class="clearf"> </div-->
+</div>
 </div>
 	<footer>footer</footer>
 	
