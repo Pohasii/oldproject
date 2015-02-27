@@ -270,6 +270,7 @@ background: #000;
 .tab-headings {
 	margin-bottom: 20px;
 }
+.tab-line {}
 .tab-line:hover > a {
 	color: #fff;	
 }
@@ -411,8 +412,10 @@ input.searchbutton:active {
 	color: gray;
 	border: 1px solid #82E296;
 	transition: .2s;
+	border-right: none;
+	margin-right: -5px;
 }
-.user-lines div {
+.user-lines .user-divider{
 	display: inline-block;
 	font-size: 1em;
 	color: #fff;

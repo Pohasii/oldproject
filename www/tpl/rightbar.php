@@ -1,7 +1,7 @@
 <div class="rightbar">	
 
 <div class="rightbar-top10">	
-ТОП10 - ADC ===
+ТОП10 - ADC <hr>
 <?php foreach($rightbarone as $value) { ?>
 					<a href="/user/<?=$value['nic_name'];?>">
 						<div class="rightbar-top10-str" align="center">
@@ -15,7 +15,7 @@
 </div>
 
 <div class="rightbar-top10">	
-ТОП10 - MID ===
+ТОП10 - MID <hr>
 <?php foreach($rightbartwo as $value) { ?>
 					<a href="/user/<?=$value['nic_name'];?>">
 						<div class="rightbar-top10-str" align="center">
@@ -28,7 +28,7 @@
 </div>
 
 <div class="rightbar-top10">	
-ТОП10 - Jungl ===
+ТОП10 - Jungl <hr>
 <?php foreach($rightbarsecond as $value) { ?>
 					<a href="/user/<?=$value['nic_name'];?>">
 						<div class="rightbar-top10-str" align="center">
