@@ -440,6 +440,7 @@ input.searchbutton:active {
 .info-block {
 	display: inline-block;
 	position: relative;
+	margin-left: 11%;
 }
 .user-info .user-lines .user-avatar {display: block;}
 .user-lines.email {
@@ -605,14 +606,14 @@ background: rgb(234, 137, 137);
 .personal-info,
 .game-info,
 .contacts {
-	position: absolute;
-	display:none;
-	top: 81%;
-	left: 19%;
+	display: none;
 }
 #pers:target,
 #game:target,
-#cont:target {display: block;}
+#cont:target {
+	display: block;
+	margin-top: -17px;
+}
 
 
 
