@@ -377,35 +377,6 @@ $f='<div class="searchform" id="searchform" >
 	echo $f;
 }
 
-function formAuth() {
 
-$f='<div class="authform" id="authform">
-				<form method="post" action="/layout" id="authform" name="authform">
-				<a href="#" title="Закрыть" class="close">X</a>
-				<div class="tittle-forma"> Форма авторизации </div>
-					<input name="login" type="text" autofocus="autofocus"  placeholder="логин" required>
-					<input name="pass" type="password" placeholder="пароль" required>
-					<input name="sub" type="submit"  value="вход">
-				</form>	
-			</div>';
-
-	echo $f;
-}
-
-function formSing() {
-
-$f='<div class="signform" id="signform" >
-				<form method="post" action="/layout">
-					<a href="#" title="Закрыть" class="close">X</a>
-					<input name="login" type="text" autofocus="autofocus"  placeholder="логин" required onBlur="alert("asd")">
-					<input name="pass" type="password"  placeholder="пароль" required>
-					<input name="pass2" type="password"  placeholder="пароль" required>
-					<input name="email" type="text" autofocus="autofocus" placeholder="email" required>
-					<input name="sub" type="submit" value="Регистрация">
-				</form>
-			</div>';
-
-	echo $f;
-}
 
 ?>

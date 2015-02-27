@@ -112,11 +112,10 @@ window.onload = function() {
 			$login = $_SESSION["login"];
 			$result = call("SELECT * FROM `users` WHERE `nic_name`='$login'");
 			if(isset($_SESSION["login"]) && isset($_SESSION["keys"]) && $_SESSION["login"] == $result[0]["nic_name"] && $_SESSION["keys"] == $result[0]["keys"]) {
-				echo "Добро пожаловать сэр <a href='/user/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a>";
+				echo "<div class='signup'>Добро пожаловать сэр <a href='/profile/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a></div>";
 			} else { echo '
 			<div class="signup">
-				<a class="enter" href="#authform">Вход</a>
-				<a href="#signform">Регистрация</a>
+				<a class="enter" href="/authentication">Вход | Регистрация</a>
 			</div>
 			'; } ?>
 		
@@ -189,10 +188,6 @@ window.onload = function() {
 <!-- logo -->
 
 <!-- form -->
-
-		<?php formAuth(); ?>
-		<?php formSing(); ?>
-			
 
 <!-- content -->
 

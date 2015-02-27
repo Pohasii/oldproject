@@ -118,8 +118,8 @@
     <div class="wrap-head">    
 	<div class="class-404img"> </div> </div>   
     <div class="wrap"> 
-	<div class="text-error"> <span class="goodboy"> Молодец! </span> Всё сломалось... </div>
-	<div class="text-comeback"> Не переживай, мы уже чиним, а ты возвращайся на <span class="bright"> <a href="/">  главную.  </a> </span> </div>
+	<div class="text-error"> <span class="goodboy"> ШЕФ </span> Всё пропало... </div>
+	<div class="text-comeback"> Пока наш админ в шоке, ты пока потихому сваливай от сюдова <span class="bright"> <a href="/">  главную.  </a> </span> </div>
     </div>
     </div>
    
@@ -128,7 +128,7 @@
 <div class="page-buffer"></div>
 </div>
 <footer class="foot">    
-     <div class="text_foot"> Хулиган! Сайты ломаешь! </div>   
+     <div class="text_foot">Я знаю таких как ты, слежу в оба!!!</div>   
 </footer>
 
 </html>
