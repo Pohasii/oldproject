@@ -1,7 +1,7 @@
 <div class="personal">
 	<h1>My page</h1>
 	<div class="mypersonal">
-		<? if ($result['img']=='') { $scr='avatar.png'; } else $scr=$result['img'];?>
+		<?php if ($result['img']=='') { $scr='avatar.png'; } else $scr=$result['img'];?>
 			<img src="/img/<?=$scr?>">
 		<form>
 			<div class="personal-data">

@@ -301,21 +301,33 @@ min-width: 180px;
 width:100%;
 margin-top:20px;
 padding: 5px;
-border-bottom: 1px solid #000;
-height: 500px;
+border-bottom: 2px solid rgba(0, 0, 0, 0.14);
+/*height: 500px;*/
+}
+
+.rightbar-top10-titl {
+display: inline-block;
+min-width: 180px;
+width:100%;
+padding-bottom: 5px;
+color: RED;
 }
 
 .rightbar-top10-str {
 display: inline-block;
 width: 100%;
-border-bottom: 1px solid #000;
 height: 30px;
+color: #000;
 }
+
+.rightbar-top10-str:hover {
+color: green;
+}
+
 .rightbar-top10-block {
 display: inline-block;
 width: 48%;
 min-width:90px;
-border-bottom: 1px solid #000;
 height: 30px;
 }
 

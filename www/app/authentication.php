@@ -30,7 +30,7 @@ if($_POST['sub']=='Sing in'){
 				$_SESSION["login"]=$login;
 				$_SESSION["ip"]=$ip;
 				$res = put("UPDATE `users` SET `keys`='$keys' WHERE `nic_name`='$login'");
-				if ($res) {echo '<script>alert("Добро пожаловать");</script>'; }// смс приветствия 
+				if ($res) {/*echo '<script>alert("Добро пожаловать");</script>'; */}// смс приветствия 
 				unset($resultcount);
 				setcookie ("timesError", "", time() - 300);
 				setcookie ("CheckIp", "", time()-300);
@@ -78,7 +78,7 @@ if($_POST['sub']=='Sing in'){
 			$_SESSION["login"]=$login;
 			$_SESSION["ip"]=$ip;
 			$res = put("UPDATE `users` SET `keys`='$keys' WHERE `nic_name`='$login'");
-			if ($res) {$result['passErrorSingIn'] = '<script>alert("Добро пожаловать");</script>'; }// смс приветствия 
+			if ($res) {/*$result['passErrorSingIn'] = '<script>alert("Добро пожаловать");</script>';*/ }// смс приветствия 
 			unset($resultcount);
 			setcookie ("timesError", "", time() - 300);
 			setcookie ("CheckIp", "", time()-300);
