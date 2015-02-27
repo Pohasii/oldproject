@@ -408,7 +408,7 @@ input.searchbutton:active {
 	font-size: 1em;
 	width: 50%;
 	padding: 4px 10px;
-	color: #82E296;
+	color: gray;
 	border: 1px solid #82E296;
 	transition: .2s;
 }
@@ -532,6 +532,16 @@ input.searchbutton:active {
 	margin-bottom: 4px;
 }
 .personal input:focus {
+	background: #C5C3C3;
+	transition: .2s;
+	border: 2px solid gray;
+}
+.personal textarea {
+	padding: 5px 10px;
+	outline: none;
+	margin-bottom: 4px;
+}
+.personal textarea:focus {
 	background: #C5C3C3;
 	transition: .2s;
 	border: 2px solid gray;
