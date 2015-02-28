@@ -623,7 +623,7 @@ background: rgb(234, 137, 137);
 	display: inline-block;
 	margin-left: -8px;
 } */
-.but1 {
+.menu-but {
 	background: rgb(234, 137, 137);
 }
 .but2  {
@@ -632,11 +632,25 @@ background: rgb(234, 137, 137);
 .but3 {
 	background:#D78F3D;
 }
+.personal-menu{
+	white-space: nowrap;
+    overflow: hidden;
+}
+.personal-menu input {display:none;}
+.personal-menu label:hover{
+	color: green;
 
-
-
-
-
-
+}
+.personal-menu label{
+	padding: 4px;
+	display: inline-block;
+	cursor: pointer;
+    position: relative;
+	border: 1px solid orange;
+}
+.personal-menu input:checked + label {
+	border-bottom: 1px solid #fff;
+	color: yellow;
+}
 
 
