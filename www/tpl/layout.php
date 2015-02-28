@@ -2,8 +2,6 @@
 <html lang="<?=$setlang?>" class="<?=$help?>">
 <head>
     <link rel="stylesheet" type="text/css" href="/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8" />
 	
