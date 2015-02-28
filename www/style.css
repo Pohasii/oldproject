@@ -173,6 +173,7 @@ background: #000;
 	background: rgba(0, 0, 0, 0.78);
 	margin: 0 auto;
 	min-width: 700px;
+	padding: 15px;
 /*	height: 150px;*/
 }
 .searchform {

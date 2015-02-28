@@ -73,23 +73,6 @@
 //http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
     </script>
 	
-
-	<!--script type="text/javascript">
-	//выпад спис поиск
-var _click = function () {
-        var b = 1;
-        return function (c) {
-            var a = document.getElementById("item" + b);
-            c == b && (a.style.display = "none" == a.style.display ? "" : "none");
-            c != b && (a.style.display = "none", a = document.getElementById("item" + c), a.style.display = "", b = c)
-        }
-    }();
-window.onload = function() {
-    _click(1)
- }
- 
- //http://javascript.ru/forum/misc/25996-zakrytie-i-otkrytie-diva-po-kliku.html
-</script-->
     <title><?= $title ?></title>
 </head>
 
@@ -199,13 +182,13 @@ window.onload = function() {
 
 	<div class="content second">
 	<div class="contecs">
-	<div class="tab">
+	
 <?php 	
 echo $admin;
 echo $content;
 ?>
 
-</div>
+
 </div>
 <?php include('rightbar.php');?>
 			<!--div class="clearf"> </div-->
