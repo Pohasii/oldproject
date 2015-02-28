@@ -624,15 +624,30 @@ background: rgb(234, 137, 137);
 	margin-left: -8px;
 } */
 .label1{
-	background: rgb(234, 137, 137);
+	color: rgb(234, 137, 137);
+	border: 1px solid rgb(234, 137, 137);
 }
 .label2{
-	background: #82E296;
+	color: #82E296;
+	border: 1px solid #82E296;
 }
 .label3 {
-	background:#D78F3D;
+	color:#D78F3D;
+	border: 1px solid #D78F3D;
 }
-input {display:none;}
+input.menu-but:nth-of-type(1):checked + label{
+	background: rgb(234, 137, 137);
+	color: #fff;
+}
+input.menu-but:nth-of-type(2):checked + label{
+	background: #82E296;
+	color: #fff;
+}
+input.menu-but:nth-of-type(3):checked + label{
+	background: #D78F3D;
+	color: #fff;
+}
+input.menu-but {display:none;}
 .label1:hover,
 .label2:hover,
 .label3:hover{
@@ -645,12 +660,8 @@ input {display:none;}
 	display: inline-block;
 	cursor: pointer;
     position: relative;
-	border: 1px solid orange;
 } 
-input:checked + label {
-	color: #fff;
-}
-input:nth-of-type(1):checked ~ div:nth-of-type(1),
-input:nth-of-type(2):checked ~ div:nth-of-type(2),
-input:nth-of-type(3):checked ~ div:nth-of-type(3) {display: block;}
+input.menu-but:nth-of-type(1):checked ~ div:nth-of-type(1),
+input.menu-but:nth-of-type(2):checked ~ div:nth-of-type(2),
+input.menu-but:nth-of-type(3):checked ~ div:nth-of-type(3) {display: block;}
 
