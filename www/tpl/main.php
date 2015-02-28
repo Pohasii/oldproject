@@ -36,7 +36,7 @@
 			<?php foreach($result as $value) { ?>
 			<div class="tabss">
 				<div class="tab-line">
-					<a href="/user/<?=$value['nic_name'];?>#pers">
+					<a href="/user/<?=$value['nic_name'];?>">
 						<div class="tabs" align="center"><?=$value['nic_name']; ?></div>
 						<div class="tabs" align="center"><?=$value['lan'];?></div>
 						<div class="tabs" align="center"><?=$value['aga'];?></div>

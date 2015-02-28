@@ -6,19 +6,17 @@
 						</div>
 					</div>
 						<div class="info-block">
-						<div class="personal-menu">
 							<!-- <ul>
 								<li><a class="but1" href="#pers">Личное</a></li>
 								<li><a class="but2 active-personal-menu" href="#game">Игра</a></li>
 								<li><a class="but3" href="#cont">Контакты</a></li>
 							</ul>-->
-							<input class="menu-but" type="radio" name="checkbox" id="but1">
-							<label for="but1">Личное</label>
-							<input class="menu-but" type="radio" name="checkbox" id="but2">
-							<label for="but2">Игра</label>
-							<input class="menu-but" type="radio" name="checkbox" id="but3">
-							<label for="but3">Контакты</label>
-						</div>
+						<input class="menu-but" type="radio" name="checkbox" id="but1">
+						<label class="label1" for="but1">Личное</label>
+						<input class="menu-but" type="radio" name="checkbox" id="but2">
+						<label class="label2"  for="but2">Игра</label>
+						<input class="menu-but" type="radio" name="checkbox" id="but3">
+						<label class="label3"  for="but3">Контакты</label>
 						<div class="personal-info" id="pers">
 							<div class="user-lines">
 								<label class="user-label">ник</label>

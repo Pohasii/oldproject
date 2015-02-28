@@ -623,34 +623,34 @@ background: rgb(234, 137, 137);
 	display: inline-block;
 	margin-left: -8px;
 } */
-.menu-but {
+.label1{
 	background: rgb(234, 137, 137);
 }
-.but2  {
+.label2{
 	background: #82E296;
 }
-.but3 {
+.label3 {
 	background:#D78F3D;
 }
-.personal-menu{
-	white-space: nowrap;
-    overflow: hidden;
+input {display:none;}
+.label1:hover,
+.label2:hover,
+.label3:hover{
+	color: gray;
 }
-.personal-menu input {display:none;}
-.personal-menu label:hover{
-	color: green;
-
-}
-.personal-menu label{
+.label1,
+.label2,
+.label3{
 	padding: 4px;
 	display: inline-block;
 	cursor: pointer;
     position: relative;
 	border: 1px solid orange;
+} 
+input:checked + label {
+	color: #fff;
 }
-.personal-menu input:checked + label {
-	border-bottom: 1px solid #fff;
-	color: yellow;
-}
-
+input:nth-of-type(1):checked ~ div:nth-of-type(1),
+input:nth-of-type(2):checked ~ div:nth-of-type(2),
+input:nth-of-type(3):checked ~ div:nth-of-type(3) {display: block;}
 
