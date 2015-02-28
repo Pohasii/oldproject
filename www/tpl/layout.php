@@ -74,7 +74,7 @@
     </script>
 	
 
-	<script type="text/javascript">
+	<!--script type="text/javascript">
 	//выпад спис поиск
 var _click = function () {
         var b = 1;
@@ -89,7 +89,7 @@ window.onload = function() {
  }
  
  //http://javascript.ru/forum/misc/25996-zakrytie-i-otkrytie-diva-po-kliku.html
-</script>
+</script-->
     <title><?= $title ?></title>
 </head>
 
@@ -194,12 +194,7 @@ window.onload = function() {
 
 <div class="content">
 	<!--a class="searchbut" href="#searchform">Поиск</a-->
-	<div class="searchbut-align">
-		<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
-	</div>
-	<div class=searchformblock style="" id="item1">
-	<?php formSearch();?>
-	</div>
+	
 	<div class=clearf> </div>
 
 	<div class="content second">
