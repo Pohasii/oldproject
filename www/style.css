@@ -411,13 +411,14 @@ input.searchbutton:active {
 /*user info*/
 .user-lines {
 	min-width: 510px;
+	margin-bottom: 1px;
 }
 .user-lines label {
 	display: inline-block;
 	color: rgba(255, 255, 255, 1);
 	font-size: 1em;
 	width: 50%;
-	padding: 4px 10px;
+	padding: 5px 10px;
 	color: gray;
 	border: 1px solid #82E296;
 	transition: .2s;
@@ -429,9 +430,8 @@ input.searchbutton:active {
 	font-size: 1em;
 	color: #fff;
 	background: #82E296;
-	padding: 5px 10px;
+	padding: 6px 10px;
 	width: 30%;
-	border: 1px solid white;
 /* 	box-shadow: 2px -3px 10px 0px green;
 	border-radius: 3px; */
 	transition: .5s;
@@ -600,19 +600,20 @@ background: rgb(234, 137, 137);
 	outline: 0;
 	margin-left: 40%;
 }
-.personal-menu li {
+/* .personal-menu li {
 	display:inline-block;
-}
+} */
 .personal-info,
 .game-info,
 .contacts {
 	display: none;
 }
-#pers:target,
+/* #pers:target,
 #game:target,
 #cont:target {
 	display: block;
 	margin-top: -17px;
+	position: absolute;
 }
 .active-personal-menu{z-index:100;}
 .personal-menu a {
@@ -621,14 +622,14 @@ background: rgb(234, 137, 137);
 	color: #fff;
 	display: inline-block;
 	margin-left: -8px;
-}
-a.but1 {
+} */
+.but1 {
 	background: rgb(234, 137, 137);
 }
-a.but2  {
+.but2  {
 	background: #82E296;
 }
-a.but3 {
+.but3 {
 	background:#D78F3D;
 }
 
