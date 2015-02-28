@@ -133,7 +133,7 @@ window.onload = function() {
 <!-- logo -->
 
 <div id="logopole">
-   <div id="logo"><img src="/img/logo2.png" ></div>
+   <!--div id="logo"><img src="/img/logo2.png" ></div-->
 </div>
 
  <script>
