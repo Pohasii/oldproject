@@ -370,20 +370,22 @@ height: 30px;
 .searchbutton{vertical-align: middle;}
 input.searchbutton {
 	padding: 7px 22px;
-	background: #FF9B00;
+	background: rgb(223, 68, 68);
 	color: #fff;
-	border: 0;
+	border: 2px solid rgb(223, 68, 68);
 	outline: none;
+	font-weight: bold;
+	transition: .4s;
 }
 input.searchbutton:hover {
 	cursor: pointer;
-	outline: none;
-	box-shadow: 0 0 12px 1px #F49325;
+	color: #fff;
+	border: 2px solid #fff;
+	transition: .2s;
+	
 }
 input.searchbutton:active {
-	background: #F9BB5C;
-	color: #fff;
-	outline: none;
+		border: 2px solid rgb(223, 68, 68);
 }
  /* pagin */
 #content {
