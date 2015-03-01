@@ -1,7 +1,7 @@
 <div class="rightbar">	
 	
 	<div class="rightbar-top10">	
-		<div class="rightbar-top10-titl" align=center>ТОП10 - ADC</div>
+		<div class="rightbar-top10-titl" align=center>Статистика</div>
 
 			<div class="stats" align="center">У нас
 			<div class="litlestats" align="center"> <?=$statsRight[0]['account'];?> пользователя</div>
