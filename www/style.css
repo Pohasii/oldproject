@@ -112,9 +112,6 @@ footer {
 	color: #38B6CD;
 	border: 1px solid #38B6CD;
 }
-header:hover > .menu a{color: #fff;}
-header:hover > .language a{color: #fff;}
-header:hover > .signup a {color: #fff;}
 .searchbut{
 	background: rgba(0, 0, 0, 0.78);
 	text-decoration: none;
