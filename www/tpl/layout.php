@@ -97,16 +97,20 @@
 				<a class="enter" href="/authentication">Вход | Регистрация</a>
 			</div>
 			'; } ?>
-		
+		<div class="language">
+				<?php foreach ($lang as $value): ?>
+						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+				<?php endforeach; ?>
+			</div>
 	</header>
 
 <div class=bodyfonblock>
-<div class=bodyfon onclick="bg_set('/img/1.jpg');"></div>
-<div class=bodyfon onclick="bg_set('/img/2.jpg');"></div>
-<div class=bodyfon onclick="bg_set('/img/3.jpg');"></div>
-<div class=bodyfon onclick="bg_set('#284BA6');"></div>
-<div class=bodyfon onclick="bg_set('#99a628');"></div>
-<div class=bodyfon onclick="bg_set('#1b9626');"></div>
+<div class=bodyfon onclick="bg_set('/img/1.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/2.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/3.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('#284BA6');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('#99a628');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('#1b9626');"><img src="/img/knop.png" ></div>
 </div>
 <!-- logo -->
 
