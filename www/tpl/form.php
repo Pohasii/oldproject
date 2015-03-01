@@ -2,7 +2,7 @@
 
 function formSearch() {
 
-$f='<div class="searchform" id="searchform" >
+$f='
 <form method="post" action="/main">
 <div class="first-column-block">
 	<input name="login" type="text" placeholder="Login">
@@ -387,7 +387,7 @@ $f='<div class="searchform" id="searchform" >
 		  <input class="searchbutton" name="sub" type="submit"  value="поиск">
 	</div>
 </form>
-	</div>';
+	';
 
 	echo $f;
 }

@@ -1,9 +1,7 @@
-			<!--div class="searchbut-align">
-			<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
-			</div-->
 			<div class=searchformblock style="" id="item1">
 			<?php formSearch();?>
 			</div>
+<div class="tab">
 			<div class="litlestats" align="center"> 
 			<?php if($result3==1) {
 				echo "По вашему запросу найдено: $result3";
@@ -44,4 +42,4 @@
 				<?php }
 				} ?> 
 		
-		
+		</div>
