@@ -401,7 +401,7 @@ input.searchbutton:active {
 	width: 50%;
 	padding: 5px 10px;
 	color: gray;
-	border: 1px solid #82E296;
+	border: 1px solid #38B6CD;
 	transition: .2s;
 	border-right: none;
 	margin-right: -5px;
@@ -410,7 +410,7 @@ input.searchbutton:active {
 	display: inline-block;
 	font-size: 1em;
 	color: #fff;
-	background: #82E296;
+	background: #38B6CD;
 	padding: 6px 10px;
 	width: 30%;
 /* 	box-shadow: 2px -3px 10px 0px green;
@@ -553,11 +553,11 @@ input.searchbutton:active {
 	border-right: none;
 }
 .personal-info label {
-border: 1px solid rgb(234, 137, 137);
+border: 1px solid rgb(223, 68, 68);
 border-right: none;
 }
 .personal-info .user-divider {
-background: rgb(234, 137, 137);
+background: rgb(223, 68, 68);
 }
 /*searchform positioning*/
 .first-column-block,
@@ -605,23 +605,23 @@ background: rgb(234, 137, 137);
 	margin-left: -8px;
 } */
 .label1{
-	color: rgb(234, 137, 137);
-	border: 1px solid rgb(234, 137, 137);
+	color: rgb(223, 68, 68);
+	border: 1px solid rgb(223, 68, 68);
 }
 .label2{
-	color: #82E296;
-	border: 1px solid #82E296;
+	color: #38B6CD;
+	border: 1px solid #38B6CD;
 }
 .label3 {
 	color:#D78F3D;
 	border: 1px solid #D78F3D;
 }
 input.menu-but:nth-of-type(1):checked + label{
-	background: rgb(234, 137, 137);
+	background: rgb(223, 68, 68);
 	color: #fff;
 }
 input.menu-but:nth-of-type(2):checked + label{
-	background: #82E296;
+	background: #38B6CD;
 	color: #fff;
 }
 input.menu-but:nth-of-type(3):checked + label{
