@@ -82,11 +82,6 @@
 <body>
  </body>
 	<header class="main">
-			<div class="language">
-				<?php foreach ($lang as $value): ?>
-						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
-				<?php endforeach; ?>
-			</div>
 			<div class="menu">
 				<a href="/"><?=t('main');?></a>
 				<a href="/news">Новости</a>
@@ -102,6 +97,12 @@
 				<a class="enter" href="/authentication">Вход | Регистрация</a>
 			</div>
 			'; } ?>
+			
+			<div class="language">
+				<?php foreach ($lang as $value): ?>
+						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+				<?php endforeach; ?>
+			</div>
 		
 	</header>
 
