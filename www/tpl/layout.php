@@ -111,6 +111,14 @@
 <div class=bodyfon onclick="bg_set('#284BA6');"><img src="/img/knop.png" ></div>
 <div class=bodyfon onclick="bg_set('#99a628');"><img src="/img/knop.png" ></div>
 <div class=bodyfon onclick="bg_set('#1b9626');"><img src="/img/knop.png" ></div>
+
+<div class=bodyfon onclick="bg_set('/img/img5.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img6.png');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img7.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img8.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img9.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img10.jpeg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img11.jpg');"><img src="/img/knop.png" ></div>
 </div>
 <!-- logo -->
 
