@@ -26,7 +26,7 @@ header {
 	height: 60px;
 	min-width: 955px;
 	transition: .3s;
-	box-shadow: 18px 13px 92px 4px #000;
+	/* box-shadow: 18px 13px 92px 4px #000; */
 	/*margin-top:30px;
 	/*position: absolute;*/
 	z-index:3;
@@ -60,6 +60,7 @@ footer {
 	width: 20px;
 	height: 20px;
 	background: -webkit-radial-gradient(50% 50%, circle contain, #fff, #000);
+	transition: .4s;
 }
 
 .bodyfon:hover {
