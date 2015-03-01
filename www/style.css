@@ -268,6 +268,8 @@ background: #000;
 	min-width: 181px;
 	border-left: 2px solid rgba(0, 0, 0, 0.14);
 	padding: 5px;
+	margin-left: 15px;
+	background: #D8D8D8;
 }
 
 .tab ,
@@ -325,11 +327,12 @@ height: 30px;
 	min-height: 1024px;
 	display: inline-block;
 	vertical-align: top;
+	background: #D8D8D8;
 }
 
 .second {
 	margin-top: 0; 
-	background: #D8D8D8; 
+	/*background: #D8D8D8; */
 	max-width: 100%;
 	padding-top: 22px;
 }
