@@ -21,7 +21,7 @@ body {
 }
 /*header*/
 header {
-	background: rgba(98, 97, 97, 1);
+	background: rgba(32, 30, 30, 1);
 	width: 100%;
 	height: 60px;
 	min-width: 955px;
@@ -106,10 +106,8 @@ footer {
 }
 .enter {border: none;}
 .language a:hover,
-.signup a:hover,
 .menu a:hover {
 	color: #38B6CD;
-	border: 1px solid #38B6CD;
 }
 .searchbut{
 	background: rgba(0, 0, 0, 0.78);
@@ -154,7 +152,7 @@ background: #000;
 
 .searchformblock {
 	position: relative;
-	background: rgba(0, 0, 0, 1);
+	background: rgba(32, 30, 30, 1);
 	margin: 0 auto;
 	min-width: 700px;
 	padding: 15px;
