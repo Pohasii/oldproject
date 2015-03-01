@@ -227,7 +227,7 @@ background: #000;
 .tab {
 	width: 100%; 
 	padding: 5px;
-	min-width: 725px;
+	min-width: 700px;
 
 }
 .tabss {
@@ -267,7 +267,7 @@ background: #000;
 	width: 20%;
 	min-width: 181px;
 	border-left: 2px solid rgba(0, 0, 0, 0.14);
-	padding: 5px;
+	padding: 4px;
 	margin-left: 5px;
 	background: #D8D8D8;
 }
