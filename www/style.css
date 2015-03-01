@@ -362,9 +362,10 @@ input.searchbutton {
 }
 input.searchbutton:hover {
 	cursor: pointer;
-	color: #fff;
-	border: 2px solid #fff;
+	color: rgb(223, 68, 68);
+	border: 2px solid rgb(223, 68, 68);
 	transition: .2s;
+	background: transparent;
 	
 }
 input.searchbutton:active {
