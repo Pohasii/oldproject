@@ -87,11 +87,16 @@
 				<a href="/news">Новости</a>
 				<a href="/p/help">Помощь</a>
 			</div>
+			<div class="language">
+				<?php foreach ($lang as $value): ?>
+						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+				<?php endforeach; ?>
+			</div>
 			<?php 
 			$login = $_SESSION["login"];
 			$result = call("SELECT * FROM `users` WHERE `nic_name`='$login'");
 			if(isset($_SESSION["login"]) && isset($_SESSION["keys"]) && $_SESSION["login"] == $result[0]["nic_name"] && $_SESSION["keys"] == $result[0]["keys"]) {
-				echo "<div class='signup'>Добро пожаловать сэр <a href='/profile/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a></div>";
+				echo "<div class='signup'>Добро пожаловать,<a href='/profile/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a></div>";
 			} else { echo '
 			<div class="signup">
 				<a class="enter" href="/authentication">Вход | Регистрация</a>

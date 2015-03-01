@@ -70,15 +70,14 @@ footer {
 	display: inline-block;
 	margin-top: 10px;
 	margin-bottom: 11px;
-	margin-left: 10%;
+	margin-left: 9.7%;
 }
-
 .signup {
 	margin-top: 10px; 
 	float: right;
-	color: #000;
+	color: #fff;
 	padding: 4px;
-	background: #FF9B00;
+	background:#38B6CD;
 	border-radius: 3px 0 0 3px;
 }
 .language {
@@ -104,30 +103,18 @@ footer {
 	font-size: 1em;
 	transition: .3s;
 	padding: 5px;
-	border-radius: 1px;
+	border: 1px solid transparent;
 }
 .enter {border: none;}
 .language a:hover,
 .signup a:hover,
 .menu a:hover {
-	color: #fff;
+	color: #38B6CD;
+	border: 1px solid #38B6CD;
 }
-
 header:hover > .menu a{color: #fff;}
 header:hover > .language a{color: #fff;}
 header:hover > .signup a {color: #fff;}
-
-.menu a:hover {
-/* box-shadow: 0 0 86px 23px #fff; */
-	text-shadow:0 -3px 20px #fff;/*,
-				0px -20px 40px #fff, 
-				0px -30px 60px #fff, 
-				0px -50px 90px #fff, 
-				0 10px 20px #fff, 
-				0px 20px 40px #fff, 
-				0px 30px 60px #fff, 
-				0px 50px 90px #fff;  */
-}
 .searchbut{
 	background: rgba(0, 0, 0, 0.78);
 	text-decoration: none;
@@ -292,32 +279,32 @@ background: #000;
 }
 
 .rightbar-top10 {
-display: inline-block;
-min-width: 180px;
-width:100%;
-margin-top:20px;
-padding: 5px;
-border-bottom: 2px solid rgba(0, 0, 0, 0.14);
-/*height: 500px;*/
+	display: inline-block;
+	min-width: 180px;
+	width:100%;
+	margin-top:20px;
+	padding: 5px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.14);
+	/*height: 500px;*/
 }
 
 .rightbar-top10-titl {
-display: inline-block;
-min-width: 180px;
-width:100%;
-padding-bottom: 5px;
-color: RED;
+	display: inline-block;
+	min-width: 180px;
+	width:100%;
+	padding-bottom: 5px;
+	color: rgb(223, 68, 68);
 }
 
 .rightbar-top10-str {
-display: inline-block;
-width: 100%;
-height: 30px;
-color: #000;
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	color: #000;
 }
 
 .rightbar-top10-str:hover {
-color: green;
+	color: green;
 }
 
 .rightbar-top10-block {
