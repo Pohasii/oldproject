@@ -81,8 +81,9 @@ footer {
 	border-radius: 3px 0 0 3px;
 }
 .language {
-	position: absolute;
+	/*position: fixed;*/
 	margin-top: 10px;
+	float: right;
 }
 /* .language a {
 	text-decoration: none;
@@ -328,7 +329,7 @@ height: 30px;
 
 .second {
 	margin-top: 0; 
-	background: #FFF; 
+	background: #D8D8D8; 
 	max-width: 100%;
 	padding-top: 22px;
 }
