@@ -1,5 +1,10 @@
-
-			<div class="stats" align="center">У нас
+			<!--div class="searchbut-align">
+			<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
+			</div-->
+			<div class=searchformblock style="" id="item1">
+			<?php formSearch();?>
+			</div>
+			<!--div class="stats" align="center">У нас
 			<div class="litlestats" align="center"> <?=$result2[0]['account'];?> пользователя</div>
 			<div class="litlestats" align="center"> из них <?=$result2[0]['chelick'];?> Челенджеры</div>
 			<div class="litlestats" align="center"> Керри:<?=$result2[0]['adc'];?></div>
@@ -7,7 +12,7 @@
 			<div class="litlestats" align="center"> Мидера:<?=$result2[0]['mid'];?> </div>
 			<div class="litlestats" align="center"> Топера:<?=$result2[0]['top'];?> </div>
 			<div class="litlestats" align="center"> Джанглеров:<?=$result2[0]['jungl'];?></div>
-			</div>
+			</div-->
 			<div class="litlestats" align="center"> 
 			<?php if($result3==1) {
 				echo "По вашему запросу найдено: $result3";
