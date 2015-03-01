@@ -2,6 +2,7 @@
 <html lang="<?=$setlang?>" class="<?=$help?>">
 <head>
     <link rel="stylesheet" type="text/css" href="/style.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8" />
 	
 	<link rel="icon" href="img/favicon2.ico" type="image/x-icon">
@@ -72,23 +73,6 @@
 //http://javascript.ru/blog/script_code/Smena-fonovogo-izobrazheniya-cveta-javascript-s-pomoshu-cookie-kliku
     </script>
 	
-
-	<script type="text/javascript">
-	//выпад спис поиск
-var _click = function () {
-        var b = 1;
-        return function (c) {
-            var a = document.getElementById("item" + b);
-            c == b && (a.style.display = "none" == a.style.display ? "" : "none");
-            c != b && (a.style.display = "none", a = document.getElementById("item" + c), a.style.display = "", b = c)
-        }
-    }();
-window.onload = function() {
-    _click(1)
- }
- 
- //http://javascript.ru/forum/misc/25996-zakrytie-i-otkrytie-diva-po-kliku.html
-</script>
     <title><?= $title ?></title>
 </head>
 
@@ -98,11 +82,6 @@ window.onload = function() {
 <body>
  </body>
 	<header class="main">
-			<div class="language">
-				<?php foreach ($lang as $value): ?>
-						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
-				<?php endforeach; ?>
-			</div>
 			<div class="menu">
 				<a href="/"><?=t('main');?></a>
 				<a href="/news">Новости</a>
@@ -112,27 +91,39 @@ window.onload = function() {
 			$login = $_SESSION["login"];
 			$result = call("SELECT * FROM `users` WHERE `nic_name`='$login'");
 			if(isset($_SESSION["login"]) && isset($_SESSION["keys"]) && $_SESSION["login"] == $result[0]["nic_name"] && $_SESSION["keys"] == $result[0]["keys"]) {
-				echo "<div class='signup'>Добро пожаловать сэр <a href='/profile/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a></div>";
+				echo "<div class='signup'>Добро пожаловать,<a href='/profile/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a></div>";
 			} else { echo '
 			<div class="signup">
 				<a class="enter" href="/authentication">Вход | Регистрация</a>
 			</div>
 			'; } ?>
-		
+		<div class="language">
+				<?php foreach ($lang as $value): ?>
+						<a class="<?=($setlang==$value['name'])?'active':''?>" href="#" onclick="setlang('<?=$value['name']?>');return false;"><?=$value['name']?></a>
+				<?php endforeach; ?>
+			</div>
 	</header>
 
 <div class=bodyfonblock>
-<div class=bodyfon onclick="bg_set('/img/1.jpg');"></div>
-<div class=bodyfon onclick="bg_set('/img/2.jpg');"></div>
-<div class=bodyfon onclick="bg_set('/img/3.jpg');"></div>
-<div class=bodyfon onclick="bg_set('#284BA6');"></div>
-<div class=bodyfon onclick="bg_set('#99a628');"></div>
-<div class=bodyfon onclick="bg_set('#1b9626');"></div>
+<div class=bodyfon onclick="bg_set('/img/1.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/2.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/3.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('#284BA6');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('#99a628');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('#1b9626');"><img src="/img/knop.png" ></div>
+
+<div class=bodyfon onclick="bg_set('/img/img5.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img6.png');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img7.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img8.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img9.jpg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img10.jpeg');"><img src="/img/knop.png" ></div>
+<div class=bodyfon onclick="bg_set('/img/img11.jpg');"><img src="/img/knop.png" ></div>
 </div>
 <!-- logo -->
 
 <div id="logopole">
-   <div id="logo"><img src="/img/logo2.png" ></div>
+   <!--div id="logo"><img src="/img/logo2.png" ></div-->
 </div>
 
  <script>
@@ -193,23 +184,18 @@ window.onload = function() {
 
 <div class="content">
 	<!--a class="searchbut" href="#searchform">Поиск</a-->
-	<div class="searchbut-align">
-		<a class="searchbut" onclick="_click(1); return false;" href="#" align=center>Search</a>
-	</div>
-	<div class=searchformblock style="" id="item1">
-	<?php formSearch();?>
-	</div>
+	
 	<div class=clearf> </div>
 
 	<div class="content second">
 	<div class="contecs">
-	<div class="tab">
+	
 <?php 	
 echo $admin;
 echo $content;
 ?>
 
-</div>
+
 </div>
 <?php include('rightbar.php');?>
 			<!--div class="clearf"> </div-->

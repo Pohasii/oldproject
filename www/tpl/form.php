@@ -2,7 +2,7 @@
 
 function formSearch() {
 
-$f='<div class="searchform" id="searchform" >
+$f='
 <form method="post" action="/main">
 <div class="first-column-block">
 	<input name="login" type="text" placeholder="Login">
@@ -21,13 +21,11 @@ $f='<div class="searchform" id="searchform" >
 
 	<select name="lane[]" data-placeholder="Line" class="chosen-select" multiple style="width:150px;" tabindex="1">
 				<option value=""></option>
-				<option value="duotop">Duo Top</option>
-				<option value="jungl">Jungl</option>
-				<option value="mid">Mid</option>
-				<option value="bot">Bottom</option>
-				<option value="solotop">Solo top</option>
-				<option value="mid">Mid</option>
-				<option value="bot">Bottom</option>
+				<option value="top">TOP</option>
+				<option value="adcarry">AD Carry</option>
+				<option value="mid">MID</option>
+				<option value="support">Support</option>
+				<option value="jungler">Jungler</option>
 			  </select>
 	</div>	  
 	<div class="second-column-block-element">
@@ -41,7 +39,7 @@ $f='<div class="searchform" id="searchform" >
 				<option value="increaseelo">increase ELO</option>
 			  </select>
 	</div>
-	<div class="second-column-block-element">
+	<!--div class="second-column-block-element">
 	<select name="role[]" data-placeholder="Role" class="chosen-select" multiple style="width:150px;" tabindex="3">
 				<option value=""></option>
 				<option value="tank">Tank</option>
@@ -52,7 +50,7 @@ $f='<div class="searchform" id="searchform" >
 				<option value="support">Support</option>
 				<option value="jungler">Jungler</option>
 	</select>
-	</div>
+	</div-->
 </div>		  
 	<div class="third-column-block">
 		<div class="third-column-block-element">
@@ -389,7 +387,7 @@ $f='<div class="searchform" id="searchform" >
 		  <input class="searchbutton" name="sub" type="submit"  value="поиск">
 	</div>
 </form>
-	</div>';
+	';
 
 	echo $f;
 }
