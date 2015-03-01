@@ -68,12 +68,12 @@ footer {
 .menu {
 	/*position: fixed;*/
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 21px;
 	margin-bottom: 11px;
 	margin-left: 9.7%;
 }
 .signup {
-	margin-top: 10px; 
+	margin-top: 21px; 
 	float: right;
 	color: #fff;
 	padding: 4px;
@@ -82,7 +82,7 @@ footer {
 }
 .language {
 	/*position: fixed;*/
-	margin-top: 10px;
+	margin-top: 21px;
 	float: right;
 }
 /* .language a {
