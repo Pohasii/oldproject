@@ -120,16 +120,19 @@ function sampleArrs($result='',$field='',$fieldsecond=''){
 	}
 	
 	$resultRightB = call("SELECT `nic_name`, `rating`, `role` FROM `users` WHERE `role`in('adc','mid','jungl') ORDER BY `rating` DESC LIMIT 0,100");
+	
 
 if($query[0] != '') {
 	$controller = $query[0];
 	unset($query[0]);
 	$action = array_values($query);
+	$statsRight = call("SELECT * FROM `stats`");
 	$rightbarone = sampleArrs($resultRightB,'role','adc');
 	$rightbartwo = sampleArrs($resultRightB,'role','mid');
 	$rightbarsecond = sampleArrs($resultRightB,'role','jungl');
 } else {
 	$controller = 'main';
+	$statsRight = call("SELECT * FROM `stats`");
 	$rightbarone = sampleArrs($resultRightB,'role','adc');
 	$rightbartwo = sampleArrs($resultRightB,'role','mid');
 	$rightbarsecond = sampleArrs($resultRightB,'role','jungl');

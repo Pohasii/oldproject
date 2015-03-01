@@ -4,15 +4,6 @@
 			<div class=searchformblock style="" id="item1">
 			<?php formSearch();?>
 			</div>
-			<!--div class="stats" align="center">У нас
-			<div class="litlestats" align="center"> <?=$result2[0]['account'];?> пользователя</div>
-			<div class="litlestats" align="center"> из них <?=$result2[0]['chelick'];?> Челенджеры</div>
-			<div class="litlestats" align="center"> Керри:<?=$result2[0]['adc'];?></div>
-			<div class="litlestats" align="center"> Саппорта:<?=$result2[0]['sup'];?> </div>
-			<div class="litlestats" align="center"> Мидера:<?=$result2[0]['mid'];?> </div>
-			<div class="litlestats" align="center"> Топера:<?=$result2[0]['top'];?> </div>
-			<div class="litlestats" align="center"> Джанглеров:<?=$result2[0]['jungl'];?></div>
-			</div-->
 			<div class="litlestats" align="center"> 
 			<?php if($result3==1) {
 				echo "По вашему запросу найдено: $result3";
