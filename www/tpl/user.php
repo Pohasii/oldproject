@@ -13,7 +13,7 @@
 							</ul>-->
 						<input class="menu-but" type="radio" name="checkbox" id="but1">
 						<label class="label1" for="but1">Личное</label>
-						<input class="menu-but" type="radio" name="checkbox" id="but2">
+						<input class="menu-but" type="radio" name="checkbox" id="but2" checked>
 						<label class="label2"  for="but2">Игра</label>
 						<input class="menu-but" type="radio" name="checkbox" id="but3">
 						<label class="label3"  for="but3">Контакты</label>
