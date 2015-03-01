@@ -70,15 +70,14 @@ footer {
 	display: inline-block;
 	margin-top: 10px;
 	margin-bottom: 11px;
-	margin-left: 15%;
+	margin-left: 9.7%;
 }
-
 .signup {
 	margin-top: 10px; 
 	float: right;
 	color: #fff;
 	padding: 4px;
-	background:#57E2CD;
+	background:#38B6CD;
 	border-radius: 3px 0 0 3px;
 }
 .language {
