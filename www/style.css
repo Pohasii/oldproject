@@ -68,21 +68,20 @@ footer {
 .menu {
 	/*position: fixed;*/
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 21px;
 	margin-bottom: 11px;
 	margin-left: 9.7%;
 }
 .signup {
-	margin-top: 10px; 
+	margin-top: 21px; 
 	float: right;
 	color: #fff;
 	padding: 4px;
 	background:#38B6CD;
-	border-radius: 3px 0 0 3px;
 }
 .language {
 	/*position: fixed;*/
-	margin-top: 10px;
+	margin-top: 21px;
 	float: right;
 }
 /* .language a {
@@ -112,9 +111,6 @@ footer {
 	color: #38B6CD;
 	border: 1px solid #38B6CD;
 }
-header:hover > .menu a{color: #fff;}
-header:hover > .language a{color: #fff;}
-header:hover > .signup a {color: #fff;}
 .searchbut{
 	background: rgba(0, 0, 0, 0.78);
 	text-decoration: none;
