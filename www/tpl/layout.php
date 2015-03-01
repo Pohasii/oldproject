@@ -96,7 +96,7 @@
 			$login = $_SESSION["login"];
 			$result = call("SELECT * FROM `users` WHERE `nic_name`='$login'");
 			if(isset($_SESSION["login"]) && isset($_SESSION["keys"]) && $_SESSION["login"] == $result[0]["nic_name"] && $_SESSION["keys"] == $result[0]["keys"]) {
-				echo "<div class='signup'>Добро пожаловать сэр <a href='/profile/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a></div>";
+				echo "<div class='signup'>Добро пожаловать,<a href='/profile/".$_SESSION["login"]."'>".$_SESSION["login"]."</a> <a href='/layout/exit' > выйти </a></div>";
 			} else { echo '
 			<div class="signup">
 				<a class="enter" href="/authentication">Вход | Регистрация</a>
