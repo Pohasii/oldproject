@@ -2,7 +2,6 @@
 
 	<div class="rightbar-top10">	
 		<div class="rightbar-top10-titl" align=center>ТОП10 - ADC</div>
-
 		<?php foreach($rightbarone as $value) { ?>
 			<a href="/user/<?=$value['nic_name'];?>">
 				<div class="rightbar-top10-str" align="center">
