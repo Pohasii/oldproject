@@ -106,10 +106,8 @@ footer {
 }
 .enter {border: none;}
 .language a:hover,
-.signup a:hover,
 .menu a:hover {
 	color: #38B6CD;
-	border: 1px solid #38B6CD;
 }
 .searchbut{
 	background: rgba(0, 0, 0, 0.78);
