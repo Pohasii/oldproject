@@ -158,7 +158,7 @@ background: #000;
 
 .searchformblock {
 	position: relative;
-	background: rgba(0, 0, 0, 0.78);
+	background: rgba(0, 0, 0, 1);
 	margin: 0 auto;
 	min-width: 700px;
 	padding: 15px;
@@ -268,7 +268,7 @@ background: #000;
 	min-width: 181px;
 	border-left: 2px solid rgba(0, 0, 0, 0.14);
 	padding: 5px;
-	margin-left: 15px;
+	margin-left: 5px;
 	background: #D8D8D8;
 }
 
