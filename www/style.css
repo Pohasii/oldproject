@@ -85,7 +85,7 @@ footer {
 }
 .language {
 	/*position: fixed;*/
-	margin-top: 21px;
+	margin-top: 25px;
 	float: right;
 }
 /* .language a {
@@ -359,10 +359,11 @@ input.searchbutton {
 	outline: none;
 	font-weight: bold;
 	transition: .4s;
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 input.searchbutton:hover {
 	cursor: pointer;
-	color: rgb(223, 68, 68);
+	color: #fff/*rgb(223, 68, 68)*/;
 	border: 2px solid rgb(223, 68, 68);
 	transition: .2s;
 	background: transparent;
