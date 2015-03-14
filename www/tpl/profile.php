@@ -14,8 +14,6 @@
 				<label>Возраст</label>
 				<input name="" type="text" value="<?=$result['aga'];?>">
 				<label>Страна</label>
-				<input name="" type="text" value="<?=$result['strana'];?>">
-				<label>Язык</label>
 				<select name="country[]" data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:150px;" tabindex="4">
 					<option value=""></option>
 					<option value="United States">United States</option>
@@ -270,6 +268,7 @@
 					<option value="Zambia">Zambia</option>
 					<option value="Zimbabwe">Zimbabwe</option>
 				</select>
+				<label>Язык</label>
 			</div>
 			<div class="login">
 				<label>Логин</label>
